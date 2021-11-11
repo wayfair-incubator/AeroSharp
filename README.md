@@ -9,8 +9,8 @@ As much as possible, we have tried to provide enough tooling to get you up and r
 
 In trying to keep this template as generic and reusable as possible, there are some things that were omitted out of necessity and others that need a little tweaking. Before you begin developing in earnest, there are a few changes that need to be made.
 
-- [ ] Select an appropriate license for your project. This can easily be achieved through the 'Add File' button on the GitHub UI, naming the file `LICENSE`, and selecting your desired license from the provided list.
-- [ ] Update the `<License name>` placeholder in this file to reflect the name of the license you selected above
+- [X] Select an appropriate license for your project. This can easily be achieved through the 'Add File' button on the GitHub UI, naming the file `LICENSE`, and selecting your desired license from the provided list.
+- [X] Update the `<License name>` placeholder in this file to reflect the name of the license you selected above
 - [ ] Replace `[INSERT CONTACT METHOD]` in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) with a suitable communication channel
 - [ ] Change references to `org_name` to the name of the org your repo belongs to (eg. `wayfair-incubator`)
   - [ ] In [`README.md`](README.md)
@@ -77,7 +77,7 @@ Contributions are what make the open source community such an amazing place to l
 
 ## License
 
-Distributed under the `<License name>` License. See `LICENSE` for more information.
+Distributed under the `Apache 2.0` License. See [LICENSE](LICENSE) for more information.
 
 ## Contact
 
