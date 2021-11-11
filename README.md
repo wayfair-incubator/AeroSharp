@@ -12,12 +12,12 @@ In trying to keep this template as generic and reusable as possible, there are s
 - [X] Select an appropriate license for your project. This can easily be achieved through the 'Add File' button on the GitHub UI, naming the file `LICENSE`, and selecting your desired license from the provided list.
 - [X] Update the `<License name>` placeholder in this file to reflect the name of the license you selected above
 - [X] Replace `[INSERT CONTACT METHOD]` in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) with a suitable communication channel
-- [ ] Change references to `org_name` to the name of the org your repo belongs to (eg. `wayfair-incubator`)
-  - [ ] In [`README.md`](README.md)
-  - [ ] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- [ ] Change references to `repo_name` to the name of your new repo
-  - [ ] In [`README.md`](README.md)
-  - [ ] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [X] Change references to `org_name` to the name of the org your repo belongs to (eg. `wayfair-incubator`)
+  - [X] In [`README.md`](README.md)
+  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [X] Change references to `repo_name` to the name of your new repo
+  - [X] In [`README.md`](README.md)
+  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - [ ] Update the link to the contribution guidelines to point to your project
   - [ ] In [`.github/ISSUE_TEMPLATE/BUG_REPORT.md`](.github/ISSUE_TEMPLATE/BUG_REPORT.md)
   - [ ] In [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
@@ -52,7 +52,7 @@ This is an example of how to list things you need to use the software and how to
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/org_name/repo_name.git
+   git clone https://github.com/wayfair-incubator/AeroSharp.git
    ```
 
 2. Install NPM packages
@@ -65,11 +65,11 @@ This is an example of how to list things you need to use the software and how to
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com) or the [Wiki](https://github.com/org_name/repo_name/wiki)_
+_For more examples, please refer to the [Documentation](https://example.com) or the [Wiki](https://github.com/wayfair-incubator/AeroSharp/wiki)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/org_name/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/wayfair-incubator/AeroSharp/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -83,7 +83,7 @@ Distributed under the `Apache 2.0` License. See [LICENSE](LICENSE) for more info
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
 
-Project Link: [https://github.com/org_name/repo_name](https://github.com/org_name/repo_name)
+Project Link: [https://github.com/wayfair-incubator/AeroSharp](https://github.com/wayfair-incubator/AeroSharp)
 
 ## Acknowledgements
 
