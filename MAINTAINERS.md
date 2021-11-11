@@ -1,5 +1,4 @@
 # Maintainers
 
-- [GitHub Username](https://github.com/username)
-- [GitHub Username](https://github.com/username)
-- [GitHub Username](https://github.com/username)
+- [wbaldoumas](https://github.com/wbaldoumas)
+- [suzicurran](https://github.com/suzicurran)
