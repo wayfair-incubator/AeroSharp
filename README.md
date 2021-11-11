@@ -1,4 +1,4 @@
-# OSPO Project Template
+# AeroSharp
 
 [![OSS Template Version](https://img.shields.io/badge/OSS%20Template-0.3.5-7f187f.svg)](https://github.com/wayfair-incubator/oss-template/blob/main/CHANGELOG.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
@@ -21,9 +21,9 @@ In trying to keep this template as generic and reusable as possible, there are s
 - [X] Update the link to the contribution guidelines to point to your project
   - [X] In [`.github/ISSUE_TEMPLATE/BUG_REPORT.md`](.github/ISSUE_TEMPLATE/BUG_REPORT.md)
   - [X] In [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
-- [ ] Replace the `<project name>` placeholder with the name of your project
-  - [ ] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-  - [ ] In [`SECURITY.md`](SECURITY.md)
+- [X] Replace the `<project name>` placeholder with the name of your project
+  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
+  - [X] In [`SECURITY.md`](SECURITY.md)
 - [ ] Add names and contact information for actual project maintainers to [`MAINTAINERS.md`](MAINTAINERS.md)
 - [ ] Delete the content of [`CHANGELOG.md`](CHANGELOG.md). We encourgage you to [keep a changelog](https://keepachangelog.com/en/1.0.0/).
 - [ ] Replace the generic content in this file with the relevant details about your project
