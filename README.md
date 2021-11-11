@@ -3,69 +3,72 @@
 [![OSS Template Version](https://img.shields.io/badge/OSS%20Template-0.3.5-7f187f.svg)](https://github.com/wayfair-incubator/oss-template/blob/main/CHANGELOG.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
-## Before You Start
-
-As much as possible, we have tried to provide enough tooling to get you up and running quickly and with a minimum of effort. This includes sane defaults for documentation; templates for bug reports, feature requests, and pull requests; and [GitHub Actions](https://github.com/features/actions) that will automatically manage stale issues and pull requests. This latter defaults to labeling issues and pull requests as stale after 60 days of inactivity, and closing them after 7 additional days of inactivity. These [defaults](.github/workflows/stale.yml) and more can be configured. For configuration options, please consult the documentation for the [stale action](https://github.com/actions/stale).
-
-In trying to keep this template as generic and reusable as possible, there are some things that were omitted out of necessity and others that need a little tweaking. Before you begin developing in earnest, there are a few changes that need to be made.
-
-- [X] Select an appropriate license for your project. This can easily be achieved through the 'Add File' button on the GitHub UI, naming the file `LICENSE`, and selecting your desired license from the provided list.
-- [X] Update the `<License name>` placeholder in this file to reflect the name of the license you selected above
-- [X] Replace `[INSERT CONTACT METHOD]` in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) with a suitable communication channel
-- [X] Change references to `org_name` to the name of the org your repo belongs to (eg. `wayfair-incubator`)
-  - [X] In [`README.md`](README.md)
-  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- [X] Change references to `repo_name` to the name of your new repo
-  - [X] In [`README.md`](README.md)
-  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- [X] Update the link to the contribution guidelines to point to your project
-  - [X] In [`.github/ISSUE_TEMPLATE/BUG_REPORT.md`](.github/ISSUE_TEMPLATE/BUG_REPORT.md)
-  - [X] In [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
-- [X] Replace the `<project name>` placeholder with the name of your project
-  - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-  - [X] In [`SECURITY.md`](SECURITY.md)
-- [X] Add names and contact information for actual project maintainers to [`MAINTAINERS.md`](MAINTAINERS.md)
-- [X] Delete the content of [`CHANGELOG.md`](CHANGELOG.md). We encourgage you to [keep a changelog](https://keepachangelog.com/en/1.0.0/).
-- [ ] Replace the generic content in this file with the relevant details about your project
-- [ ] Delete this section of the README
-
 ## About The Project
 
-Provide some information about what the project is/does.
+AeroSharp is a wrapper around the .NET Aerospike client. This library provides a
+variety of generic methods for storing and retrieving data on Aerospike while
+handling serialization, client-side compression, policy validation, and other
+features under the hood.
 
-## Getting Started
+## Installation
 
-To get a local copy up and running follow these simple steps.
+Get the latest version with NuGet:
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-
-   ```sh
-   git clone https://github.com/wayfair-incubator/AeroSharp.git
-   ```
-
-2. Install NPM packages
-
-   ```sh
-   npm install
-   ```
+```shell
+// NuGet package manager console
+Install-Package AeroSharp
+```
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In AeroSharp, accessing data stored in Aerospike (e.g. blobs or
+[lists](https://www.aerospike.com/docs/guide/cdt-list.html)) generally involves
+two steps:
 
-_For more examples, please refer to the [Documentation](https://example.com) or the [Wiki](https://github.com/wayfair-incubator/AeroSharp/wiki)_
+1. building a client provider that specifies how connections to Aerospike are established (e.g. cluster connection strings, credentials), and
+2. building a data access object that provides an easy-to-use interface for interacting with the Aerospike database.
+
+In general, you should only need to build one client provider and the underlying
+[Aerospike client](https://www.aerospike.com/docs/client/csharp/usage/connect_sync.html)
+will maintain connections to all nodes in the Aerospike cluster. Once a client
+provider is built, you can then build a variety of data access objects to store
+and retrieve your various data types in Aerospike.
+
+For example, this code builds a client provider that connects to a local
+instance of Aerospike and then writes and reads a blob of a custom data type
+(via KeyValueStore) and appends a few items to a list (via List).
+
+```C#
+var clientProvider = ClientProviderBuilder
+    .Configure()
+    .WithBootstrapServers(new string[] { "localhost" })
+    .WithoutCredentials()
+    .Build(); // Only do this once.
+
+var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithSet("my_set")
+    .UseMessagePackSerializer()
+    .Build<MyDataType>();
+
+await keyValueStore.WriteAsync("record_key", new MyDataType("some data"), CancellationToken.None);
+
+KeyValuePair<string, MyDataType> keyValueResult = await keyValueStore.ReadAsync("record_key", CancellationToken.None);
+// keyValueResult contains [ Key = "record_key", Value = MyDataType("some data") ]
+
+var list = ListBuilder
+    .Configure(clientProvider)
+    .WithSet("my_set")
+    .UseMessagePackSerializer()
+    .WithKey("list_record_key")
+    .Build<MyDataType>();
+
+await list.AppendAsync(new MyDataType("list item 1"), CancellationToken.None);
+await list.AppendAsync(new MyDataType("list item 2"), CancellationToken.None);
+
+IEnumerable<MyDataType> listResult = await list.ReadAllAsync(CancellationToken.None);
+// listResult contains [ MyDataType("list item 1"), MyDataType("list item 2") ]
+```
 
 ## Roadmap
 
@@ -81,11 +84,9 @@ Distributed under the `Apache 2.0` License. See [LICENSE](LICENSE) for more info
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
 Project Link: [https://github.com/wayfair-incubator/AeroSharp](https://github.com/wayfair-incubator/AeroSharp)
 
-## Acknowledgements
+## References
 
-This template was adapted from
-[https://github.com/othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template).
+- [Aerospike](https://www.aerospike.com/docs/)
+- [Aerospike C# Client](https://docs.aerospike.com/docs/client/csharp/index.html)
