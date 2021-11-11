@@ -18,9 +18,9 @@ In trying to keep this template as generic and reusable as possible, there are s
 - [X] Change references to `repo_name` to the name of your new repo
   - [X] In [`README.md`](README.md)
   - [X] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
-- [ ] Update the link to the contribution guidelines to point to your project
-  - [ ] In [`.github/ISSUE_TEMPLATE/BUG_REPORT.md`](.github/ISSUE_TEMPLATE/BUG_REPORT.md)
-  - [ ] In [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
+- [X] Update the link to the contribution guidelines to point to your project
+  - [X] In [`.github/ISSUE_TEMPLATE/BUG_REPORT.md`](.github/ISSUE_TEMPLATE/BUG_REPORT.md)
+  - [X] In [`.github/PULL_REQUEST_TEMPLATE.md`](.github/PULL_REQUEST_TEMPLATE.md)
 - [ ] Replace the `<project name>` placeholder with the name of your project
   - [ ] In [`CONTRIBUTING.md`](CONTRIBUTING.md)
   - [ ] In [`SECURITY.md`](SECURITY.md)
