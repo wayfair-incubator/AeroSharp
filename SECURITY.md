@@ -10,7 +10,7 @@ AeroSharp project.
 ## Reporting a Bug
 
 The AeroSharp team and community take all security bugs in AeroSharp seriously.
-Thank you for improving the security of AeroSharp . We appreciate your efforts
+Thank you for improving the security of AeroSharp. We appreciate your efforts
 and responsible disclosure and will make every effort to acknowledge your
 contributions.
 
