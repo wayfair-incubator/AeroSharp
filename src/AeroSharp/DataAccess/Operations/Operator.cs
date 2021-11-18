@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Internal;
 using AeroSharp.Serialization;
 
@@ -29,11 +27,6 @@ namespace AeroSharp.DataAccess.Operations
         {
             var recordOperator = new RecordOperator(_clientProvider, _dataAccessConfiguration);
             return new OperationBuilder(_serializer, recordOperator, _writeConfiguration, key);
-        }
-
-        public IBatchOperationBuilder Keys(IEnumerable<string> keys)
-        {
-            throw new NotImplementedException();
         }
     }
 }
