@@ -18,6 +18,7 @@
 If you're not familiar with Aerospike, take a look at the [official documentation](https://www.aerospike.com/docs/) before using this library.
 
 In this library, access to data stored in Aerospike (e.g. blobs or [lists](https://www.aerospike.com/docs/guide/cdt-list.html)) generally involves two steps:
+
 1. building a [client provider](#client-provider) that specifies how connections to Aerospike are established (e.g. cluster connection strings, credentials), and
 2. building a [data access object](#data-access-types) that provides an easy-to-use interface for interacting with the Aerospike database.
 
@@ -92,6 +93,7 @@ If you _must_ construct your own [AerospikeClient](https://www.aerospike.com/doc
 The goal of this library is to provide performant access to Aerospike in such a way that makes it hard to corrupt your data or find yourself reading unexpected bytes. This is accomplished by factoring out as many request parameters as possible into one-time configuration of data access objects; and by handling the serialization of your data types under the hood.
 
 We provide built-in serializers:
+
 - [MessagePack](https://github.com/neuecc/MessagePack-CSharp)
 - [ProtoBuf](https://github.com/protobuf-net/protobuf-net)
 
@@ -128,6 +130,7 @@ Based on some benchmarking, we recommend using MessagePack.
 ## Compressors
 
 After serialization, the resulting bytes can be compressed (or otherwise transformed) by supplying an `ICompressor`. We provide built-in compressors:
+
 - [LZ4](https://github.com/MiloszKrajewski/lz4net)
 
 ## Data Context
@@ -162,7 +165,7 @@ Supplying a configuration object is optional--default values will work for devel
 
 ### Configuration overrides
 
-In some cases, certain requests may require a different configuration than what was provided when the data access object was built. In these cases, configurations can be overridden using `.Override()`. 
+In some cases, certain requests may require a different configuration than what was provided when the data access object was built. In these cases, configurations can be overridden using `.Override()`.
 
 _This feature is currently only implemented on the `KeyValueStore` data access type._
 
