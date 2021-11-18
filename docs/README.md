@@ -5,15 +5,15 @@
 - [Serialization](#serialization)
 - [Data Context](#data-context)
 - [Data Access Types](#data-access-types)
-  * [Configuration](#configuration)
-  * [KeyValueStore](#keyvaluestore)
-  * [List](#list)
-  * [Operator](#operator)
-  * [General](#general)
-    + [SetTruncator](#settruncator)
-    + [KeyOperator](#keyoperator)
+  - [Configuration](#configuration)
+  - [KeyValueStore](#keyvaluestore)
+  - [List](#list)
+  - [Operator](#operator)
+  - [General](#general)
+    - [SetTruncator](#settruncator)
+    - [KeyOperator](#keyoperator)
 
-# Getting Started
+## Getting Started
 
 If you're not familiar with Aerospike, take a look at the [official documentation](https://www.aerospike.com/docs/) before using this library.
 
@@ -57,7 +57,7 @@ IEnumerable<MyDataType> listResult = await list.ReadAllAsync(CancellationToken.N
 // listResult contains [ MyDataType("list item 1"), MyDataType("list item 2") ]
 ```
 
-# Client Provider
+## Client Provider
 
 Aerospike provides a [client](https://www.aerospike.com/docs/client/csharp/) that maintains a pool of connections to an Aerospike cluster. The client needs to know the location of at least one node in the cluster and can discover the remaining nodes. The client can also accept username/password credentials as well as other parameters (e.g. connection timeout).
 
@@ -78,25 +78,26 @@ var clientProvider = ClientProviderBuilder
 
 ❗ **In most cases you only need one client provider!** The underlying Aerospike client is thread-safe and will maintain connection threads for your entire parallel/concurrent application. You can store a reference to your client provider in a singleton or register it as such with your DI container, for example.
 
-## Implementing `IClientProvider`
+### Implementing `IClientProvider`
 
-You may need to implement custom connection logic, such as falling back to a separate Aerospike cluster when feature toggle is toggled. You can achieve this by implementing the `IClientProvider` interface and passing your client provider to the data access object builders' `Configure(...)` method. 
+You may need to implement custom connection logic, such as falling back to a separate Aerospike cluster when feature toggle is toggled. You can achieve this by implementing
+the `IClientProvider` interface and passing your client provider to the data access object builders' `Configure(...)` method.
 
 The recommended approach is to use `ClientProviderBuilder` to build the various connections that you will need, and put them in a wrapper that implements `IClientProvider`. Keep in mind that _connections are not established until the first request is made_, so you can safely build client providers in advance without actually connecting to any Aerospike cluster.
 
 If you _must_ construct your own [AerospikeClient](https://www.aerospike.com/docs/client/csharp/) or [AsyncClient](https://www.aerospike.com/docs/client/csharp/usage/async/connect_async.html), keep in mind that the client providers return an instance of `ClientWrapper`. `ClientWrapper` simply accepts an Aerospike client in its constructor and only exposes it to internal classes.
 
-# Serialization
+## Serialization
 
 The goal of this library is to provide performant access to Aerospike in such a way that makes it hard to corrupt your data or find yourself reading unexpected bytes. This is accomplished by factoring out as many request parameters as possible into one-time configuration of data access objects; and by handling the serialization of your data types under the hood.
 
 We provide built-in serializers:
-* [MessagePack](https://github.com/neuecc/MessagePack-CSharp)
-* [ProtoBuf](https://github.com/protobuf-net/protobuf-net)
+- [MessagePack](https://github.com/neuecc/MessagePack-CSharp)
+- [ProtoBuf](https://github.com/protobuf-net/protobuf-net)
 
 Custom serializers can also be provided by implementing `ISerializer`.
 
-## Using built-in serializers
+### Using built-in serializers
 
 In general, to use built-in components call builder methods like `UseMessagePackSerializer()` or `UseProtobufSerializer()`. Both of these built-in libraries feature C# contract definitions via attributes. For example, you can define your serializable data types like this:
 
@@ -127,16 +128,16 @@ Based on some benchmarking, we recommend using MessagePack.
 ## Compressors
 
 After serialization, the resulting bytes can be compressed (or otherwise transformed) by supplying an `ICompressor`. We provide built-in compressors:
-* [LZ4](https://github.com/MiloszKrajewski/lz4net)
+- [LZ4](https://github.com/MiloszKrajewski/lz4net)
 
-# Data Context
+## Data Context
 
 Most data access types require a data context. The data context is simply the namespace and set that the object will access, and is generally configured with `WithDataContext(new DataContext("namespace", "set"))`.
 
 ⚠️ Aerospike sets are created the first time you write to them, so care should be taken before writing new data to production.
-⚠️ There's nothing stopping you from writing to a set that isn't configured with its own credentials. So, be sure you never accidentally write to anyone else's set! 
+⚠️ There's nothing stopping you from writing to a set that isn't configured with its own credentials. So, be sure you never accidentally write to anyone else's set!
 
-# Data Access Types
+## Data Access Types
 
 The goal of this library is to provide performant access to Aerospike in such a way that makes it hard to corrupt your data or find yourself reading unexpected bytes. This is accomplished by factoring out as many request parameters as possible into one-time configuration of data access objects; and by handling the serialization of your data types under the hood. Each data access type is designed to suit a different access pattern.
 
@@ -168,37 +169,39 @@ _This feature is currently only implemented on the `KeyValueStore` data access t
 For example:
 
 ```C#
- var keyValueStore = KeyValueStoreBuilder.Configure(clientProvider)
-     .WithDataContext(new DataContext("my_namespace", "my_set"))
-     .UseMessagePackSerializer()
-     .WithWriteConfiguration(new WriteConfiguration
-     {
-          RecordExistsAction = RecordExistsAction.CreateOnly
-     })
-     .Build<MyType>();
+var keyValueStore = KeyValueStoreBuilder.Configure(clientProvider)
+    .WithDataContext(new DataContext("my_namespace", "my_set"))
+    .UseMessagePackSerializer()
+    .WithWriteConfiguration(new WriteConfiguration
+    {
+        RecordExistsAction = RecordExistsAction.CreateOnly
+    })
+    .Build<MyType>();
 
 // Do things that only operate on non-existent keys
 ...
 
 // Override to operate once on keys that already exist
 await keyValueStore
-     .Override((WriteConfiguration config) => {
-           // `config` object has values from initial configuration--only set parameters that need to change
-           config.RecordExistsAction = RecordExistsAction.UpdateOnly;
-           return config;
-     })
-     .WriteAsync("key", value, token);
+    .Override((WriteConfiguration config) => {
+        // `config` object has values from initial configuration--only set parameters that need to change
+        config.RecordExistsAction = RecordExistsAction.UpdateOnly;
+        return config;
+    })
+    .WriteAsync("key", value, token);
 ```
 
 ## KeyValueStore
 
 `IKeyValueStore<T>` provides a simple interface for writing data as blobs to Aerospike records and reading them back in batches. For example:
+
 ```C#
 await keyValueStore.WriteAsync("record_key_1", myData1, CancellationToken.None);
 await keyValueStore.WriteAsync("record_key_2", myData2, CancellationToken.None);
 var result = await keyValueStore.ReadAsync(new [] { "record_key_1", "record_key_2" }, CancellationToken.None); 
 // result is an array of key-value pairs containing { "record_key_1", myData1 } and { "record_key_2", myData2 }
 ```
+
 This interface comes in two flavors: one more safe and one more flexible.
 
 The safe version is configured with a data type and a bin, and it will only read or write data of that type from the specified bin. In our experience, this is most common usage of key-value storage in Aerospike. The flexible version can read or write data of any type in any bin.
@@ -214,7 +217,7 @@ var keyValueStore = KeyValueStoreBuilder
     .WithDataContext(new DataContext("my_namespace", "my_set"))
     .UseMessagePackSerializer()
     .Build<MyDataType>(); // Access to one bin with a default name
-    
+
 // Write some data
 MyDataType data = ... // get data to write from somewhere
 await keyValueStore.WriteAsync("some_key", data, cancellationToken);
@@ -226,7 +229,7 @@ var readResult = keyValuestore.ReadAsync("some_key", cancellationToken);
 
 The final call to `Build<T>` is overloaded to use a default bin name or a given bin name. This interface currently supports access of up to three bins. For example:
 
-```C#   
+```C#
 // Configure a KeyValueStore to operate on two bins
 var keyValueStore = KeyValueStoreBuilder
     .Configure(clientProvider)
@@ -238,7 +241,7 @@ var keyValueStore = KeyValueStoreBuilder
 MyDataType data = ... // get data to write from somewhere
 OtherType otherData = ... // get some more data
 await keyValueStore.WriteAsync("some_key", data, otherData, cancellationToken);
-  
+
 // Read the data
 var readResult = keyValuestore.ReadAsync("some_key", cancellationToken); 
 // readResult contains a tuple of type (string, MyDataType, OtherType) where the first item is the record key
@@ -248,7 +251,7 @@ var readResult = keyValuestore.ReadAsync("some_key", cancellationToken);
 
 Are you sure you need more than one bin? Bins are not SQL columns. That is, you can't relate records using values in bins. If you are only ever reading and writing one bin per request, you can just as easily write your data into different records. One common approach is to build key prefixes that differentiate between the different data types stored in a set. i.e.,
 
-```
+```text
 my_service.birthday.Will
 my_service.favorite_food.Will
 my_service.favorite_color.Will
@@ -290,17 +293,17 @@ The Read-Modify-Write approach is designed to permit reading a record into memor
 ```C#
 var readModifyWritePolicy = new ReadModifyWritePolicy
 {
-	MaxRetries = 5,
-	WaitTimeInMilliseconds = 10,
-	WithExponentialBackoff = true
+    MaxRetries = 5,
+    WaitTimeInMilliseconds = 10,
+    WithExponentialBackoff = true
 };
 
 var keyValueStore = KeyValueStoreBuilder
-	.Configure(_clientProvider)
-	.WithDataContext(new DataContext("my_namespace", "my_set"))
-	.UseMessagePackSerializer()
-	.WithReadModifyWriteConfiguration(readModifyWritePolicy)
-	.Build<MyType>("some_bin");
+    .Configure(_clientProvider)
+    .WithDataContext(new DataContext("my_namespace", "my_set"))
+    .UseMessagePackSerializer()
+    .WithReadModifyWriteConfiguration(readModifyWritePolicy)
+    .Build<MyType>("some_bin");
 ```
 
 The `KeyValueStore` can then be used to `ReadModifyWriteAsync`. Note that this requires the user to specify both an `addOperation` and `updateOperation`, like so:
@@ -308,25 +311,25 @@ The `KeyValueStore` can then be used to `ReadModifyWriteAsync`. Note that this r
 ```C#
 var addOperation = new Func<MyType>(() =>
 {
-	return new MyType
-	{
-		Text = "Hello!",
-		Value = 2
-	};
+    return new MyType
+    {
+        Text = "Hello!",
+        Value = 2
+    };
 });
 
 var updateOperation = new Func<MyType, MyType>((x) =>
 {
-	x.Value += 2;
-	return x;
+    x.Value += 2;
+    return x;
 });
 
 await keyValueStore.ReadModifyWriteAsync(
-	"some_key", 
-	addOperation, 
-	updateOperation, 
-	timeToLive: TimeSpan.FromHours(5), 
-	CancellationToken.None
+    "some_key", 
+    addOperation, 
+    updateOperation, 
+    timeToLive: TimeSpan.FromHours(5), 
+    CancellationToken.None
 );
 ```
 
@@ -379,12 +382,6 @@ var listOperator = ListBuilder.Configure(clientProvider)
     .UseMessagePackSerializer()
     .Build<TestType>();
 ```
-
-### Map
-
-_This feature is not yet implemented._
-
-In future versions, this library will support access to [Aerospike Maps](https://docs.aerospike.com/docs/guide/cdt-map.html).
 
 ### ReadAll()
 
