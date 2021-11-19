@@ -8,7 +8,7 @@
 
 To run integration tests for the project locally, first start up Aerospike in a local Docker container by running:
 
-```
+```text
 ../scripts/start_aerospike_in_docker.sh
 ```
 
