@@ -3,10 +3,8 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace AeroSharp.DataAccess
 {
-    /// <summary>
     /// /// <summary>
     /// A class for storing and passing the configurable settings for reads.
-    /// </summary>
     /// </summary>
     [ExcludeFromCodeCoverage]
     public class ReadConfiguration

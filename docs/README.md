@@ -414,12 +414,6 @@ var list2Size = await _operator.Key(RecordKey) // The record you're operating on
     .SizeAsync("list_2_bin", cancellationToken); // Return the result of the "size" operation
 ```
 
-### Batch Operations
-
-_This feature is not yet implemented._
-
-Aerospike does not support batching update or write operations on multiple records in the same request. It does, however, support [fetching batches of records](https://docs.aerospike.com/docs/guide/batch.html#known-limitations). The [KeyValueStore](#keyvaluestore) data access object fetches records in batches when reading multiple keys of the same type.
-
 ## Set Scans
 
 Using the `ISetScanner` interface, you're able to scan all records in a specified namespace and set. This means you can iterate through every record, its key (see Caveat below) and value(s).

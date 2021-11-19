@@ -1,5 +1,6 @@
 ﻿using System;
 using AeroSharp.Connection;
+using AeroSharp.DataAccess;
 
 namespace AeroSharp.Tests.Utility
 {
@@ -37,12 +38,12 @@ namespace AeroSharp.Tests.Utility
 
         public const string TestSet = "test_set";
         public const string TestNamespace = "test_namespace";
-        public static DataAccess.DataContext TestDataContext => new(TestNamespace, TestSet);
+        public static DataContext TestDataContext => new(TestNamespace, TestSet);
 
         /// <summary>
-        /// Call this method in the Setup phase of unit tests to clear out test data and get a ClientProvider and DataAccessConfiguration.
+        /// Call this method in the Setup phase of integration tests to clear out test data and get an <see cref="IClientProvider"/>.
         /// </summary>
-        /// <returns>Tuple containing a client provider and data access configuration.</returns>
+        /// <returns>A preconfigured <see cref="IClientProvider"/> for use with integration tests</returns>
         public static IClientProvider PrepareTest()
         {
             var clientProvider = ClientProviderBuilder
@@ -56,7 +57,7 @@ namespace AeroSharp.Tests.Utility
 
             SetTruncatorBuilder
                 .Configure(clientProvider)
-                .WithDataContext(new DataAccess.DataContext(TestNamespace, TestSet))
+                .WithDataContext(TestDataContext)
                 .Build()
                 .TruncateSet();
 

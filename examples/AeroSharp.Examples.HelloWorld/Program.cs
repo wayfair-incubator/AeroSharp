@@ -8,7 +8,7 @@ namespace AeroSharp.Examples.HelloWorld
     /// <summary>
     /// The simplest example of connecting to a local instance of Aerospike and writing/reading some data.
     /// 
-    /// Before running this, run `start_aerospike_in_docker.sh` to start a preconfigured local Aerospike instance.
+    /// Before running this, run `../scripts/start_aerospike_in_docker.sh` to start a preconfigured local Aerospike instance.
     /// </summary>
     public class Program
     {
