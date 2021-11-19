@@ -336,7 +336,7 @@ await keyValueStore.ReadModifyWriteAsync(
 );
 ```
 
-This mimics the AddOrUpdate method on the ConcurrentDictionary object in C#. In this way, the user does not have to care whether the record already exists or not: the library will handle creating or updating the record appropriately.
+This mimics the [AddOrUpdate method on the ConcurrentDictionary](https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2.addorupdate?view=net-6.0#System_Collections_Concurrent_ConcurrentDictionary_2_AddOrUpdate__0__1_System_Func__0__1__1__) object in C#. In this way, the user does not have to care whether the record already exists or not: the library will handle creating or updating the record appropriately.
 
 ### Plugins
 
