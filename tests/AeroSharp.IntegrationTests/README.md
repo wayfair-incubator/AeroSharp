@@ -18,7 +18,7 @@ Tests can be run from the project root with `dotnet test` or via your .NET IDE o
 
 ## Adding New Tests
 
-For convenience, there is a [TestPreparer](../tests/AeroSharp.Tests/Utility/TestPreparer.cs) utility available for use, which provides a `PrepareTest()` method that:
+For convenience, there is a [TestPreparer](../AeroSharp.Tests/Utility/TestPreparer.cs) utility available for use, which provides a `PrepareTest()` method that:
 
 1. Creates an `IClientProvider` that is preconfigured to run against the local Aerospike instance
 2. Clears out any existing test data in within the `DataContext` that it provides
