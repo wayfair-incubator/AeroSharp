@@ -62,7 +62,7 @@ IEnumerable<MyDataType> listResult = await list.ReadAllAsync(CancellationToken.N
 
 Aerospike provides a [client](https://www.aerospike.com/docs/client/csharp/) that maintains a pool of connections to an Aerospike cluster. The client needs to know the location of at least one node in the cluster and can discover the remaining nodes. The client can also accept username/password credentials as well as other parameters (e.g. connection timeout).
 
-This library uses a [client provider](./src/AeroSharp/Connection/IClientProvider.cs) to give the data access objects access to an Aerospike client. Use the `ClientProviderBuilder` to configure and build a client provider, e.g.:
+This library uses a [client provider](../src/AeroSharp/Connection/IClientProvider.cs) to give the data access objects access to an Aerospike client. Use the `ClientProviderBuilder` to configure and build a client provider, e.g.:
 
 ```C#
 var clientProvider = ClientProviderBuilder 
