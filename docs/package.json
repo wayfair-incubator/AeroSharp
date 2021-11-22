@@ -1,0 +1,10 @@
+{
+    "name": "aerosharp-docs",
+    "description": "Documentation generator for the AeroSharp C# package",
+    "version": "1.0.0",
+    "author": "",
+    "dependencies": {
+        "js-yaml": "4.1.0"
+    },
+    "license": "MIT"
+}

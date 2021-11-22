@@ -2,6 +2,7 @@
 using AeroSharp.Connection;
 using AeroSharp.DataAccess.Configuration;
 using AeroSharp.DataAccess.Internal;
+using AeroSharp.DataAccess.Operations;
 using AeroSharp.DataAccess.Validation;
 using AeroSharp.Serialization;
 using FluentValidation;

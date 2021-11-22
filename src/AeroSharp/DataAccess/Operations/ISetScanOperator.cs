@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Aerospike.Client;
 
-namespace AeroSharp.DataAccess.Internal
+namespace AeroSharp.DataAccess.Operations
 {
     /// <summary>
     /// Defines the primary interface needed to perform set scan operations.
