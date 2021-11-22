@@ -2,7 +2,7 @@ name: Build and Deploy Documentation
 on:
   push:
     branches:
-      - wbaldoumas_automated_documentation_generation
+      - main
 
 jobs:
   deploy-docs:
