@@ -16,11 +16,13 @@ jobs:
         with:
           args: metadata docs/docfx.json
 
-      - name: Transform ToC
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: cd docs && yarn && sudo node toc.js
+      
+      - name: Transform ToC
+        run: cd docs && yarn && sudo node toc.js
 
       - name: Build Docs
         uses: nikeee/docfx-action@v1.0.0
