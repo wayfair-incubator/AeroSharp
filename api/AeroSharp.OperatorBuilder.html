@@ -1,0 +1,573 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OperatorBuilder
+   | AeroSharp </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OperatorBuilder
+   | AeroSharp ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AeroSharp.OperatorBuilder">
+  
+  
+  <h1 id="AeroSharp_OperatorBuilder" data-uid="AeroSharp.OperatorBuilder" class="text-break">Class OperatorBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Configures and builds an <a class="xref" href="AeroSharp.DataAccess.Operations.IOperator.html">IOperator</a> for executing multi-operation transactions on a single record.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">OperatorBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>&gt;&gt;</div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>&gt;</div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.html">ICompressorBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AeroSharp.html">AeroSharp</a></h6>
+  <h6><strong>Assembly</strong>: AeroSharp.dll</h6>
+  <h5 id="AeroSharp_OperatorBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class OperatorBuilder : object, IDataContextBuilder&lt;ISerializerBuilder&lt;IOperatorBuilder&gt;&gt;, ISerializerBuilder&lt;IOperatorBuilder&gt;, IOperatorBuilder, ICompressorBuilder&lt;IOperatorBuilder&gt;</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_Build.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L41">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_Build_" data-uid="AeroSharp.OperatorBuilder.Build*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_Build" data-uid="AeroSharp.OperatorBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="AeroSharp.DataAccess.Operations.IOperator.html">IOperator</a> instance with the previously set properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperator Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperator.html">IOperator</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.Operations.IOperator.html">IOperator</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_Configure_AeroSharp_Connection_IClientProvider_.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.Configure(AeroSharp.Connection.IClientProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L35">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_Configure_" data-uid="AeroSharp.OperatorBuilder.Configure*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_Configure_AeroSharp_Connection_IClientProvider_" data-uid="AeroSharp.OperatorBuilder.Configure(AeroSharp.Connection.IClientProvider)">Configure(IClientProvider)</h4>
+  <div class="markdown level1 summary"><p>Configure a new <a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDataContextBuilder&lt;ISerializerBuilder&lt;IOperatorBuilder&gt;&gt; Configure(IClientProvider clientProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Connection.IClientProvider.html">IClientProvider</a></td>
+        <td><span class="parametername">clientProvider</span></td>
+        <td><p>A <a class="xref" href="AeroSharp.Connection.IClientProvider.html">IClientProvider</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>&gt;&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_UseLZ4.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.UseLZ4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L121">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_UseLZ4_" data-uid="AeroSharp.OperatorBuilder.UseLZ4*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_UseLZ4" data-uid="AeroSharp.OperatorBuilder.UseLZ4">UseLZ4()</h4>
+  <div class="markdown level1 summary"><p>Uses the default <span class="xref">AeroSharp.Compression.LZ4Compressor</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder UseLZ4()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_UseMessagePackSerializer.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.UseMessagePackSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L100">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_UseMessagePackSerializer_" data-uid="AeroSharp.OperatorBuilder.UseMessagePackSerializer*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_UseMessagePackSerializer" data-uid="AeroSharp.OperatorBuilder.UseMessagePackSerializer">UseMessagePackSerializer()</h4>
+  <div class="markdown level1 summary"><p>Use the built-in <span class="xref">AeroSharp.Serialization.MessagePackSerializer</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder UseMessagePackSerializer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_UseMessagePackSerializerWithLz4Compression.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.UseMessagePackSerializerWithLz4Compression%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L107">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_UseMessagePackSerializerWithLz4Compression_" data-uid="AeroSharp.OperatorBuilder.UseMessagePackSerializerWithLz4Compression*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_UseMessagePackSerializerWithLz4Compression" data-uid="AeroSharp.OperatorBuilder.UseMessagePackSerializerWithLz4Compression">UseMessagePackSerializerWithLz4Compression()</h4>
+  <div class="markdown level1 summary"><p>Use the built-in <span class="xref">AeroSharp.Serialization.MessagePackSerializerWithCompression</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder UseMessagePackSerializerWithLz4Compression()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_UseProtobufSerializer.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.UseProtobufSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L114">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_UseProtobufSerializer_" data-uid="AeroSharp.OperatorBuilder.UseProtobufSerializer*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_UseProtobufSerializer" data-uid="AeroSharp.OperatorBuilder.UseProtobufSerializer">UseProtobufSerializer()</h4>
+  <div class="markdown level1 summary"><p>Use the default <span class="xref">AeroSharp.Serialization.ProtobufSerializer</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder UseProtobufSerializer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_WithCompressor_AeroSharp_Compression_ICompressor_.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.WithCompressor(AeroSharp.Compression.ICompressor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L128">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_WithCompressor_" data-uid="AeroSharp.OperatorBuilder.WithCompressor*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_WithCompressor_AeroSharp_Compression_ICompressor_" data-uid="AeroSharp.OperatorBuilder.WithCompressor(AeroSharp.Compression.ICompressor)">WithCompressor(ICompressor)</h4>
+  <div class="markdown level1 summary"><p>Use a provided instance of an <a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder WithCompressor(ICompressor compressor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a></td>
+        <td><span class="parametername">compressor</span></td>
+        <td><p>The <a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_WithDataContext_AeroSharp_DataAccess_DataContext_.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L79">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_WithDataContext_" data-uid="AeroSharp.OperatorBuilder.WithDataContext*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_WithDataContext_AeroSharp_DataAccess_DataContext_" data-uid="AeroSharp.OperatorBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)">WithDataContext(DataContext)</h4>
+  <div class="markdown level1 summary"><p>Use the provided <a class="xref" href="AeroSharp.DataAccess.DataContext.html">DataContext</a>(i.e. namespace and set).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISerializerBuilder&lt;IOperatorBuilder&gt; WithDataContext(DataContext dataAccessContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.DataContext.html">DataContext</a></td>
+        <td><span class="parametername">dataAccessContext</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>&gt;</td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_WithSerializer_AeroSharp_Serialization_ISerializer_.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L93">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_WithSerializer_" data-uid="AeroSharp.OperatorBuilder.WithSerializer*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_WithSerializer_AeroSharp_Serialization_ISerializer_" data-uid="AeroSharp.OperatorBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)">WithSerializer(ISerializer)</h4>
+  <div class="markdown level1 summary"><p>Use a provided instance of an <a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder WithSerializer(ISerializer serializer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a></td>
+        <td><span class="parametername">serializer</span></td>
+        <td><p>The <a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L86">View Source</a>
+  </span>
+  <a id="AeroSharp_OperatorBuilder_WithWriteConfiguration_" data-uid="AeroSharp.OperatorBuilder.WithWriteConfiguration*"></a>
+  <h4 id="AeroSharp_OperatorBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_" data-uid="AeroSharp.OperatorBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)">WithWriteConfiguration(WriteConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Optional: Provide a <a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a> with different settings than the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IOperatorBuilder WithWriteConfiguration(WriteConfiguration writeConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a></td>
+        <td><span class="parametername">writeConfiguration</span></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Operations.IOperatorBuilder.html">IOperatorBuilder</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.html">ICompressorBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_OperatorBuilder.md&amp;value=---%0Auid%3A%20AeroSharp.OperatorBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/OperatorBuilder.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

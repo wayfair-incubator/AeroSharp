@@ -1,0 +1,1112 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class KeyValueStoreBuilder
+   | AeroSharp </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class KeyValueStoreBuilder
+   | AeroSharp ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AeroSharp.KeyValueStoreBuilder">
+  
+  
+  <h1 id="AeroSharp_KeyValueStoreBuilder" data-uid="AeroSharp.KeyValueStoreBuilder" class="text-break">Class KeyValueStoreBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>A class for building a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.html">IKeyValueStore</a> for interacting with record bins.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">KeyValueStoreBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.html">ICompressorBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>&gt;</div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>&gt;&gt;</div>
+    <div><a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AeroSharp.html">AeroSharp</a></h6>
+  <h6><strong>Assembly</strong>: AeroSharp.dll</h6>
+  <h5 id="AeroSharp_KeyValueStoreBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class KeyValueStoreBuilder : object, IKeyValueStoreBuilder, ICompressorBuilder&lt;IKeyValueStoreBuilder&gt;, IDataContextBuilder&lt;ISerializerBuilder&lt;IKeyValueStoreBuilder&gt;&gt;, ISerializerBuilder&lt;IKeyValueStoreBuilder&gt;</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L107">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build" data-uid="AeroSharp.KeyValueStoreBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.html">IKeyValueStore</a> to read or write any serializable data type in any bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.html">IKeyValueStore</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.html">IKeyValueStore</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__1.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L59">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__1" data-uid="AeroSharp.KeyValueStoreBuilder.Build``1">Build&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a> to read or write one data type in a single bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T&gt; Build&lt;T&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore</a>&lt;T&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The data type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__1_System_String_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L66">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__1_System_String_" data-uid="AeroSharp.KeyValueStoreBuilder.Build``1(System.String)">Build&lt;T&gt;(String)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a> to read or write one data type in a single bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T&gt; Build&lt;T&gt;(string bin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to operate on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore</a>&lt;T&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html">IKeyValueStore&lt;T&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The data type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__2.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L75">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__2" data-uid="AeroSharp.KeyValueStoreBuilder.Build``2">Build&lt;T1, T2&gt;()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore&lt;T1, T2&gt;</a> to read or write two types in two bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T1, T2&gt; Build&lt;T1, T2&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore</a>&lt;T1, T2&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore&lt;T1, T2&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The data type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The data type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__2_System_String_System_String_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%602(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L82">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__2_System_String_System_String_" data-uid="AeroSharp.KeyValueStoreBuilder.Build``2(System.String,System.String)">Build&lt;T1, T2&gt;(String, String)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore&lt;T1, T2&gt;</a> to read or write two types in two bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T1, T2&gt; Build&lt;T1, T2&gt;(string bin1, string bin2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to operate on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to operate on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore</a>&lt;T1, T2&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html">IKeyValueStore&lt;T1, T2&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The data type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The data type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__3.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L91">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__3" data-uid="AeroSharp.KeyValueStoreBuilder.Build``3">Build&lt;T1, T2, T3&gt;()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore&lt;T1, T2, T3&gt;</a> to read or write three types in three bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T1, T2, T3&gt; Build&lt;T1, T2, T3&gt;()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore</a>&lt;T1, T2, T3&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore&lt;T1, T2, T3&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The data type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The data type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The data type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Build__3_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Build%60%603(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L98">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Build_" data-uid="AeroSharp.KeyValueStoreBuilder.Build*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Build__3_System_String_System_String_System_String_" data-uid="AeroSharp.KeyValueStoreBuilder.Build``3(System.String,System.String,System.String)">Build&lt;T1, T2, T3&gt;(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore&lt;T1, T2, T3&gt;</a> to read or write three types in three bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStore&lt;T1, T2, T3&gt; Build&lt;T1, T2, T3&gt;(string bin1, string bin2, string bin3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to operate on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to operate on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin3</span></td>
+        <td><p>The name of the third bin to operate on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore</a>&lt;T1, T2, T3&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html">IKeyValueStore&lt;T1, T2, T3&gt;</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>The data type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>The data type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>The data type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_Configure_AeroSharp_Connection_IClientProvider_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.Configure(AeroSharp.Connection.IClientProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L53">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_Configure_" data-uid="AeroSharp.KeyValueStoreBuilder.Configure*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_Configure_AeroSharp_Connection_IClientProvider_" data-uid="AeroSharp.KeyValueStoreBuilder.Configure(AeroSharp.Connection.IClientProvider)">Configure(IClientProvider)</h4>
+  <div class="markdown level1 summary"><p>Configure a new <span class="xref">AeroSharp.DataAccess.KeyValueAccess.KeyValueStore</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDataContextBuilder&lt;ISerializerBuilder&lt;IKeyValueStoreBuilder&gt;&gt; Configure(IClientProvider clientProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Connection.IClientProvider.html">IClientProvider</a></td>
+        <td><span class="parametername">clientProvider</span></td>
+        <td><p>A client provider.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>&gt;&gt;</td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_UseLZ4.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.UseLZ4%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L184">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_UseLZ4_" data-uid="AeroSharp.KeyValueStoreBuilder.UseLZ4*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_UseLZ4" data-uid="AeroSharp.KeyValueStoreBuilder.UseLZ4">UseLZ4()</h4>
+  <div class="markdown level1 summary"><p>Uses the default <span class="xref">AeroSharp.Compression.LZ4Compressor</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder UseLZ4()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializer.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L170">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializer_" data-uid="AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializer*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializer" data-uid="AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializer">UseMessagePackSerializer()</h4>
+  <div class="markdown level1 summary"><p>Use the built-in <span class="xref">AeroSharp.Serialization.MessagePackSerializer</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder UseMessagePackSerializer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializerWithLz4Compression.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializerWithLz4Compression%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L177">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializerWithLz4Compression_" data-uid="AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializerWithLz4Compression*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_UseMessagePackSerializerWithLz4Compression" data-uid="AeroSharp.KeyValueStoreBuilder.UseMessagePackSerializerWithLz4Compression">UseMessagePackSerializerWithLz4Compression()</h4>
+  <div class="markdown level1 summary"><p>Use the built-in <span class="xref">AeroSharp.Serialization.MessagePackSerializerWithCompression</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder UseMessagePackSerializerWithLz4Compression()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_UseProtobufSerializer.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.UseProtobufSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L156">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_UseProtobufSerializer_" data-uid="AeroSharp.KeyValueStoreBuilder.UseProtobufSerializer*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_UseProtobufSerializer" data-uid="AeroSharp.KeyValueStoreBuilder.UseProtobufSerializer">UseProtobufSerializer()</h4>
+  <div class="markdown level1 summary"><p>Use the default <span class="xref">AeroSharp.Serialization.ProtobufSerializer</span>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder UseProtobufSerializer()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithCompressor_AeroSharp_Compression_ICompressor_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithCompressor(AeroSharp.Compression.ICompressor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L191">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithCompressor_" data-uid="AeroSharp.KeyValueStoreBuilder.WithCompressor*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithCompressor_AeroSharp_Compression_ICompressor_" data-uid="AeroSharp.KeyValueStoreBuilder.WithCompressor(AeroSharp.Compression.ICompressor)">WithCompressor(ICompressor)</h4>
+  <div class="markdown level1 summary"><p>Use a provided instance of an <a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithCompressor(ICompressor compressor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a></td>
+        <td><span class="parametername">compressor</span></td>
+        <td><p>The <a class="xref" href="AeroSharp.Compression.ICompressor.html">ICompressor</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithDataContext_AeroSharp_DataAccess_DataContext_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L149">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithDataContext_" data-uid="AeroSharp.KeyValueStoreBuilder.WithDataContext*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithDataContext_AeroSharp_DataAccess_DataContext_" data-uid="AeroSharp.KeyValueStoreBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)">WithDataContext(DataContext)</h4>
+  <div class="markdown level1 summary"><p>Use the provided <a class="xref" href="AeroSharp.DataAccess.DataContext.html">DataContext</a>(i.e. namespace and set).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ISerializerBuilder&lt;IKeyValueStoreBuilder&gt; WithDataContext(DataContext context)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.DataContext.html">DataContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder</a>&lt;<a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>&gt;</td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithPlugin_AeroSharp_Plugins_IKeyValueStorePlugin_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithPlugin(AeroSharp.Plugins.IKeyValueStorePlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L198">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithPlugin_" data-uid="AeroSharp.KeyValueStoreBuilder.WithPlugin*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithPlugin_AeroSharp_Plugins_IKeyValueStorePlugin_" data-uid="AeroSharp.KeyValueStoreBuilder.WithPlugin(AeroSharp.Plugins.IKeyValueStorePlugin)">WithPlugin(IKeyValueStorePlugin)</h4>
+  <div class="markdown level1 summary"><p>Optional: Provide <a class="xref" href="AeroSharp.Plugins.IKeyValueStorePlugin.html">IKeyValueStorePlugin</a> for event callbacks on reads and writes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithPlugin(IKeyValueStorePlugin keyValueStorePlugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Plugins.IKeyValueStorePlugin.html">IKeyValueStorePlugin</a></td>
+        <td><span class="parametername">keyValueStorePlugin</span></td>
+        <td><p>An implementation of <a class="xref" href="AeroSharp.Plugins.IKeyValueStorePlugin.html">IKeyValueStorePlugin</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithReadConfiguration_AeroSharp_DataAccess_ReadConfiguration_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithReadConfiguration(AeroSharp.DataAccess.ReadConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L135">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithReadConfiguration_" data-uid="AeroSharp.KeyValueStoreBuilder.WithReadConfiguration*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithReadConfiguration_AeroSharp_DataAccess_ReadConfiguration_" data-uid="AeroSharp.KeyValueStoreBuilder.WithReadConfiguration(AeroSharp.DataAccess.ReadConfiguration)">WithReadConfiguration(ReadConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Optional: Provide a <a class="xref" href="AeroSharp.DataAccess.ReadConfiguration.html">ReadConfiguration</a> with different settings than the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithReadConfiguration(ReadConfiguration readConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.ReadConfiguration.html">ReadConfiguration</a></td>
+        <td><span class="parametername">readConfiguration</span></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.ReadConfiguration.html">ReadConfiguration</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithReadModifyWriteConfiguration_AeroSharp_Utilities_ReadModifyWritePolicy_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithReadModifyWriteConfiguration(AeroSharp.Utilities.ReadModifyWritePolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L205">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithReadModifyWriteConfiguration_" data-uid="AeroSharp.KeyValueStoreBuilder.WithReadModifyWriteConfiguration*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithReadModifyWriteConfiguration_AeroSharp_Utilities_ReadModifyWritePolicy_" data-uid="AeroSharp.KeyValueStoreBuilder.WithReadModifyWriteConfiguration(AeroSharp.Utilities.ReadModifyWritePolicy)">WithReadModifyWriteConfiguration(ReadModifyWritePolicy)</h4>
+  <div class="markdown level1 summary"><p>Optional: Provide <a class="xref" href="AeroSharp.Utilities.ReadModifyWritePolicy.html">ReadModifyWritePolicy</a> for read modify write pattern implementation on writes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithReadModifyWriteConfiguration(ReadModifyWritePolicy readModifyWritePolicy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Utilities.ReadModifyWritePolicy.html">ReadModifyWritePolicy</a></td>
+        <td><span class="parametername">readModifyWritePolicy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithSerializer_AeroSharp_Serialization_ISerializer_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L163">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithSerializer_" data-uid="AeroSharp.KeyValueStoreBuilder.WithSerializer*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithSerializer_AeroSharp_Serialization_ISerializer_" data-uid="AeroSharp.KeyValueStoreBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)">WithSerializer(ISerializer)</h4>
+  <div class="markdown level1 summary"><p>Use a provided instance of an <a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithSerializer(ISerializer serializer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a></td>
+        <td><span class="parametername">serializer</span></td>
+        <td><p>The <a class="xref" href="AeroSharp.Serialization.ISerializer.html">ISerializer</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>An instance of the next builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L142">View Source</a>
+  </span>
+  <a id="AeroSharp_KeyValueStoreBuilder_WithWriteConfiguration_" data-uid="AeroSharp.KeyValueStoreBuilder.WithWriteConfiguration*"></a>
+  <h4 id="AeroSharp_KeyValueStoreBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_" data-uid="AeroSharp.KeyValueStoreBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)">WithWriteConfiguration(WriteConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Optional: Provide a <a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a> with different settings than the default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IKeyValueStoreBuilder WithWriteConfiguration(WriteConfiguration writeConfiguration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a></td>
+        <td><span class="parametername">writeConfiguration</span></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.WriteConfiguration.html">WriteConfiguration</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a></td>
+        <td><p>A <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html">IKeyValueStoreBuilder</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.html">ICompressorBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html">IDataContextBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html">ISerializerBuilder&lt;TNextBuilder&gt;</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_KeyValueStoreBuilder.md&amp;value=---%0Auid%3A%20AeroSharp.KeyValueStoreBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/KeyValueStoreBuilder.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

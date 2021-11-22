@@ -1,0 +1,1256 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.ClientProviderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.ClientProviderBuilder.html",
+          "hash": "7uXZ0QoXaSVlPvF5bvvyKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Compression.ICompressor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Compression.ICompressor.html",
+          "hash": "kcQ5MHhC6yfNmb8sAu+Omw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Compression.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Compression.html",
+          "hash": "v/i0Bk4kvz9TCQCygJCAzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.ClientWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.ClientWrapper.html",
+          "hash": "9GjhjDd4wb1gz2STSMI1Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.ConnectionConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.ConnectionConfiguration.html",
+          "hash": "lVW5+S0v/o/vR/uVZ/c5Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.ConnectionContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.ConnectionContext.html",
+          "hash": "lW0BD6U+K0FZPlNq9wMYgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.Credentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.Credentials.html",
+          "hash": "ADmbR+G+vvogG0UAEPkn0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.IClientProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.IClientProvider.html",
+          "hash": "g/mJTBHolVXOPtULKW/+3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.IConnectionBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.IConnectionBuilder.html",
+          "hash": "UjIJaDBpsEGynnuwnisg1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.IConnectionBuilderNeedingContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.IConnectionBuilderNeedingContext.html",
+          "hash": "7T4FiI7SzCmyHFkR5/nfGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.IConnectionBuilderNeedingCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.IConnectionBuilderNeedingCredentials.html",
+          "hash": "EPUhAy5c8QjXIqO1oBJzzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Connection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Connection.html",
+          "hash": "fKz3qFWC+zbtXGP35vGahw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Configuration.ICompressorBuilder-1.html",
+          "hash": "3fihEY/0PT/fmDOs00p6hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Configuration.IDataContextBuilder-1.html",
+          "hash": "WeTtcIZkoKJD+OE8ctGDmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Configuration.IOverridable-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Configuration.IOverridable-2.html",
+          "hash": "5O2qvK7rFB2S7XCn+lm+VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Configuration.ISerializerBuilder-1.html",
+          "hash": "5e6928UkUH+IGsclnRnC8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Configuration.html",
+          "hash": "l7dNOGBNOllw8b2ya/szYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.DataContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.DataContext.html",
+          "hash": "y4Mrjt+6ZZrl+BgdMYZ2kQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.BinTypeMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.BinTypeMismatchException.html",
+          "hash": "sdcFb2QFZa0Z/oHLDolxSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.ConfigurationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.ConfigurationException.html",
+          "hash": "0mqgkCw5V0pmwaqNFba/ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.DeserializationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.DeserializationException.html",
+          "hash": "p7b8hc7IHycIGZj+/DXJfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.IndexedOperationFailedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.IndexedOperationFailedException.html",
+          "hash": "m8C9NannfgLGQ//A21Noow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.KeyAlreadyExistsException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.KeyAlreadyExistsException.html",
+          "hash": "E91gE5aWvN7daD+RGO7ClQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.OperationFailedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.OperationFailedException.html",
+          "hash": "ncZBwK3+0Nke4v8HZTeXKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.RecordNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.RecordNotFoundException.html",
+          "hash": "W3nwBoRu/HeRqkMIHX9H1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.UnableToConnectException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.UnableToConnectException.html",
+          "hash": "QoSU4lb5iNQdt1+7MdMg2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.UnexpectedDataFormatException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.UnexpectedDataFormatException.html",
+          "hash": "NPu877fI+TqrRfwPYRGQAQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Exceptions.html",
+          "hash": "rRqditTSm2yMYO+ENU9iMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.IKeyOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.IKeyOperator.html",
+          "hash": "BYmk3bCc+WNucjEZGIYIOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.IKeyOperatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.IKeyOperatorBuilder.html",
+          "hash": "aTMwvzRygblyqaEfvNOOxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetScanner-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetScanner-1.html",
+          "hash": "riTCqwRCr4XKT26Cor3tMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetScanner-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetScanner-2.html",
+          "hash": "XEj2chAR1OBvpfwwHf1apQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetScanner-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetScanner-3.html",
+          "hash": "dIg3Spq6EcVS1D2YQJ7T5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetScanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetScanner.html",
+          "hash": "NPAs1w3VeJuuBVcu2W0Gug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetScannerBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetScannerBuilder.html",
+          "hash": "8mjQEApQFd5yqbuzqo7cqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetTruncator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetTruncator.html",
+          "hash": "6DEZFIV+jCcJaI1+HvNYtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ISetTruncatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ISetTruncatorBuilder.html",
+          "hash": "HIn2zrFJYOfMsnzCrjL6nQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.KeyExistence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.KeyExistence.html",
+          "hash": "88QHaqTWU88EloDRYYyH8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.ScanContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.ScanContext.html",
+          "hash": "xN8gUObv+dLX7ZyrTleQcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.SetScannerBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.SetScannerBuilder.html",
+          "hash": "6E14d9ZCrOb9PiyYP0cpbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.General.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.General.html",
+          "hash": "15cDB1A5qcmsQe64Uo/fcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.InfoConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.InfoConfiguration.html",
+          "hash": "lD+pHPw4m/ejt0r95x5DOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-1.html",
+          "hash": "iB8zEyl1VQQYakQqDEQpjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-2.html",
+          "hash": "C5zHP/9rN6Vk2x2D0hPzuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore-3.html",
+          "hash": "i/NZzWazOrbSn3p8TEyHxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.html",
+          "hash": "+XOScOL1xAh8a7IYqIhCAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.IKeyValueStoreBuilder.html",
+          "hash": "uSNQhz5t+3hm7X7HjKn8KA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-1.html",
+          "hash": "d40Fjc90IVadEYBJ5ZEebg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-2.html",
+          "hash": "WtCAV8ChN8/pJ7K0YYUffA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStore-3.html",
+          "hash": "7NXJb3DA+INwLXfrHeb79g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStoreContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.KeyValueStoreContext.html",
+          "hash": "WiOxshWCfGIV1hsSOJIGoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.KeyValueAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.KeyValueAccess.html",
+          "hash": "5xpExc4asZSDPJb2OUtBrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListAccess.IList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListAccess.IList-1.html",
+          "hash": "9s+pG37WZ8iM1ZOgOcG9rQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListAccess.IListBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListAccess.IListBuilder.html",
+          "hash": "l92lb2VtM2CZlF/csnTeSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListAccess.IListOperator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListAccess.IListOperator-1.html",
+          "hash": "xwI8abqPQCnY9LNX0jE6Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListAccess.ListContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListAccess.ListContext.html",
+          "hash": "iLbYJETpfKkuaYFcJSgKig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListAccess.html",
+          "hash": "L1Bbhh3DxSiwtsAEycvTgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ListConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ListConfiguration.html",
+          "hash": "eke6P0J7K6jtlUMeawokJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.IBlobOperationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.IBlobOperationBuilder.html",
+          "hash": "4iPORsInNUedpEI8vZNc1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.IListOperationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.IListOperationBuilder.html",
+          "hash": "1U4MRlEshmEOnYAK8sw9ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.IOperationBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.IOperationBuilder.html",
+          "hash": "N2DgUpe5jwk7pSSxMK3WnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.IOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.IOperator.html",
+          "hash": "3N5nD02u9Ie9aJGsPAuntQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.IOperatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.IOperatorBuilder.html",
+          "hash": "Av9fJBp0ewNNshCQSBTAtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.ISetScanOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.ISetScanOperator.html",
+          "hash": "CX0jljrRu0kDt39XN9y/uA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Operations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Operations.html",
+          "hash": "ARE3FY2nzzXv2u+X+3qi+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Policies.ListConfigurationToListPolicyMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Policies.ListConfigurationToListPolicyMapper.html",
+          "hash": "vtMhCsP+kIRHnuSwWDv0rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Policies.ReadConfigurationToBatchPolicyMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Policies.ReadConfigurationToBatchPolicyMapper.html",
+          "hash": "Vj/saYTk7v6X0wKbdO07xA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Policies.ScanConfigurationToScanPolicyMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Policies.ScanConfigurationToScanPolicyMapper.html",
+          "hash": "xv7+GZE8sRQldUv+6o3wCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Policies.WriteConfigurationToWritePolicyMapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Policies.WriteConfigurationToWritePolicyMapper.html",
+          "hash": "+iNZl7eCyxQH94pPg9SQmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.Policies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.Policies.html",
+          "hash": "SNKFyVT3qU3UgnivYPR1qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ReadConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ReadConfiguration.html",
+          "hash": "gImlUzpsjUOCg7Fjihi6Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.ScanConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.ScanConfiguration.html",
+          "hash": "kz2v1vfdc6Vts4MB7fLCRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.TimeToLiveBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.TimeToLiveBehavior.html",
+          "hash": "P+dIcDS9sOtB6WPtiViZTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.WriteConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.WriteConfiguration.html",
+          "hash": "wt7L49Qqw6pFMTCXiky7KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.DataAccess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.DataAccess.html",
+          "hash": "gLx89w17a0DNTfuvNNGqMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Enums.CommitLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Enums.CommitLevel.html",
+          "hash": "4Ki5JhPxloyCW5vNhh0P+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Enums.GenerationPolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Enums.GenerationPolicy.html",
+          "hash": "nYunslLiNZLmBke6lkKSfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Enums.MaxCommandAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Enums.MaxCommandAction.html",
+          "hash": "Oi7/FjmvlxiJCu8nvMW5gQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Enums.RecordExistsAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Enums.RecordExistsAction.html",
+          "hash": "t/9bcotM/kPuewzr1lQCTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Enums.html",
+          "hash": "3TCLpOGgCw06u0aceNMcpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.KeyOperatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.KeyOperatorBuilder.html",
+          "hash": "SIHQUMvQ0DDiYcw7KPqx/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.KeyValueStoreBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.KeyValueStoreBuilder.html",
+          "hash": "e5h0WpV4gOboJmZ5DgkjHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.ListBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.ListBuilder.html",
+          "hash": "PNSvVOa31g/i2fS6h+hrDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.OperatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.OperatorBuilder.html",
+          "hash": "kSd4Hihl3/RmPCAkPIGikA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Plugins.IKeyValueStorePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Plugins.IKeyValueStorePlugin.html",
+          "hash": "JoMkBYbQHW5SX66zuUp2WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Plugins.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Plugins.html",
+          "hash": "Lop2SpJrv/cNrN5MD78MEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Serialization.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Serialization.ISerializer.html",
+          "hash": "/AeENsRLCQkqlOTscK+rJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Serialization.SerializationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Serialization.SerializationException.html",
+          "hash": "vsUq0R9ojBb/qMZBJoIIPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Serialization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Serialization.html",
+          "hash": "Et3PGcL67Wy6AXP8ZaJLLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.SetTruncatorBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.SetTruncatorBuilder.html",
+          "hash": "3bpXCgXjohvCX2xBI3zFqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Utilities.CollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Utilities.CollectionExtensions.html",
+          "hash": "BMshUefFC9j1abIVA/dlqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Utilities.IReadModifyWritePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Utilities.IReadModifyWritePolicy.html",
+          "hash": "Z4njUEiZ8NmdUxycLzC3Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Utilities.ReadModifyWritePolicy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Utilities.ReadModifyWritePolicy.html",
+          "hash": "bMwFwzcABe1/zFh5t7UE6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Utilities.ReadModifyWritePolicyFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Utilities.ReadModifyWritePolicyFactory.html",
+          "hash": "PmudZ5Rh3T7S+c8mBTCZUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.Utilities.html",
+          "hash": "RjmGjPbJYwwxpIORPjj7nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../site/yml/api/AeroSharp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AeroSharp.html",
+          "hash": "bvIdWttkNtZoUoXxkjlttw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../site/yml/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "mfXnSpqe4b2Q16KnO/Y4Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "jeqoE02okEU+UQeMH4HLzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "1sbUJvkVX9fjKRQMuZv25Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 96,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

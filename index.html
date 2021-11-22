@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AeroSharp Docs | AeroSharp </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="AeroSharp Docs | AeroSharp ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="aerosharp-docs">AeroSharp Docs</h1>
+
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#client-provider">Client Provider</a></li>
+<li><a href="#serialization">Serialization</a></li>
+<li><a href="#data-context">Data Context</a></li>
+<li><a href="#data-access-types">Data Access Types</a>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#keyvaluestore">KeyValueStore</a></li>
+<li><a href="#list">List</a></li>
+<li><a href="#operator">Operator</a></li>
+<li><a href="#general">General</a>
+<ul>
+<li><a href="#settruncator">SetTruncator</a></li>
+<li><a href="#keyoperator">KeyOperator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>If you're not familiar with Aerospike, take a look at the <a href="https://www.aerospike.com/docs/">official documentation</a> before using this library.</p>
+<p>In this library, access to data stored in Aerospike (e.g. blobs or <a href="https://www.aerospike.com/docs/guide/cdt-list.html">lists</a>) generally involves two steps:</p>
+<ol>
+<li>building a <a href="#client-provider">client provider</a> that specifies how connections to Aerospike are established (e.g. cluster connection strings, credentials), and</li>
+<li>building a <a href="#data-access-types">data access object</a> that provides an easy-to-use interface for interacting with the Aerospike database.</li>
+</ol>
+<p>In general, you should only need to build one client provider and the underlying <a href="https://www.aerospike.com/docs/client/csharp/usage/connect_sync.html">Aerospike client</a> will maintain connections to all nodes in the Aerospike cluster. Once a client provider is built, you can then build a variety of data access objects to store and retrieve your various data types in Aerospike.</p>
+<p>For example, this code builds a client provider that connects to a local instance of Aerospike and then writes and reads a blob of a custom data type (via <a href="#keyvaluestore">KeyValueStore</a>) and appends a few items to a list (via <a href="#list">List</a>).</p>
+<pre><code class="lang-C#">var clientProvider = ClientProviderBuilder 
+    .Configure()
+    .WithBootstrapServers(new string[] { &quot;localhost&quot; })
+    .WithoutCredentials()
+    .Build(); // Only do this once.
+
+var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build&lt;MyDataType&gt;();
+
+await keyValueStore.WriteAsync(&quot;record_key&quot;, new MyDataType(&quot;some data&quot;), CancellationToken.None);
+
+KeyValuePair&lt;string, MyDataType&gt; keyValueResult = await keyValueStore.ReadAsync(&quot;record_key&quot;, CancellationToken.None);
+// keyValueResult contains [ Key = &quot;record_key&quot;, Value = MyDataType(&quot;some data&quot;) ]
+
+var list = ListBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .WithKey(&quot;list_record_key&quot;)
+    .Build&lt;MyDataType&gt;();
+
+await list.AppendAsync(new MyDataType(&quot;list item 1&quot;), CancellationToken.None);
+await list.AppendAsync(new MyDataType(&quot;list item 2&quot;), CancellationToken.None);
+
+IEnumerable&lt;MyDataType&gt; listResult = await list.ReadAllAsync(CancellationToken.None);
+// listResult contains [ MyDataType(&quot;list item 1&quot;), MyDataType(&quot;list item 2&quot;) ]
+</code></pre>
+<h2 id="client-provider">Client Provider</h2>
+<p>Aerospike provides a <a href="https://www.aerospike.com/docs/client/csharp/">client</a> that maintains a pool of connections to an Aerospike cluster. The client needs to know the location of at least one node in the cluster and can discover the remaining nodes. The client can also accept username/password credentials as well as other parameters (e.g. connection timeout).</p>
+<p>This library uses a <a href="../src/AeroSharp/Connection/IClientProvider.cs">client provider</a> to give the data access objects access to an Aerospike client. Use the <code>ClientProviderBuilder</code> to configure and build a client provider, e.g.:</p>
+<pre><code class="lang-C#">var clientProvider = ClientProviderBuilder 
+    .Configure()
+    .WithBootstrapServers(new string[] { &quot;localhost&quot; })
+    .WithUsernameAndPassword(&quot;my_username&quot;, &quot;my_password&quot;)
+    .WithConnectionConfiguration(new ConnectionConfiguration { ConnectionTimeout = TimeSpan.FromMinutes(1) })
+    .Build();
+</code></pre>
+<p><code>WithBootstrapServers(...)</code> is shorthand for <code>WithConnectionContext(...)</code> that assumes a default port (3000).</p>
+<p><code>WithConnectionConfiguration</code> is optional and exposes <a href="https://www.aerospike.com/docs/guide/policies.html">ClientPolicy</a> parameters, with the exception of the username and password credentials which we require in a separate configuration step.</p>
+<p>❗ <strong>In most cases you only need one client provider!</strong> The underlying Aerospike client is thread-safe and will maintain connection threads for your entire parallel/concurrent application. You can store a reference to your client provider in a singleton or register it as such with your DI container, for example.</p>
+<h3 id="implementing-iclientprovider">Implementing <code>IClientProvider</code></h3>
+<p>You may need to implement custom connection logic, such as falling back to a separate Aerospike cluster when feature toggle is toggled. You can achieve this by implementing
+the <code>IClientProvider</code> interface and passing your client provider to the data access object builders' <code>Configure(...)</code> method.</p>
+<p>The recommended approach is to use <code>ClientProviderBuilder</code> to build the various connections that you will need, and put them in a wrapper that implements <code>IClientProvider</code>. Keep in mind that <em>connections are not established until the first request is made</em>, so you can safely build client providers in advance without actually connecting to any Aerospike cluster.</p>
+<p>If you <em>must</em> construct your own <a href="https://www.aerospike.com/docs/client/csharp/">AerospikeClient</a> or <a href="https://www.aerospike.com/docs/client/csharp/usage/async/connect_async.html">AsyncClient</a>, keep in mind that the client providers return an instance of <code>ClientWrapper</code>. <code>ClientWrapper</code> simply accepts an Aerospike client in its constructor and only exposes it to internal classes.</p>
+<h2 id="serialization">Serialization</h2>
+<p>The goal of this library is to provide performant access to Aerospike in such a way that makes it hard to corrupt your data or find yourself reading unexpected bytes. This is accomplished by factoring out as many request parameters as possible into one-time configuration of data access objects; and by handling the serialization of your data types under the hood.</p>
+<p>We provide built-in serializers:</p>
+<ul>
+<li><a href="https://github.com/neuecc/MessagePack-CSharp">MessagePack</a></li>
+<li><a href="https://github.com/protobuf-net/protobuf-net">ProtoBuf</a></li>
+</ul>
+<p>Custom serializers can also be provided by implementing <code>ISerializer</code>.</p>
+<h3 id="using-built-in-serializers">Using built-in serializers</h3>
+<p>In general, to use built-in components call builder methods like <code>UseMessagePackSerializer()</code> or <code>UseProtobufSerializer()</code>. Both of these built-in libraries feature C# contract definitions via attributes. For example, you can define your serializable data types like this:</p>
+<pre><code class="lang-C#">// MessagePack
+[MessagePackObject]
+class MyType
+{
+    [Key(0)]
+    public int Value { get; set; }
+    [Key(1)]
+    public string Text { get; set; }
+}
+
+// Protobuf
+[ProtoContract]
+class MyType
+{
+    [ProtoMember(1)]
+    public int Value { get; set; }
+    [ProtoMember(2)]
+    public string Text { get; set; }
+}
+</code></pre>
+<p>Based on some benchmarking, we recommend using MessagePack.</p>
+<h2 id="compressors">Compressors</h2>
+<p>After serialization, the resulting bytes can be compressed (or otherwise transformed) by supplying an <code>ICompressor</code>. We provide built-in compressors:</p>
+<ul>
+<li><a href="https://github.com/MiloszKrajewski/lz4net">LZ4</a></li>
+</ul>
+<h2 id="data-context">Data Context</h2>
+<p>Most data access types require a data context. The data context is simply the namespace and set that the object will access, and is generally configured with <code>WithDataContext(new DataContext(&quot;namespace&quot;, &quot;set&quot;))</code>.</p>
+<p>⚠️ Aerospike sets are created the first time you write to them, so care should be taken before writing new data to production.
+⚠️ There's nothing stopping you from writing to a set that isn't configured with its own credentials. So, be sure you never accidentally write to anyone else's set!</p>
+<h2 id="data-access-types">Data Access Types</h2>
+<p>The goal of this library is to provide performant access to Aerospike in such a way that makes it hard to corrupt your data or find yourself reading unexpected bytes. This is accomplished by factoring out as many request parameters as possible into one-time configuration of data access objects; and by handling the serialization of your data types under the hood. Each data access type is designed to suit a different access pattern.</p>
+<h2 id="configuration">Configuration</h2>
+<p>Aerospike offers many different request behaviors that are configurable through <a href="https://www.aerospike.com/docs/guide/policies.html">policies</a>. This library uses configuration objects (e.g. <code>ReadConfiguration</code>, <code>WriteConfiguration</code>) to expose policy parameters. These are generally configured with builder methods, e.g.:</p>
+<pre><code class="lang-C#">var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .WithReadConfiguration(new ReadConfiguration
+    {
+        RetryCount = 2,
+        // ...set other configuration parameters or leave them as their default values
+    })
+    .Build&lt;MyDataType&gt;(); // Access to one bin with a default bin name
+</code></pre>
+<p>Supplying a configuration object is optional--default values will work for development in most cases and can be tuned when your service is nearing production.</p>
+<h3 id="configuration-overrides">Configuration overrides</h3>
+<p>In some cases, certain requests may require a different configuration than what was provided when the data access object was built. In these cases, configurations can be overridden using <code>.Override()</code>.</p>
+<p><em>This feature is currently only implemented on the <code>KeyValueStore</code> data access type.</em></p>
+<p>For example:</p>
+<pre><code class="lang-C#">var keyValueStore = KeyValueStoreBuilder.Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .WithWriteConfiguration(new WriteConfiguration
+    {
+        RecordExistsAction = RecordExistsAction.CreateOnly
+    })
+    .Build&lt;MyType&gt;();
+
+// Do things that only operate on non-existent keys
+...
+
+// Override to operate once on keys that already exist
+await keyValueStore
+    .Override((WriteConfiguration config) =&gt; {
+        // `config` object has values from initial configuration--only set parameters that need to change
+        config.RecordExistsAction = RecordExistsAction.UpdateOnly;
+        return config;
+    })
+    .WriteAsync(&quot;key&quot;, value, token);
+</code></pre>
+<h2 id="keyvaluestore">KeyValueStore</h2>
+<p><code>IKeyValueStore&lt;T&gt;</code> provides a simple interface for writing data as blobs to Aerospike records and reading them back in batches. For example:</p>
+<pre><code class="lang-C#">await keyValueStore.WriteAsync(&quot;record_key_1&quot;, myData1, CancellationToken.None);
+await keyValueStore.WriteAsync(&quot;record_key_2&quot;, myData2, CancellationToken.None);
+var result = await keyValueStore.ReadAsync(new [] { &quot;record_key_1&quot;, &quot;record_key_2&quot; }, CancellationToken.None); 
+// result is an array of key-value pairs containing { &quot;record_key_1&quot;, myData1 } and { &quot;record_key_2&quot;, myData2 }
+</code></pre>
+<p>This interface comes in two flavors: one more safe and one more flexible.</p>
+<p>The safe version is configured with a data type and a bin, and it will only read or write data of that type from the specified bin. In our experience, this is most common usage of key-value storage in Aerospike. The flexible version can read or write data of any type in any bin.</p>
+<h3 id="safe-keyvaluestore-access">&quot;Safe&quot; KeyValueStore access</h3>
+<p>Often, different parts of your code need to only read or write data of a single type (such as a repository class). In these cases, configure a <code>KeyValueStore</code> access object to read or write only that type of data.
+Configure a key-value store data access object with <code>KeyValueStoreBuilder</code>:</p>
+<pre><code class="lang-C#">var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build&lt;MyDataType&gt;(); // Access to one bin with a default name
+
+// Write some data
+MyDataType data = ... // get data to write from somewhere
+await keyValueStore.WriteAsync(&quot;some_key&quot;, data, cancellationToken);
+
+// Read the data
+var readResult = keyValuestore.ReadAsync(&quot;some_key&quot;, cancellationToken);
+// readResult is a key-value pair of type &lt;string, MyDataType&gt;
+</code></pre>
+<p>The final call to <code>Build&lt;T&gt;</code> is overloaded to use a default bin name or a given bin name. This interface currently supports access of up to three bins. For example:</p>
+<pre><code class="lang-C#">// Configure a KeyValueStore to operate on two bins
+var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build&lt;MyDataType, OtherType&gt;();
+
+// Write some data
+MyDataType data = ... // get data to write from somewhere
+OtherType otherData = ... // get some more data
+await keyValueStore.WriteAsync(&quot;some_key&quot;, data, otherData, cancellationToken);
+
+// Read the data
+var readResult = keyValuestore.ReadAsync(&quot;some_key&quot;, cancellationToken); 
+// readResult contains a tuple of type (string, MyDataType, OtherType) where the first item is the record key
+</code></pre>
+<h4 id="a-tangent-on-aerospike-bins">A tangent on Aerospike bins</h4>
+<p>Are you sure you need more than one bin? Bins are not SQL columns. That is, you can't relate records using values in bins. If you are only ever reading and writing one bin per request, you can just as easily write your data into different records. One common approach is to build key prefixes that differentiate between the different data types stored in a set. i.e.,</p>
+<pre><code class="lang-text">my_service.birthday.Will
+my_service.favorite_food.Will
+my_service.favorite_color.Will
+</code></pre>
+<p>In this example, data for Will is stored in three records.</p>
+<p>If you have a complex object with many properties and you only want to read and write it as a whole, just serialize that object into one bin. You can combine different data types by building a wrapper class to contain them both, or use a value tuple (e.g. <code>.Build&lt;(MyDataType, MyOtherDataType)&gt;()</code>).</p>
+<p>Keep in mind that Aerospike records have a size limit. Breaking your data into mutiple records is not only easy to do, but it may save you a headache down the road when your data size starts to grow.</p>
+<h3 id="flexible-keyvaluestore-access">&quot;Flexible&quot; KeyValueStore access</h3>
+<p><code>IKeyValueStore</code> provides a more flexible interface that allows you to specify the data type and bin per read and write operation. In cases where you have a diverse set of data types to store in Aerospike that are related to some common behavior (i.e. accessed from the same place in your code), configure a flexible <code>KeyValueStore</code> by omitting the type parameter when calling <code>Build()</code>:</p>
+<pre><code class="lang-C#">
+var keyValueStore = KeyValueStoreBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build();
+
+// Write some data
+MyDataType data = ... // get data to write from somewhere
+await keyValueStore.WriteAsync(&quot;some_key&quot;, &quot;bin&quot;, data, cancellationToken); // Generic parameter is inferred
+
+// Read the data
+var readResult = keyValuestore.ReadAsync&lt;MyDataType&gt;(&quot;some_key&quot;, &quot;bin&quot;, cancellationToken);
+// readResult is a key-value pair of type &lt;string, MyDataType&gt;
+</code></pre>
+<h3 id="read-modify-write-transactions">Read-Modify-Write Transactions</h3>
+<p>The Read-Modify-Write approach is designed to permit reading a record into memory, updating it, and then writing it with changes in a thread-safe, transactional manner. We do this by performing the write only if the generation is equal to that at the time of the read. If there was an interim change, the write will fail and the entire Read-Write-Modify transaction pattern may be retried.</p>
+<p><code>KeyValueStoreBuilder</code> allows for providing a <code>ReadModifyWritePolicy</code> to configure the retry behavior:</p>
+<pre><code class="lang-C#">var readModifyWritePolicy = new ReadModifyWritePolicy
+{
+    MaxRetries = 5,
+    WaitTimeInMilliseconds = 10,
+    WithExponentialBackoff = true
+};
+
+var keyValueStore = KeyValueStoreBuilder
+    .Configure(_clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .WithReadModifyWriteConfiguration(readModifyWritePolicy)
+    .Build&lt;MyType&gt;(&quot;some_bin&quot;);
+</code></pre>
+<p>The <code>KeyValueStore</code> can then be used to <code>ReadModifyWriteAsync</code>. Note that this requires the user to specify both an <code>addOperation</code> and <code>updateOperation</code>, like so:</p>
+<pre><code class="lang-C#">var addOperation = new Func&lt;MyType&gt;(() =&gt;
+{
+    return new MyType
+    {
+        Text = &quot;Hello!&quot;,
+        Value = 2
+    };
+});
+
+var updateOperation = new Func&lt;MyType, MyType&gt;((x) =&gt;
+{
+    x.Value += 2;
+    return x;
+});
+
+await keyValueStore.ReadModifyWriteAsync(
+    &quot;some_key&quot;, 
+    addOperation, 
+    updateOperation, 
+    timeToLive: TimeSpan.FromHours(5), 
+    CancellationToken.None
+);
+</code></pre>
+<p>This mimics the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2.addorupdate?view=net-6.0#System_Collections_Concurrent_ConcurrentDictionary_2_AddOrUpdate__0__1_System_Func__0__1__1__">AddOrUpdate method on the ConcurrentDictionary</a> object in C#. In this way, the user does not have to care whether the record already exists or not: the library will handle creating or updating the record appropriately.</p>
+<h3 id="plugins">Plugins</h3>
+<p>The <code>IKeyValueStorePlugin</code> interface allows you to write hooks to execute on read or write actions, like so:</p>
+<pre><code class="lang-C#">    public class MyKeyValueStorePlugin : IKeyValueStorePlugin
+    {
+        public Task OnWriteCompletedAsync(DataContext dataContext, string key, Bin[] bins, Type[] types, TimeSpan duration,
+            CancellationToken cancellationToken)
+        {
+            return textLogger.WriteAsync($&quot;Successfully wrote to {dataContext.Set}!&quot;);
+        }
+        ...
+    }
+</code></pre>
+<p>Custom plugin(s) can then be used by adding them to the <code>KeyValueStore</code> during configuration:</p>
+<pre><code class="lang-C#"> var keyValueStore = KeyValueStoreBuilder.Configure(clientProvider)
+     .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+     .UseMessagePackSerializer()
+     .WithPlugin(myPlugin)
+     .Build&lt;MyType&gt;();
+</code></pre>
+<h2 id="list">List</h2>
+<p>The list interfaces provide access to an <a href="https://www.aerospike.com/docs/guide/cdt-list.html">Aerospike List</a>.</p>
+<p>To access a single list, build an <code>IList&lt;T&gt;</code> and provide the record key where the list will be stored:</p>
+<pre><code class="lang-C#"> var list = ListBuilder.Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build&lt;TestType&gt;(&quot;list_record_key&quot;); // A bin name can also be specified here
+</code></pre>
+<p>To operate on multiple lists that contain the same data type, build an <code>IListOperator&lt;T&gt;</code> by omitting the key when building, i.e:</p>
+<pre><code class="lang-C#">var listOperator = ListBuilder.Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializer()
+    .Build&lt;TestType&gt;();
+</code></pre>
+<h3 id="readall">ReadAll()</h3>
+<p>Both available interfaces accept a generic type during configuration (and therefore only operate on one type of list) in order to avoid mixing data types in a single list. To illustrate the problem, consider the <code>ReadAll()</code> method that returns all items in a list. Without knowing the size of the list, it must deserialize every item into some data type. If an item of a different type is accidentally added to the list, it will be impossible to deserialize without handling the different type specially. The interfaces are designed to (hopefully) prevent this from happening.</p>
+<p>If a complex data structure involving lists with multiple types is needed, use the <a href="#operator">Operator</a> data access object.</p>
+<h2 id="operator">Operator</h2>
+<p>The <code>IOperator</code> interface allows you to build and execute multi-operation transactions on a single record. Generally, this wraps the <a href="https://www.aerospike.com/docs/client/csharp/usage/kvs/multiops.html"><code>client.Operate</code></a> functionality provided by Aerospike.</p>
+<p><code>IOperator</code> currently only supports reading one result from a arbitrarily long list of operations. i.e., you may perform multiple operations at once (e.g. remove an item from a list in one bin, add an item to a list in another bin), but only retrieve one piece of data back (e.g. get the size of the second list).</p>
+<p>For example:</p>
+<pre><code class="lang-C#">// Configure an operator
+_operator = OperatorBuilder
+    .Configure(clientProvider)
+    .WithDataContext(new DataContext(&quot;my_namespace&quot;, &quot;my_set&quot;))
+    .UseMessagePackSerializerWithLz4Compression()
+    .Build();
+    
+var list2Size = await _operator.Key(RecordKey) // The record you're operating on
+    .List.RemoveByValue(&quot;list_1_bin&quot;, listItem)
+    .List.Append(&quot;list_2_bin&quot;, listItem)
+    .SizeAsync(&quot;list_2_bin&quot;, cancellationToken); // Return the result of the &quot;size&quot; operation
+</code></pre>
+<h2 id="set-scans">Set Scans</h2>
+<p>Using the <code>ISetScanner</code> interface, you're able to scan all records in a specified namespace and set. This means you can iterate through every record, its key (see Caveat below) and value(s).
+For example (flexible interface):</p>
+<pre><code class="lang-C#">// Use the 'flexible' scanner interface.
+var scanner = SetScannerBuilder.Configure(myClientProvider)
+    .WithDataContext(myDataContext)
+    .WithSerializer(mySerializer)
+    .WithScanConfiguration(myConfig)
+    .Build();
+
+// Write each fetched key to the console.
+scanner.ScanSet(key =&gt; Console.WriteLine(key));
+</code></pre>
+<p>or using the strongly typed interface:</p>
+<pre><code class="lang-C#">// Use the 'strongly-typed' scanner interface.
+var scanner = SetScannerBuilder.Configure(myClientProvider)
+    .WithDataContext(myDataContext)
+    .WithSerializer(mySerializer)
+    .WithScanConfiguration(myConfig)
+    .Build&lt;MyCoolClass&gt;(&quot;my_cool_bin_name&quot;);
+
+// Write each fetched key to the console.
+scanner.ScanSet((key, record) =&gt; Console.WriteLine(key));
+</code></pre>
+<h3 id="caveat">Caveat</h3>
+<p>Key retrieval requires that <code>sendKey</code> was set to <code>true</code> when the record was <em>written to Aerospike</em>. Otherwise, the string key isn't stored in Aerospike and all we'll have access to is the digest.</p>
+<h2 id="general">General</h2>
+<p>The general interfaces include the SetTruncator and the KeyOperator. As the name implies, the SetTruncator is for removing all records in a set.
+The KeyOperator is for interacting with records by their key. As stated above, a <a href="#client-provider">client provider</a> must be provided to the KeyOperatorBuilder
+or the SetTruncatorBuilder.</p>
+<h3 id="settruncator">SetTruncator</h3>
+<p>⚠️ <strong>Use With Caution!</strong> ⚠️
+The SetTruncator is for quickly truncating all records contained in a namespace/set. It gets the namespace and set from the DataContext
+passed into the SetTruncatorBuilder. Removing records using the SetTruncator is many orders of magnitude faster than deleting records one at a time.
+You can either remove all records in a set using the TruncateSet method with no parameters, or a DateTime can be specified for removing
+records before the last update time.</p>
+<h3 id="keyoperator">KeyOperator</h3>
+<p>The KeyOperator provides a way for interacting by key with records that are already in Aerospike. The KeyOperator exposes methods to reset
+a record's time to live, delete a record, or check if a record exists. Similar to the <a href="#SetTruncator">set truncator</a>, a KeyOperator is created
+using the KeyOperatorBuilder, and a <a href="#client-provider">client provider</a> and DataContext must be provided.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

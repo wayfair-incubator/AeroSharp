@@ -1,0 +1,1402 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IKeyValueStore
+   | AeroSharp </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IKeyValueStore
+   | AeroSharp ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore">
+  
+  
+  <h1 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore" class="text-break">Interface IKeyValueStore
+  </h1>
+  <div class="markdown level0 summary"><p>An interface for reading and writing values by key.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.IOverridable-2.html#AeroSharp_DataAccess_Configuration_IOverridable_2_Override_Func__1__1__">IOverridable&lt;IKeyValueStore, ReadConfiguration&gt;.Override(Func&lt;ReadConfiguration, ReadConfiguration&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="AeroSharp.DataAccess.Configuration.IOverridable-2.html#AeroSharp_DataAccess_Configuration_IOverridable_2_Override_Func__1__1__">IOverridable&lt;IKeyValueStore, WriteConfiguration&gt;.Override(Func&lt;WriteConfiguration, WriteConfiguration&gt;)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="AeroSharp.DataAccess.KeyValueAccess.html">AeroSharp.DataAccess.KeyValueAccess</a></h6>
+  <h6><strong>Assembly</strong>: AeroSharp.dll</h6>
+  <h5 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IKeyValueStore : IOverridable&lt;IKeyValueStore, ReadConfiguration&gt;, IOverridable&lt;IKeyValueStore, WriteConfiguration&gt;</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__1_IEnumerable_System_String__System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%601(IEnumerable%7BSystem.String%7D%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L58">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__1_IEnumerable_System_String__System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``1(IEnumerable{System.String},System.String,CancellationToken)">ReadAsync&lt;T&gt;(IEnumerable&lt;String&gt;, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the values for multiple keys in a specified bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;KeyValuePair&lt;string, T&gt;&gt;&gt; ReadAsync&lt;T&gt;(IEnumerable&lt;string&gt; keys, string bin, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The record keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T&gt;&gt;&gt;</td>
+        <td><p>A collection of KeyValuePairs representing the records.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__1_System_String_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%601(System.String%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L22">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__1_System_String_System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``1(System.String,System.String,CancellationToken)">ReadAsync&lt;T&gt;(String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the value for a single key in a specified bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;KeyValuePair&lt;string, T&gt;&gt; ReadAsync&lt;T&gt;(string key, string bin, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">KeyValuePair</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T&gt;&gt;</td>
+        <td><p>A KeyValuePair representing the record.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__2_IEnumerable_System_String__System_String_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%602(IEnumerable%7BSystem.String%7D%2CSystem.String%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L70">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__2_IEnumerable_System_String__System_String_System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``2(IEnumerable{System.String},System.String,System.String,CancellationToken)">ReadAsync&lt;T1, T2&gt;(IEnumerable&lt;String&gt;, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the values for multiple keys across two bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;(string Key, T1 Value1, T2 Value2)&gt;&gt; ReadAsync&lt;T1, T2&gt;(IEnumerable&lt;string&gt; keys, string bin1, string bin2, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The record keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-3">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T1, T2&gt;&gt;&gt;</td>
+        <td><p>The keys and associated values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__2_System_String_System_String_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%602(System.String%2CSystem.String%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L34">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__2_System_String_System_String_System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``2(System.String,System.String,System.String,CancellationToken)">ReadAsync&lt;T1, T2&gt;(String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the values for a single key in specified bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;(string Key, T1 Value1, T2 Value2)&gt; ReadAsync&lt;T1, T2&gt;(string key, string bin1, string bin2, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-3">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T1, T2&gt;&gt;</td>
+        <td><p>The key and associated values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__3_IEnumerable_System_String__System_String_System_String_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%603(IEnumerable%7BSystem.String%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L84">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__3_IEnumerable_System_String__System_String_System_String_System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``3(IEnumerable{System.String},System.String,System.String,System.String,CancellationToken)">ReadAsync&lt;T1, T2, T3&gt;(IEnumerable&lt;String&gt;, String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the values for multiple keys across three bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;(string Key, T1 Value1, T2 Value2, T3 Value3)&gt;&gt; ReadAsync&lt;T1, T2, T3&gt;(IEnumerable&lt;string&gt; keys, string bin1, string bin2, string bin3, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">keys</span></td>
+        <td><p>The record keys.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin3</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-4">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T1, T2, T3&gt;&gt;&gt;</td>
+        <td><p>The keys and associated values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>Type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__3_System_String_System_String_System_String_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync%60%603(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L48">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadAsync__3_System_String_System_String_System_String_System_String_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadAsync``3(System.String,System.String,System.String,System.String,CancellationToken)">ReadAsync&lt;T1, T2, T3&gt;(String, String, String, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read the values for a single key in specified bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;(string Key, T1 Value1, T2 Value2, T3 Value3)&gt; ReadAsync&lt;T1, T2, T3&gt;(string key, string bin1, string bin2, string bin3, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin3</span></td>
+        <td><p>The name of the third bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-4">ValueTuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, T1, T2, T3&gt;&gt;</td>
+        <td><p>The key and associated values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>Type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadModifyWriteAsync__1_System_String_System_String_Func___0__Func___0___0__TimeSpan_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadModifyWriteAsync%60%601(System.String%2CSystem.String%2CFunc%7B%60%600%7D%2CFunc%7B%60%600%2C%60%600%7D%2CTimeSpan%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L97">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadModifyWriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadModifyWriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_ReadModifyWriteAsync__1_System_String_System_String_Func___0__Func___0___0__TimeSpan_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.ReadModifyWriteAsync``1(System.String,System.String,Func{``0},Func{``0,``0},TimeSpan,CancellationToken)">ReadModifyWriteAsync&lt;T&gt;(String, String, Func&lt;T&gt;, Func&lt;T, T&gt;, TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Read a record, modify, and write it in a thread-safe manner, with a specified time to live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ReadModifyWriteAsync&lt;T&gt;(string key, string bin, Func&lt;T&gt; addValueFunc, Func&lt;T, T&gt; updateValueFunc, TimeSpan timeToLive, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;T&gt;</td>
+        <td><span class="parametername">addValueFunc</span></td>
+        <td><p>Function to initialize the value if it did not previously exist.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;T, T&gt;</td>
+        <td><span class="parametername">updateValueFunc</span></td>
+        <td><p>Function to update a previously-existing value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time to live.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__1_System_String_System_String___0_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%601(System.String%2CSystem.String%2C%60%600%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L108">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__1_System_String_System_String___0_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``1(System.String,System.String,``0,CancellationToken)">WriteAsync&lt;T&gt;(String, String, T, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write a value to a record in a specified bin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T&gt;(string key, string bin, T value, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to write.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__1_System_String_System_String___0_TimeSpan_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%601(System.String%2CSystem.String%2C%60%600%2CTimeSpan%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L120">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__1_System_String_System_String___0_TimeSpan_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``1(System.String,System.String,``0,TimeSpan,CancellationToken)">WriteAsync&lt;T&gt;(String, String, T, TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write a value to a record in a specified bin, with a specified time to live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T&gt;(string key, string bin, T value, TimeSpan timeToLive, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin</span></td>
+        <td><p>The name of the bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to write.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time to live.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Type stored in the bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__2_System_String_System_String___0_System_String___1_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%602(System.String%2CSystem.String%2C%60%600%2CSystem.String%2C%60%601%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L134">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__2_System_String_System_String___0_System_String___1_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``2(System.String,System.String,``0,System.String,``1,CancellationToken)">WriteAsync&lt;T1, T2&gt;(String, String, T1, String, T2, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write to records in two specified bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T1, T2&gt;(string key, string bin1, T1 value1, string bin2, T2 value2, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td><p>The value to write to the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td><p>The value to write to the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__2_System_String_System_String___0_System_String___1_TimeSpan_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%602(System.String%2CSystem.String%2C%60%600%2CSystem.String%2C%60%601%2CTimeSpan%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L149">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__2_System_String_System_String___0_System_String___1_TimeSpan_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``2(System.String,System.String,``0,System.String,``1,TimeSpan,CancellationToken)">WriteAsync&lt;T1, T2&gt;(String, String, T1, String, T2, TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write to records in two specified bins, with a specified time to live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T1, T2&gt;(string key, string bin1, T1 value1, string bin2, T2 value2, TimeSpan timeToLive, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td><p>The value to write to the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td><p>The value to write to the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time to live.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__3_System_String_System_String___0_System_String___1_System_String___2_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%603(System.String%2CSystem.String%2C%60%600%2CSystem.String%2C%60%601%2CSystem.String%2C%60%602%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L166">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__3_System_String_System_String___0_System_String___1_System_String___2_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``3(System.String,System.String,``0,System.String,``1,System.String,``2,CancellationToken)">WriteAsync&lt;T1, T2, T3&gt;(String, String, T1, String, T2, String, T3, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write to records in three specified bins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T1, T2, T3&gt;(string key, string bin1, T1 value1, string bin2, T2 value2, string bin3, T3 value3, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td><p>The value to write to the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td><p>The value to write to the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin3</span></td>
+        <td><p>The name of the third bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">value3</span></td>
+        <td><p>The value to write to the third bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>Type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__3_System_String_System_String___0_System_String___1_System_String___2_TimeSpan_CancellationToken_.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync%60%603(System.String%2CSystem.String%2C%60%600%2CSystem.String%2C%60%601%2CSystem.String%2C%60%602%2CTimeSpan%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L184">View Source</a>
+  </span>
+  <a id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync*"></a>
+  <h4 id="AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore_WriteAsync__3_System_String_System_String___0_System_String___1_System_String___2_TimeSpan_CancellationToken_" data-uid="AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore.WriteAsync``3(System.String,System.String,``0,System.String,``1,System.String,``2,TimeSpan,CancellationToken)">WriteAsync&lt;T1, T2, T3&gt;(String, String, T1, String, T2, String, T3, TimeSpan, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Write to records in three specified bins, with a specified time to live.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task WriteAsync&lt;T1, T2, T3&gt;(string key, string bin1, T1 value1, string bin2, T2 value2, string bin3, T3 value3, TimeSpan timeToLive, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>The record key.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin1</span></td>
+        <td><p>The name of the first bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">value1</span></td>
+        <td><p>The value to write to the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin2</span></td>
+        <td><p>The name of the second bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">value2</span></td>
+        <td><p>The value to write to the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">bin3</span></td>
+        <td><p>The name of the third bin to access.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">value3</span></td>
+        <td><p>The value to write to the third bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeToLive</span></td>
+        <td><p>The time to live.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>A cancellation token to cooperatively cancel the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td><p>An awaitable <see cref="!:Task"></see> representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T1</span></td>
+        <td><p>Type stored in the first bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T2</span></td>
+        <td><p>Type stored in the second bin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td><p>Type stored in the third bin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/new/main/apiSpec/new?filename=AeroSharp_DataAccess_KeyValueAccess_IKeyValueStore.md&amp;value=---%0Auid%3A%20AeroSharp.DataAccess.KeyValueAccess.IKeyValueStore%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/wayfair-incubator/AeroSharp/blob/main/src/AeroSharp/DataAccess/KeyValueAccess/IKeyValueStore.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
