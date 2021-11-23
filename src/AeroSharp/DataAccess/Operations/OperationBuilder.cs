@@ -1,4 +1,5 @@
-﻿using AeroSharp.DataAccess.Internal;
+﻿using System;
+using AeroSharp.DataAccess.Internal;
 using AeroSharp.DataAccess.Internal.Parsers;
 using AeroSharp.Serialization;
 using Aerospike.Client;
@@ -8,17 +9,17 @@ using System.Threading.Tasks;
 
 namespace AeroSharp.DataAccess.Operations
 {
-    internal class OperationBuilder : IBlobOperationBuilder, IOperationBuilder, IListOperationBuilder
+    internal class OperationBuilder : IBlobOperationBuilder, IOperationBuilder, IListOperationBuilder, IMapOperationBuilder
     {
         private readonly ISerializer _serializer;
         private readonly IRecordOperator _recordOperator;
         private readonly WriteConfiguration _writeConfiguration;
         private readonly string _key;
-
-        private List<Operation> _operations;
+        private readonly List<Operation> _operations;
 
         public IBlobOperationBuilder Blob => this;
         public IListOperationBuilder List => this;
+        public IMapOperationBuilder Map => throw new NotImplementedException();
 
         public OperationBuilder(
             ISerializer serializer,
@@ -133,6 +134,115 @@ namespace AeroSharp.DataAccess.Operations
             _operations.Add(op);
             var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
             return SizeParser.Parse(record, bin);
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.Put<TKey, TVal>(
+            string bin,
+            TKey valueKey,
+            TVal value,
+            MapConfiguration mapConfiguration)
+        {
+            var op = MapOperations.Put(bin, valueKey, value, _serializer, mapConfiguration);
+
+            _operations.Add(op);
+
+            return this;
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.Put<TKey, TVal>(string bin, TKey valueKey, TVal value)
+        {
+            return Map.Put(bin, valueKey, value, new MapConfiguration());
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.PutItems<TKey, TVal>(
+            string bin,
+            IDictionary<TKey, TVal> values,
+            MapConfiguration mapConfiguration)
+        {
+            var op = MapOperations.PutItems(bin, values, _serializer, mapConfiguration);
+
+            _operations.Add(op);
+
+            return this;
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.PutItems<TKey, TVal>(string bin, IDictionary<TKey, TVal> values)
+        {
+            return Map.PutItems(bin, values, new MapConfiguration());
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.RemoveByKey<TKey, TVal>(string bin, TKey valueKey)
+        {
+            var op = MapOperations.RemoveByKey(bin, valueKey, _serializer);
+
+            _operations.Add(op);
+
+            return this;
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.RemoveByKeys<TKey, TVal>(string bin, IEnumerable<TKey> valueKeys)
+        {
+            var op = MapOperations.RemoveByKeys(bin, valueKeys, _serializer);
+
+            _operations.Add(op);
+
+            return this;
+        }
+
+        /// <inheritdoc />
+        IOperationBuilder IMapOperationBuilder.Clear(string bin)
+        {
+            var op = MapOperations.Clear(bin);
+
+            _operations.Add(op);
+
+            return this;
+        }
+
+        /// <inheritdoc />
+        async Task<TVal> IMapOperationBuilder.GetByKeyAsync<TKey, TVal>(
+            string bin,
+            TKey valueKey,
+            CancellationToken token)
+        {
+            var op = MapOperations.GetByKey(bin, valueKey, _serializer);
+
+            _operations.Add(op);
+
+            var record = await _recordOperator.OperateAsync(
+                _key,
+                _operations.ToArray(),
+                _writeConfiguration,
+                token
+            ).ConfigureAwait(false);
+
+            return OperationResultParser.Parse<TVal>(_serializer, record, bin);
+        }
+
+        /// <inheritdoc />
+        async Task<IEnumerable<TVal>> IMapOperationBuilder.GetByKeysAsync<TKey, TVal>(
+            string bin,
+            IEnumerable<TKey> valueKeys,
+            CancellationToken token)
+        {
+            var op = MapOperations.GetByKeys(bin, valueKeys, _serializer);
+
+            _operations.Add(op);
+
+            var record = await _recordOperator.OperateAsync(
+                _key,
+                _operations.ToArray(),
+                _writeConfiguration,
+                token
+            ).ConfigureAwait(false);
+
+            return OperationResultParser.Parse<IEnumerable<TVal>>(_serializer, record, bin);
         }
 
         /// <inheritdoc />

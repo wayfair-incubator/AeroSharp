@@ -82,5 +82,42 @@ namespace AeroSharp.IntegrationTests.DataAccess.Operations
             bin1.Should().BeEquivalentTo("Hello", "there");
             bin2.Should().BeEquivalentTo("!");
         }
+
+        [Test]
+        [Ignore("Maps aren't supported yet.")]
+        public async Task When_the_last_operation_is_a_GetByKey_it_should_return_only_the_read_result()
+        {
+            const int itemKey = 0;
+            const string itemValue = "value";
+            const string bin = "map_data";
+
+            var item = await _operator.Key("test.multi.put.get")
+                .Map.Put(bin, itemKey, itemValue)
+                .Map.GetByKeyAsync<int, string>(bin, itemKey, default);
+
+            item.Should().Be(itemValue);
+        }
+
+        [Test]
+        [Ignore("Maps aren't supported yet.")]
+        public async Task When_the_last_operation_is_a_RemoveByKeys_it_should_return_only_the_read_result()
+        {
+            var dataDict = Enumerable.Range(0, 10).ToDictionary(item => item, item => $"test.data.{item}");
+            const string bin = "map_data";
+            const string recordKey = "test.multi.putitems.remove.execute";
+
+            await _operator.Key(recordKey)
+                .Map.PutItems(bin, dataDict)
+                .Map.RemoveByKeys<int, string>(bin, Enumerable.Range(0, 3))
+                .ExecuteAsync(default);
+
+            var retrieved = await _operator.Key(recordKey)
+                .Map.Put(bin, 0, "new zero value")
+                .Map.GetByKeysAsync<int, string>(bin, Enumerable.Range(3, 7), default);
+
+            retrieved.Count().Should().Be(7);
+            var expected = dataDict.Where(kvp => kvp.Key >= 3).Select(kvp => kvp.Value);
+            retrieved.Should().BeEquivalentTo(expected);
+        }
     }
 }

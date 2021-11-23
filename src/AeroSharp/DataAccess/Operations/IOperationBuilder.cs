@@ -10,6 +10,8 @@ namespace AeroSharp.DataAccess.Operations
 
         IListOperationBuilder List { get; }
 
+        IMapOperationBuilder Map { get; }
+
         Task ExecuteAsync(CancellationToken cancellationToken);
     }
 
@@ -38,4 +40,34 @@ namespace AeroSharp.DataAccess.Operations
         Task<T> GetByIndexAsync<T>(string bin, int index, CancellationToken cancellationToken);
         Task<long> SizeAsync(string bin, CancellationToken cancellationToken);
     }
+
+    public interface IMapOperationBuilder
+    {
+        IOperationBuilder Put<TKey, TVal>(string bin, TKey valueKey, TVal value, MapConfiguration mapConfiguration);
+
+        IOperationBuilder Put<TKey, TVal>(string bin, TKey valueKey, TVal value);
+
+        IOperationBuilder PutItems<TKey, TVal>(
+            string bin,
+            IDictionary<TKey, TVal> values,
+            MapConfiguration mapConfiguration
+        );
+
+        IOperationBuilder PutItems<TKey, TVal>(string bin, IDictionary<TKey, TVal> values);
+
+        IOperationBuilder RemoveByKey<TKey, TVal>(string bin, TKey valueKey);
+
+        IOperationBuilder RemoveByKeys<TKey, TVal>(string bin, IEnumerable<TKey> valueKeys);
+
+        IOperationBuilder Clear(string bin);
+
+        Task<TVal> GetByKeyAsync<TKey, TVal>(string bin, TKey valueKey, CancellationToken token);
+
+        Task<IEnumerable<TVal>> GetByKeysAsync<TKey, TVal>(
+            string bin,
+            IEnumerable<TKey> valueKeys,
+            CancellationToken token
+        );
+    }
+
 }
