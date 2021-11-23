@@ -7,7 +7,6 @@ namespace AeroSharp.DataAccess.Policies
     /// <summary>
     ///     Maps a MapConfiguration to a MapPolicy to be used with Map Operations
     /// </summary>
-    [ExcludeFromCodeCoverage]
     public static class MapConfigurationToMapPolicyMapper
     {
         public static MapPolicy MapToPolicy(MapConfiguration config)

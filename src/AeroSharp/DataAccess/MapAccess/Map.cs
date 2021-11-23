@@ -1,17 +1,15 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.DataAccess.Internal;
+﻿using AeroSharp.DataAccess.Internal;
 using AeroSharp.DataAccess.Internal.Parsers;
 using AeroSharp.Serialization;
 using Aerospike.Client;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.DataAccess.MapAccess
 {
     /// <inheritdoc/>
-    [ExcludeFromCodeCoverage]
     public class Map : IMap
     {
         private readonly IRecordOperator _operator;

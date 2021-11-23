@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using AeroSharp.Compression;
+﻿using AeroSharp.Compression;
 using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.MapAccess;
@@ -7,7 +6,6 @@ using AeroSharp.Serialization;
 
 namespace AeroSharp
 {
-    [ExcludeFromCodeCoverage]
     internal class MapBuilder : IMapBuilder // TODO: Make builder public after implementing maps
     {
         private readonly IClientProvider _clientProvider;

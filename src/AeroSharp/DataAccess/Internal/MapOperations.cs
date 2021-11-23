@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using AeroSharp.DataAccess.Policies;
+﻿using AeroSharp.DataAccess.Policies;
 using AeroSharp.Serialization;
 using Aerospike.Client;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Internal
 {
-    [ExcludeFromCodeCoverage]
     internal static class MapOperations
     {
         public static Operation Put<TKey, TVal>(string bin, TKey valueKey, TVal value, ISerializer serializer, MapConfiguration config)

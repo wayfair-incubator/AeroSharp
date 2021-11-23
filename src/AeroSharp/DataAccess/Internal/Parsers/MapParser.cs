@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using AeroSharp.DataAccess.Exceptions;
+﻿using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.Serialization;
 using Aerospike.Client;
+using System;
+using System.Collections.Generic;
 
 namespace AeroSharp.DataAccess.Internal.Parsers
 {
-    [ExcludeFromCodeCoverage]
     internal static class MapParser
     {
         public static IDictionary<TKey, TVal> Parse<TKey, TVal>(ISerializer serializer, Record record, string bin)
