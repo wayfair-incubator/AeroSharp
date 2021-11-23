@@ -70,7 +70,7 @@ IEnumerable<MyDataType> listResult = await list.ReadAllAsync(CancellationToken.N
 // listResult contains [ MyDataType("list item 1"), MyDataType("list item 2") ]
 ```
 
-Full library documentation can be found in the [docs directory](./docs)
+Full library documentation can be found at the [docs site](https://wayfair-incubator.github.io/AeroSharp/)
 
 Code examples can be found in the [examples directory](./examples)
 
