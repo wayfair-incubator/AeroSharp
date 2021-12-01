@@ -26,7 +26,7 @@ jobs:
           cd ./tests/AeroSharp.UnitTests/
           dotnet test --no-build -nodereuse:false \
             /p:UseSharedCompilation=false \
-            /p:UseRazorBuildServer \
+            /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
@@ -35,7 +35,7 @@ jobs:
           cd ./tests/AeroSharp.IntegrationTests/
           dotnet test --no-build -nodereuse:false \
             /p:UseSharedCompilation=false \
-            /p:UseRazorBuildServer \
+            /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
