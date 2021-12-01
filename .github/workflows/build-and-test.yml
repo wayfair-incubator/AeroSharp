@@ -1,0 +1,46 @@
+name: .NET Build & Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore Dependencies
+        run: cd src && dotnet restore
+      - name: Build
+        run: cd src && dotnet build --configuration Release --no-restore
+      - name: Unit Tests
+        run: |
+          cd ./tests/AeroSharp.UnitTests/
+          dotnet test --no-build -nodereuse:false \
+            /p:UseSharedCompilation=false \
+            /p:UseRazorBuildServer \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=opencover \
+            /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
+      - name: Integration Tests
+        run: |
+          cd ./tests/AeroSharp.IntegrationTests/
+          dotnet test --no-build -nodereuse:false \
+            /p:UseSharedCompilation=false \
+            /p:UseRazorBuildServer \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=opencover \
+            /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
+      - name: Publish Code Coverage
+        uses: codecov/codecov-action@v2
+        with:
+          files: /home/runner/work/AeroSharp/AeroSharp/coverage.opencover.xml
+          fail_ci_if_error: true
