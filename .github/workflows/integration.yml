@@ -21,6 +21,8 @@ jobs:
         run: cd src && dotnet restore
       - name: Build
         run: cd src && dotnet build --configuration Release --no-restore
+      - name: Set up Aerospike Database
+        uses: reugn/github-action-aerospike@v1.1.0
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
