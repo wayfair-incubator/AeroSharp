@@ -24,7 +24,7 @@ jobs:
       - name: Unit Tests
         run: |
           cd ./tests/AeroSharp.UnitTests/
-          dotnet test --no-build -nodereuse:false \
+          dotnet test --no-restore -nodereuse:false \
             /p:UseSharedCompilation=false \
             /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
@@ -33,7 +33,7 @@ jobs:
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
-          dotnet test --no-build -nodereuse:false \
+          dotnet test --no-restore -nodereuse:false \
             /p:UseSharedCompilation=false \
             /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
