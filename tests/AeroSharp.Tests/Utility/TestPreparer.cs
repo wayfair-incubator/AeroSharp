@@ -37,7 +37,7 @@ namespace AeroSharp.Tests.Utility
         private const int Port = 3000;
 
         public const string TestSet = "test_set";
-        public const string TestNamespace = "test_namespace";
+        public const string TestNamespace = "gha_aerospike";
         public static DataContext TestDataContext => new(TestNamespace, TestSet);
 
         /// <summary>
