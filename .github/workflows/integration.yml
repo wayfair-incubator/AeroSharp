@@ -23,9 +23,6 @@ jobs:
         run: cd src && dotnet build --configuration Release --no-restore
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
-        with:
-          port: 3000
-          config-file: '.github/etc/aerospike/aerospike.conf'
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
