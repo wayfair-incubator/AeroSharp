@@ -18,9 +18,9 @@ jobs:
         with:
           dotnet-version: 5.0.x
       - name: Restore Dependencies
-        run: cd src && dotnet restore
+        run: run dotnet && restore src
       - name: Build
-        run: cd src && dotnet build --configuration Release --no-restore
+        run: run dotnet && dotnet build --configuration Release --no-restore
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
       - name: Integration Tests
@@ -31,7 +31,7 @@ jobs:
             /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
-            /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
+            /p:CoverletOutput=./AeroSharp/ \
       - name: Publish Code Coverage
         uses: codecov/codecov-action@v2
         with:
