@@ -18,9 +18,9 @@ jobs:
         with:
           dotnet-version: 5.0.x
       - name: Restore Dependencies
-        run: run dotnet && restore src
+        run: dotnet restore src
       - name: Build
-        run: run dotnet && dotnet build --configuration Release --no-restore
+        run: dotnet build src --configuration Release --no-restore
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
       - name: Integration Tests
