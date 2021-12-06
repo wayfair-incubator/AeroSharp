@@ -31,7 +31,7 @@ jobs:
             /p:UseRazorBuildServer=false \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
-            /p:CoverletOutput=./coverage.opencover.xml \
+            /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
       - name: Publish Code Coverage
         uses: codecov/codecov-action@v2
         with:
