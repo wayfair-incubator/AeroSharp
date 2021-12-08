@@ -14,7 +14,6 @@ namespace AeroSharp.DataAccess
         /// </summary>
         public ReadConfiguration()
         {
-            SocketTimeout = TimeSpan.FromSeconds(10);
             RetryCount = 2;
             ReadBatchSize = 5000;
             SendKey = false;
@@ -31,7 +30,6 @@ namespace AeroSharp.DataAccess
         /// <param name="other">Configuration to copy.</param>
         public ReadConfiguration(ReadConfiguration other)
         {
-            SocketTimeout = other.SocketTimeout;
             RetryCount = other.RetryCount;
             ReadBatchSize = other.ReadBatchSize;
             SendKey = other.SendKey;
