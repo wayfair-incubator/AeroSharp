@@ -18,11 +18,6 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
-    <PropertyGroup>
-        <DocumentationFile>obj\$(Platform)\netcoreapp2.0\$(AssemblyName).xml</DocumentationFile>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    </PropertyGroup>
-
     <ItemGroup>
         <None Include="..\..\LICENSE">
             <Pack>True</Pack>
