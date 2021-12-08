@@ -14,6 +14,22 @@
         <PackageTags>aerospike, aerosharp, serialization, policy validation</PackageTags>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DocumentationFile>obj\$(Platform)\netcoreapp2.0\$(AssemblyName).xml</DocumentationFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Aerospike.Client" Version="4.2.6" />
         <PackageReference Include="FluentValidation" Version="10.3.5" />
