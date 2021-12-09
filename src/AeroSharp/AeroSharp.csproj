@@ -5,17 +5,13 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Version>0.1.0</Version>
         <Authors>Wayfair</Authors>
-        <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data on Aerospike</Description>
+        <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
         <Copyright>Wayfair ©2021</Copyright>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageProjectUrl>https://github.com/wayfair-incubator/AeroSharp</PackageProjectUrl>
         <RepositoryUrl>https://github.com/wayfair-incubator/AeroSharp</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>aerospike, aerosharp, serialization, policy validation</PackageTags>
-    </PropertyGroup>
-
-    <PropertyGroup>
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     </PropertyGroup>
 
     <ItemGroup>
