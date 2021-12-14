@@ -28,7 +28,8 @@ Before sending a new pull request, take a look at existing pull requests and iss
 has been discussed in the past, or if the change was already implemented but not yet released.
 
 We expect new pull requests to include tests for any affected behavior, and, as we follow semantic versioning, we may
-reserve breaking changes until the next major version release.
+reserve breaking changes until the next major version release. We also expect all pull requests to follow our defined code
+linting rules and to not introduce any new linting warnings.
 
 ## Other Ways to Contribute
 

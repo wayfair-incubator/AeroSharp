@@ -1,0 +1,10 @@
+[*.cs]
+
+# require documentation on all constructs when a documentation file is specified
+dotnet_diagnostic.CS1591.severity = none
+
+# follow standardized element ordering scheme
+dotnet_diagnostic.SA1201.severity = none
+
+# require XML documentation on all public code constructs
+dotnet_diagnostic.SA1600.severity = none
