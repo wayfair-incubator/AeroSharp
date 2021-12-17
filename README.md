@@ -47,7 +47,7 @@ var clientProvider = ClientProviderBuilder
 
 var keyValueStore = KeyValueStoreBuilder
     .Configure(clientProvider)
-    .WithSet("my_set")
+    .WithDataContext(new DataContext("my_namespace", "my_set"))
     .UseMessagePackSerializer()
     .Build<MyDataType>();
 
@@ -58,7 +58,7 @@ KeyValuePair<string, MyDataType> keyValueResult = await keyValueStore.ReadAsync(
 
 var list = ListBuilder
     .Configure(clientProvider)
-    .WithSet("my_set")
+    .WithDataContext(new DataContext("my_namespace", "my_set"))
     .UseMessagePackSerializer()
     .WithKey("list_record_key")
     .Build<MyDataType>();
