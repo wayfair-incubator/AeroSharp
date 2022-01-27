@@ -434,6 +434,8 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WaitTimeInMilliseconds = 10,
                 WithExponentialBackoff = true
             };
+
+            await _recordOperator.DeleteAsync(UnoccupiedRecord, new WriteConfiguration(), default);
             var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
                 .WithDataContext(TestPreparer.TestDataContext)
                 .UseMessagePackSerializer()
@@ -472,6 +474,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WithExponentialBackoff = true
             };
 
+            await _recordOperator.DeleteAsync(OccupiedRecord1, new WriteConfiguration(), default);
             var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
                 .WithDataContext(TestPreparer.TestDataContext)
                 .UseMessagePackSerializer()
@@ -491,7 +494,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default),
                 keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default));
 
-            KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(UnoccupiedRecord, default);
+            KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(OccupiedRecord1, default);
             Assert.IsNull(finalValue.Value);
         }
     }
