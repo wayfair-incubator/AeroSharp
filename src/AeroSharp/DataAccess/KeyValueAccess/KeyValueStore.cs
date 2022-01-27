@@ -146,6 +146,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
                 await WriteAsyncWithEqualGeneration(key, bin, value, generationId, timeToLive, cancellationToken);
             });
         }
+
         private Task WriteAsyncWithEqualGeneration<T>(string key, string bin, T value, int generationId, TimeSpan timeToLive, CancellationToken cancellationToken)
         {
             var config = new WriteConfiguration(_writeConfiguration);
@@ -164,8 +165,9 @@ namespace AeroSharp.DataAccess.KeyValueAccess
 
         private T GetValueToWrite<T>(Func<T> addValueFunc, Func<T, T> updateValueFunc, IEnumerable<KeyValuePair<string, Record>> value, string bin)
         {
-            // Adding this function in as a helper method to AddOrUpdate
-            // Intention is to make the code in the retry simple and readable
+            /* Adding this function in as a helper method to AddOrUpdate
+             * Intention is to make the code in the retry simple and readable
+             */
             T result;
             if (value.First().Value is object)
             {
@@ -173,9 +175,10 @@ namespace AeroSharp.DataAccess.KeyValueAccess
 
                 if (!Equals(cachedValue, default(T)))
                 {
-                    // modify the record's value by first mapping the record to the object and then passing that
-                    // to the updateValueFunction
-                    // returns the object to write down to the store
+                    /* modify the record's value by first mapping the record to
+                     * the object and then passing that to the updateValueFunction
+                     * returns the object to write down to the store
+                     */
                     result = updateValueFunc(cachedValue);
                 }
                 else
