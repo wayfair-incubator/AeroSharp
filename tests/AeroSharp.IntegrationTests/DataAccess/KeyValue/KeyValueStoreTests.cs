@@ -435,7 +435,6 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WithExponentialBackoff = true
             };
 
-            await _recordOperator.DeleteAsync(UnoccupiedRecord, new WriteConfiguration(), default);
             var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
                 .WithDataContext(TestPreparer.TestDataContext)
                 .UseMessagePackSerializer()

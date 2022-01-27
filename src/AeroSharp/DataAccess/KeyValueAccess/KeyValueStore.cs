@@ -171,7 +171,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
             {
                 T cachedValue = MapRecordsToTuple<T>(value, bin).First().Value;
 
-                if (!EqualityComparer<T>.Default.Equals(cachedValue, default(T)))
+                if (!Equals(cachedValue, default(T)))
                 {
                     // modify the record's value by first mapping the record to the object and then passing that
                     // to the updateValueFunction
