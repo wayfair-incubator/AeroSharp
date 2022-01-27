@@ -465,8 +465,9 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
         }
 
         [Test]
-        public async Task When_writing_a_record_that_does_exist_as_a_null_write_is_successful()
+        public async Task When_writing_an_object_record_that_does_exist_as_a_null_write_is_successful_and_subsequent_updates_successful()
         {
+            int expectedFinalValue = 42;
             ReadModifyWritePolicy rmwPolicy = new ReadModifyWritePolicy
             {
                 MaxRetries = 5,
@@ -474,6 +475,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WithExponentialBackoff = true
             };
 
+            // Confirm the record is cleared prior to the run
             await _recordOperator.DeleteAsync(OccupiedRecord1, new WriteConfiguration(), default);
             var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
                 .WithDataContext(TestPreparer.TestDataContext)
@@ -481,21 +483,73 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 .WithReadModifyWriteConfiguration(rmwPolicy)
                 .Build<TestType>(OccupiedBin);
 
-            var addValueOnTestType = new Func<TestType>(() => null);
+            // Initially set the cached value to be null
+            var addValueOnTestType1 = new Func<TestType>(() => null);
 
-            // Should never be called due to add value here being null
+            // Update cached value
             var updateValueOnTestType = new Func<TestType, TestType>(x =>
             {
-                x.Value = 42;
+                x.Value++; // this will throw an exception if the record in the cache is null
                 return x;
             });
 
-            await Task.WhenAll(
-                keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default),
-                keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default));
+            // Re-add cached value
+            var addValueOnTestType2 = new Func<TestType>(() => new TestType
+            {
+                Text = "Hello!",
+                Value = expectedFinalValue - 1
+            });
 
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType1, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType2, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType1, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+
+            // Confirm that update is only called once
             KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(OccupiedRecord1, default);
-            Assert.IsNull(finalValue.Value);
+            Assert.AreEqual(expectedFinalValue, finalValue.Value.Value);
+        }
+
+        [Test]
+        public async Task When_writing_a_scalar_record_that_does_exist_as_a_null_write_is_successful_and_subsequent_updates_successful()
+        {
+            int expectedFinalValue = 42;
+            ReadModifyWritePolicy rmwPolicy = new ReadModifyWritePolicy
+            {
+                MaxRetries = 5,
+                WaitTimeInMilliseconds = 10,
+                WithExponentialBackoff = true
+            };
+
+            // Confirm the record is cleared prior to the run
+            await _recordOperator.DeleteAsync(OccupiedRecord1, new WriteConfiguration(), default);
+            var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
+                .WithDataContext(TestPreparer.TestDataContext)
+                .UseMessagePackSerializer()
+                .WithReadModifyWriteConfiguration(rmwPolicy)
+                .Build<int>(OccupiedBin);
+
+            // Initially set the cached value to be null
+            var addValueOnTestType1 = new Func<int>(() => default);
+
+            // Update cached value
+            var updateValueOnTestType = new Func<int, int>(x => x + 1);
+
+            // Re-add cached value
+            var addValueOnTestType2 = new Func<int>(() => expectedFinalValue - 1);
+
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType1, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType2, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+            await keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType1, updateValueOnTestType,
+                TimeSpan.FromSeconds(5), default);
+
+            // Confirm that update is only called once
+            KeyValuePair<string, int> finalValue = await keyValueStore.ReadAsync(OccupiedRecord1, default);
+            Assert.AreEqual(expectedFinalValue, finalValue.Value);
         }
     }
 }
