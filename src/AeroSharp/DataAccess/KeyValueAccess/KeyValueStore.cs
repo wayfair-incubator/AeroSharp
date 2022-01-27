@@ -176,7 +176,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
                     // modify the record's value by first mapping the record to the object and then passing that
                     // to the updateValueFunction
                     // returns the object to write down to the store
-                    result = updateValueFunc(MapRecordsToTuple<T>(value, bin).First().Value);
+                    result = updateValueFunc(cachedValue);
                 }
                 else
                 {
