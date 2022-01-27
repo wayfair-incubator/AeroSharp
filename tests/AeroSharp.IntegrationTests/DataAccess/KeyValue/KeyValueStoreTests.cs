@@ -26,6 +26,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
         {
             [Key(1)]
             public string Text { get; set; }
+
             [Key(2)]
             public int Value { get; set; }
         }
