@@ -168,7 +168,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
             // Intention is to make the code in the retry simple and readable
 
             T result;
-            if (value.First().Value is object)
+            if (value is object && value.Any() && value.First().Value is object)
             {
                 // modify the record's value by first mapping the record to the object and then passing that
                 // to the updateValueFunction
