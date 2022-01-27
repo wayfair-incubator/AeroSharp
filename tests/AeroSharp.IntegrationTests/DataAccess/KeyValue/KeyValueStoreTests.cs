@@ -472,15 +472,11 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WithExponentialBackoff = true
             };
 
-            // The purpose of this test is to assert that a previously non-existent record
-            // can be added and modified in parallel without any issue, so let's delete
-            // any previously setup record from the set first
-            await _recordOperator.DeleteAsync(UnoccupiedRecord, new WriteConfiguration(), default);
             var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
                 .WithDataContext(TestPreparer.TestDataContext)
                 .UseMessagePackSerializer()
                 .WithReadModifyWriteConfiguration(rmwPolicy)
-                .Build<TestType>(UnoccupiedBin);
+                .Build<TestType>(OccupiedBin);
 
             var addValueOnTestType = new Func<TestType>(() => null);
 
@@ -492,8 +488,8 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
             });
 
             await Task.WhenAll(
-                keyValueStore.ReadModifyWriteAsync(UnoccupiedRecord, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default),
-                keyValueStore.ReadModifyWriteAsync(UnoccupiedRecord, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default));
+                keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default),
+                keyValueStore.ReadModifyWriteAsync(OccupiedRecord1, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default));
 
             KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(UnoccupiedRecord, default);
             Assert.IsNull(finalValue.Value);
