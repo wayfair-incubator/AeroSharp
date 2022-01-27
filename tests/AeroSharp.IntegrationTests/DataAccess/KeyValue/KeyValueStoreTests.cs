@@ -393,6 +393,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WaitTimeInMilliseconds = 10,
                 WithExponentialBackoff = true
             };
+
             // The purpose of this test is to assert that a previously non-existent record
             // can be added and modified in parallel without any issue, so let's delete
             // any previously setup record from the set first
@@ -459,6 +460,43 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
 
             KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(OccupiedRecord1, default);
             Assert.AreEqual(expectedFinalValue, finalValue.Value.Value);
+        }
+
+        [Test]
+        public async Task When_writing_a_record_that_does_exist_as_a_null_write_is_successful()
+        {
+            ReadModifyWritePolicy rmwPolicy = new ReadModifyWritePolicy
+            {
+                MaxRetries = 5,
+                WaitTimeInMilliseconds = 10,
+                WithExponentialBackoff = true
+            };
+
+            // The purpose of this test is to assert that a previously non-existent record
+            // can be added and modified in parallel without any issue, so let's delete
+            // any previously setup record from the set first
+            await _recordOperator.DeleteAsync(UnoccupiedRecord, new WriteConfiguration(), default);
+            var keyValueStore = KeyValueStoreBuilder.Configure(_clientProvider)
+                .WithDataContext(TestPreparer.TestDataContext)
+                .UseMessagePackSerializer()
+                .WithReadModifyWriteConfiguration(rmwPolicy)
+                .Build<TestType>(UnoccupiedBin);
+
+            var addValueOnTestType = new Func<TestType>(() => null);
+
+            // Should never be called due to add value here being null
+            var updateValueOnTestType = new Func<TestType, TestType>(x =>
+            {
+                x.Value = 42;
+                return x;
+            });
+
+            await Task.WhenAll(
+                keyValueStore.ReadModifyWriteAsync(UnoccupiedRecord, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default),
+                keyValueStore.ReadModifyWriteAsync(UnoccupiedRecord, addValueOnTestType, updateValueOnTestType, TimeSpan.FromSeconds(5), default));
+
+            KeyValuePair<string, TestType> finalValue = await keyValueStore.ReadAsync(UnoccupiedRecord, default);
+            Assert.IsNull(finalValue.Value);
         }
     }
 }
