@@ -167,7 +167,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
             // Adding this function in as a helper method to AddOrUpdate
             // Intention is to make the code in the retry simple and readable
             T result;
-            if (value.First().Value is object && MapRecordsToTuple<T>(value, bin).First().Value is object)
+            if (value.First().Value is object)
             {
                 T cachedValue = MapRecordsToTuple<T>(value, bin).First().Value;
 
