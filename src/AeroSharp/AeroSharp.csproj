@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aerospike.Client" Version="4.2.6" />
+    <PackageReference Include="Aerospike.Client" Version="4.2.7" />
     <PackageReference Include="FluentValidation" Version="10.3.5" />
     <PackageReference Include="lz4net" Version="1.0.15.93" />
     <PackageReference Include="MessagePack" Version="2.3.85" />
