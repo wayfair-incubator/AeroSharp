@@ -1,7 +1,21 @@
 # AeroSharp
 
-[![OSS Template Version](https://img.shields.io/badge/OSS%20Template-0.3.5-7f187f.svg)](https://github.com/wayfair-incubator/oss-template/blob/main/CHANGELOG.md)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![OSS Template Version][oss-template-shield]][oss-template-url]
+
+[![Status][github-status-shield]][github-status-url]
+[![Coverage][coverage-shield]][coverage-url]
+
+[![Version][nuget-version-shield]][nuget-url]
+[![Downloads][nuget-downloads-shield]][nuget-url]
+
+[![Contributor Covenant][contributor-covenant-shield]][contributor-covenant-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Commits][last-commit-shield]][last-commit-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+[![MIT License][license-shield]][license-url]
 
 ## About The Project
 
@@ -94,3 +108,29 @@ Project Link: [https://github.com/wayfair-incubator/AeroSharp](https://github.co
 
 - [Aerospike](https://www.aerospike.com/docs/)
 - [Aerospike C# Client](https://docs.aerospike.com/docs/client/csharp/index.html)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/wayfair-incubator/AeroSharp.svg?style=for-the-badge
+[contributors-url]: https://github.com/wayfair-incubator/AeroSharp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wayfair-incubator/AeroSharp.svg?style=for-the-badge
+[forks-url]: https://github.com/wayfair-incubator/AeroSharp/network/members
+[stars-shield]: https://img.shields.io/github/stars/wayfair-incubator/AeroSharp.svg?style=for-the-badge
+[stars-url]: https://github.com/wayfair-incubator/AeroSharp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wayfair-incubator/AeroSharp.svg?style=for-the-badge
+[issues-url]: https://github.com/wayfair-incubator/AeroSharp/issues
+[license-shield]: https://img.shields.io/github/license/wayfair-incubator/AeroSharp.svg?style=for-the-badge
+[license-url]: https://github.com/wayfair-incubator/AeroSharp/blob/main/LICENSE
+[github-status-shield]: https://img.shields.io/github/checks-status/wayfair-incubator/AeroSharp/main?style=for-the-badge
+[github-status-url]: https://github.com/wayfair-incubator/AeroSharp/actions
+[coverage-shield]: https://img.shields.io/codecov/c/github/wayfair-incubator/AeroSharp?style=for-the-badge
+[coverage-url]: https://app.codecov.io/gh/wayfair-incubator/AeroSharp
+[nuget-version-shield]: https://img.shields.io/nuget/v/AeroSharp?style=for-the-badge
+[nuget-downloads-shield]: https://img.shields.io/nuget/dt/AeroSharp?style=for-the-badge
+[nuget-url]: https://www.nuget.org/packages/AeroSharp/
+[last-commit-shield]: https://img.shields.io/github/last-commit/wayfair-incubator/AeroSharp?style=for-the-badge
+[last-commit-url]: https://github.com/wayfair-incubator/AeroSharp/commits/main
+[oss-template-shield]: https://img.shields.io/badge/OSS%20Template-0.3.5-7f187f.svg?style=for-the-badge
+[oss-template-url]: https://github.com/wayfair-incubator/oss-template/blob/main/CHANGELOG.md
+[contributor-covenant-shield]: https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge
+[contributor-covenant-url]: https://github.com/wayfair-incubator/AeroSharp/blob/main/CODE_OF_CONDUCT.md
