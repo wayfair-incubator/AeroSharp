@@ -15,7 +15,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-[![MIT License][license-shield]][license-url]
+[![Apache 2.0 License][license-shield]][license-url]
 
 ## About The Project
 
@@ -84,9 +84,9 @@ IEnumerable<MyDataType> listResult = await list.ReadAllAsync(CancellationToken.N
 // listResult contains [ MyDataType("list item 1"), MyDataType("list item 2") ]
 ```
 
-Full library documentation can be found at the [docs site](https://wayfair-incubator.github.io/AeroSharp/)
+Full library documentation can be found at the [docs site](https://wayfair-incubator.github.io/AeroSharp/).
 
-Code examples can be found in the [examples directory](./examples)
+Code examples can be found in the [examples directory](https://github.com/wayfair-incubator/AeroSharp/tree/main/examples).
 
 ## Roadmap
 
@@ -94,11 +94,11 @@ See the [open issues](https://github.com/wayfair-incubator/AeroSharp/issues) for
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. For detailed contributing guidelines, please see [CONTRIBUTING.md](CONTRIBUTING.md)
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. For detailed contributing guidelines, please see [CONTRIBUTING.md](https://github.com/wayfair-incubator/AeroSharp/blob/main/CONTRIBUTING.md).
 
 ## License
 
-Distributed under the `Apache 2.0` License. See [LICENSE](LICENSE) for more information.
+Distributed under the `Apache 2.0` License. See [LICENSE](https://github.com/wayfair-incubator/AeroSharp/blob/main/LICENSE) for more information.
 
 ## Contact
 
