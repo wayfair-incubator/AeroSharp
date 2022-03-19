@@ -1,0 +1,29 @@
+name: Auto-Approve Dependabot
+on:
+  pull_request:
+    branches: [ main ] 
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    # Only run this action on dependabot PRs.
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      # This first step will fail if there's no dependabot metadata, so the PR approval will not occur.
+      - name: Dependabot Metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v1.3.0
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      # Approve the PR.
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Auto-merge the PR for patch and minor updates if all checks pass.
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{ steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major' }}
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
