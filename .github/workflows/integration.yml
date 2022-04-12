@@ -33,7 +33,7 @@ jobs:
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
       - name: Publish Code Coverage
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v3
         with:
           files: /home/runner/work/AeroSharp/AeroSharp/coverage.opencover.xml
           fail_ci_if_error: true
