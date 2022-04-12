@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- `Aerospike.Client` v4.2.7 => v5.0.0. 
+- `Aerospike.Client` v4.2.7 => v5.0.0.
 
 See Aerospike's [C# Client Library Release Notes](https://download.aerospike.com/download/client/csharp/notes.html#5.0.0) for details on underlying core client changes.
 
