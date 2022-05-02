@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <PackageReference Include="Aerospike.Client" Version="5.0.0" />
-    <PackageReference Include="FluentValidation" Version="10.4.0" />
+    <PackageReference Include="FluentValidation" Version="11.0.0" />
     <PackageReference Include="lz4net" Version="1.0.15.93" />
     <PackageReference Include="MessagePack" Version="2.3.85" />
     <PackageReference Include="Polly" Version="7.2.3" />
