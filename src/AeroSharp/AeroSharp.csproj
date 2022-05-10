@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
     <Authors>Wayfair</Authors>
     <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
     <Copyright>Wayfair ©2021</Copyright>
