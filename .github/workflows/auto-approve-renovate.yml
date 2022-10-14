@@ -1,0 +1,18 @@
+name: Auto-Approve Renovate
+on:
+  pull_request:
+    branches: [ main ]
+permissions:
+  pull-requests: write
+jobs:
+  approval:
+    runs-on: ubuntu-latest
+    # Only run this action PRs authored by renovate.
+    if: ${{ github.actor == 'renovate[bot]' }}
+    steps:
+      # Approve the PR.
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
