@@ -5,7 +5,7 @@ on:
 permissions:
   pull-requests: write
 jobs:
-  dependabot:
+  approval:
     runs-on: ubuntu-latest
     # Only run this action PRs authored by renovate.
     if: ${{ github.actor == 'renovate[bot]' }}
