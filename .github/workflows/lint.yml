@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: lint markdown files
+      - name: Lint Markdown files
         uses: avto-dev/markdown-lint@v1
         with:
           config: '.markdownlint.json'
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Lint renovate config
+      - name: Lint Renovate config
         uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
         with:
           config_file_path: 'renovate.json'
