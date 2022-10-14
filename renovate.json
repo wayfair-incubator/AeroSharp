@@ -1,0 +1,50 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "description": "Renovate configuration for AeroSharp",
+  "labels": [
+    "dependencies",
+    "renovate"
+  ],
+  "timezone": "America/New_York",
+  "packageRules": [
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "groupName": "GitHub Actions",
+      "addLabels": [
+        "actions"
+      ]
+    },
+    {
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "addLabels": [
+        "non-breaking",
+        "cut new release"
+      ],
+      "groupName": "NuGet Packages - Minor Updates"
+    },
+    {
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "addLabels": [
+        "breaking",
+        "cut new release"
+      ],
+      "groupName": "NuGet Packages - Major Updates"
+    }
+  ]
+}
