@@ -8,7 +8,9 @@
     "dependencies",
     "renovate"
   ],
-  "timezone": "America/New_York",
+  "schedule": [
+    "before 9am on Monday"
+  ],
   "packageRules": [
     {
       "matchManagers": [
