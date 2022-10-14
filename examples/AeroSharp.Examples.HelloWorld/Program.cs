@@ -26,7 +26,7 @@ namespace AeroSharp.Examples.HelloWorld
                 )
                 .Build();
 
-            var dataContext = new DataContext("test_namespace", "test_set");
+            var dataContext = new DataContext("test", "test_set");
 
             var keyValueStore = KeyValueStoreBuilder
                 .Configure(clientProvider)
