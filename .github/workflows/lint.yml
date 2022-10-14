@@ -6,15 +6,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint Renovate config
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
+        with:
+          config_file_path: 'renovate.json'
+
       - name: Lint Markdown files
-        uses: actions/checkout@v3
         uses: avto-dev/markdown-lint@v1
         with:
           config: '.markdownlint.json'
           args: '**/*.md .github/**/*.md'
-
-      - name: Lint Renovate config
-        uses: actions/checkout@v3
-        uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
-        with:
-          config_file_path: 'renovate.json'
