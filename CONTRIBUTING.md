@@ -9,7 +9,7 @@ requests after 60 days of inactivity.
 
 Please note that all of your interactions in the project are subject to our [Code of Conduct](CODE_OF_CONDUCT.md). This
 includes creation of issues or pull requests, commenting on issues or pull requests, and extends to all interactions in
-any real-time space (eg. Slack, Discord, etc).
+any real-time space (eg. Slack, Discord, etc).  We follow the general git-paradigm for contributions to this repo, you can read about it [here](https://gist.github.com/Chaser324/ce0505fbed06b947d962)!
 
 ## Reporting Issues
 
