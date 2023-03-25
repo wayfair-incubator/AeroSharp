@@ -20,7 +20,8 @@ namespace AeroSharp.UnitTests.DataAccess.Policies
                 SendKey = true,
                 SendSetName = true,
                 SleepBetweenRetries = TimeSpan.FromMilliseconds(1000),
-                TotalTimeout = TimeSpan.FromMilliseconds(2000)
+                TotalTimeout = TimeSpan.FromMilliseconds(2000),
+                MaxConcurrentThreads = 1
             };
 
             var result = ReadConfigurationToBatchPolicyMapper.MapToPolicy(config);
@@ -30,6 +31,7 @@ namespace AeroSharp.UnitTests.DataAccess.Policies
             result.sendSetName.Should().Be(config.SendSetName);
             result.sleepBetweenRetries.Should().Be((int)config.SleepBetweenRetries.TotalMilliseconds);
             result.totalTimeout.Should().Be((int)config.TotalTimeout.TotalMilliseconds);
+            result.maxConcurrentThreads.Should().Be(config.MaxConcurrentThreads);
         }
     }
 }

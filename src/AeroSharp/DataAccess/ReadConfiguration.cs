@@ -22,6 +22,7 @@ namespace AeroSharp.DataAccess
             TotalTimeout = TimeSpan.FromSeconds(10);
             SocketTimeout = TimeSpan.FromSeconds(4);
             MaxConcurrentBatches = 1;
+            MaxConcurrentThreads = 1;
         }
 
         /// <summary>
@@ -38,6 +39,7 @@ namespace AeroSharp.DataAccess
             TotalTimeout = other.TotalTimeout;
             SocketTimeout = other.SocketTimeout;
             MaxConcurrentBatches = other.MaxConcurrentBatches;
+            MaxConcurrentThreads = other.MaxConcurrentThreads;
         }
 
         /// <summary>
@@ -78,5 +80,11 @@ namespace AeroSharp.DataAccess
         /// If set to 1, batches are read sequentially. Must be >= 1.
         /// </summary>
         public int MaxConcurrentBatches { get; set; }
+        /// <summary>
+        /// Maximum number of concurrent synchronous batch node request threads to server nodes.
+        /// Asynchronous batch requests ignore this field and always issue all node requests in parallel.
+        /// Must be >= 0.
+        /// </summary>
+        public int MaxConcurrentThreads { get; set; }
     }
 }
