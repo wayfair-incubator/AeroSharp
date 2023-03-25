@@ -1,47 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.3.1</Version>
-    <Authors>Wayfair</Authors>
-    <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
-    <Copyright>Wayfair ©2021</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/wayfair-incubator/AeroSharp</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/wayfair-incubator/AeroSharp</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>aerospike, aerosharp, serialization, policy validation</PackageTags>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-    <None Remove="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Aerospike.Client" Version="5.1.1" />
-    <PackageReference Include="FluentValidation" Version="11.0.3" />
-    <PackageReference Include="lz4net" Version="1.0.15.93" />
-    <PackageReference Include="MessagePack" Version="2.3.112" />
-    <PackageReference Include="Polly" Version="7.2.3" />
-    <PackageReference Include="protobuf-net" Version="3.1.4" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
- 
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>1.0.0</Version>
+		<Authors>Wayfair</Authors>
+		<Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
+		<Copyright>Wayfair ©2023</Copyright>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/wayfair-incubator/AeroSharp</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/wayfair-incubator/AeroSharp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>aerospike, aerosharp, serialization, policy validation</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath/>
+		</None>
+		<None Remove="stylecop.json"/>
+	</ItemGroup>
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\stylecop.json" Link="stylecop.json"/>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Aerospike.Client" Version="6.0.0"/>
+		<PackageReference Include="FluentValidation" Version="11.0.3"/>
+		<PackageReference Include="lz4net" Version="1.0.15.93"/>
+		<PackageReference Include="MessagePack" Version="2.3.112"/>
+		<PackageReference Include="Polly" Version="7.2.3"/>
+		<PackageReference Include="protobuf-net" Version="3.1.4"/>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
 </Project>
