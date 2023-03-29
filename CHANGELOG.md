@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2023-03-29
+
+### Changed
+
+- Target .net6 and .net7 frameworks
+- `Aerospike.Client` v5.1.1 => 6.0.0
+
+Our first major release!  This looks to upgrade the package with some of the performance improvements in .net6 and
+includes all of the additional changes/improvements from Aerospike in their latest client version.
+
+## [0.4.0] - 2023-03-29
+
+### Changed
+
+- Allow users to set MaxConcurrentThreads in ReadConfiguration
+
 ## [0.3.1] - 2022-06-01
 
 ### Changed
