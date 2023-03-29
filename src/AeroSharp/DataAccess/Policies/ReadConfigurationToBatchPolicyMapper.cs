@@ -12,7 +12,8 @@ namespace AeroSharp.DataAccess.Policies
                 sendKey = configuration.SendKey,
                 sendSetName = configuration.SendSetName,
                 sleepBetweenRetries = (int)configuration.SleepBetweenRetries.TotalMilliseconds,
-                totalTimeout = (int)configuration.TotalTimeout.TotalMilliseconds
+                totalTimeout = (int)configuration.TotalTimeout.TotalMilliseconds,
+                maxConcurrentThreads = configuration.MaxConcurrentThreads
             };
     }
 }

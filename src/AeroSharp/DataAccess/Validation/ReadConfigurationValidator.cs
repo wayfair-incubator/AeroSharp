@@ -11,6 +11,7 @@ namespace AeroSharp.DataAccess.Validation
             RuleFor(x => x.SocketTimeout.TotalMilliseconds).GreaterThanOrEqualTo(TimeSpan.FromMilliseconds(0).TotalMilliseconds);
             RuleFor(x => x.RetryCount).GreaterThanOrEqualTo(0);
             RuleFor(x => x.MaxConcurrentBatches).GreaterThanOrEqualTo(1);
+            RuleFor(x => x.MaxConcurrentThreads).GreaterThanOrEqualTo(0);
         }
     }
 }
