@@ -3426,6 +3426,19 @@ references:
   isSpec: "True"
   fullName: AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentBatches
   nameWithType: ReadConfiguration.MaxConcurrentBatches
+- uid: AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads
+  name: MaxConcurrentThreads
+  href: api/AeroSharp.DataAccess.ReadConfiguration.html#AeroSharp_DataAccess_ReadConfiguration_MaxConcurrentThreads
+  commentId: P:AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads
+  fullName: AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads
+  nameWithType: ReadConfiguration.MaxConcurrentThreads
+- uid: AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads*
+  name: MaxConcurrentThreads
+  href: api/AeroSharp.DataAccess.ReadConfiguration.html#AeroSharp_DataAccess_ReadConfiguration_MaxConcurrentThreads_
+  commentId: Overload:AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.ReadConfiguration.MaxConcurrentThreads
+  nameWithType: ReadConfiguration.MaxConcurrentThreads
 - uid: AeroSharp.DataAccess.ReadConfiguration.ReadBatchSize
   name: ReadBatchSize
   href: api/AeroSharp.DataAccess.ReadConfiguration.html#AeroSharp_DataAccess_ReadConfiguration_ReadBatchSize
