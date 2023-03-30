@@ -17,7 +17,9 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: |
+            6.0.x
+            7.0.x
       - name: Restore Dependencies
         run: dotnet restore src
       - name: Build
@@ -34,5 +36,5 @@ jobs:
       - name: Publish Code Coverage
         uses: codecov/codecov-action@v3
         with:
-          files: /home/runner/work/AeroSharp/AeroSharp/coverage.opencover.xml
+          files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
           fail_ci_if_error: true
