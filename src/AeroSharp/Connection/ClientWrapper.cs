@@ -16,5 +16,10 @@ namespace AeroSharp.Connection
 
             Client = client;
         }
+
+        public Node[] GetClientNodes()
+        {
+            return Client.Nodes;
+        }
     }
 }
