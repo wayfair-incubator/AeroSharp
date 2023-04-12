@@ -26,16 +26,6 @@ namespace AeroSharp.Connection
             _hosts = connection.BootstrapServers.Select(s => new Host(s, connection.Port)).ToArray();
         }
 
-        public Node[] GetNodes()
-        {
-            if (_client is null || !_client.Client.Connected)
-            {
-                _ = GetClient();
-            }
-
-            return _client.GetClientNodes();
-        }
-
         public ClientWrapper GetClient()
         {
             if (_client is null || !_client.Client.Connected)

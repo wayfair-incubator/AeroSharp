@@ -32,11 +32,6 @@ namespace AeroSharp.Tests.Utility
 
                 return _instance;
             }
-
-            public Node[] GetNodes()
-            {
-                return GetClient().GetClientNodes();
-            }
         }
 
         private static readonly string[] BootstrapServers = { "127.0.0.1" };
