@@ -1,6 +1,7 @@
 ﻿using System;
 using AeroSharp.Connection;
 using AeroSharp.DataAccess;
+using Aerospike.Client;
 
 namespace AeroSharp.Tests.Utility
 {
@@ -30,6 +31,11 @@ namespace AeroSharp.Tests.Utility
                 }
 
                 return _instance;
+            }
+
+            public Node[] GetNodes()
+            {
+                return GetClient().GetClientNodes();
             }
         }
 
