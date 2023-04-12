@@ -1,7 +1,6 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
-using Aerospike.Client;
+using System;
 
 namespace AeroSharp.Tests.Utility
 {

@@ -1,6 +1,4 @@
-﻿using Aerospike.Client;
-
-namespace AeroSharp.Connection
+﻿namespace AeroSharp.Connection
 {
     public interface IClientProvider
     {
