@@ -1,6 +1,6 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
+using System;
 
 namespace AeroSharp.Tests.Utility
 {
