@@ -176,6 +176,19 @@ references:
   isSpec: "True"
   fullName: AeroSharp.Connection.ClientWrapper.ClientWrapper
   nameWithType: ClientWrapper.ClientWrapper
+- uid: AeroSharp.Connection.ClientWrapper.ClientNodes
+  name: ClientNodes
+  href: api/AeroSharp.Connection.ClientWrapper.html#AeroSharp_Connection_ClientWrapper_ClientNodes
+  commentId: P:AeroSharp.Connection.ClientWrapper.ClientNodes
+  fullName: AeroSharp.Connection.ClientWrapper.ClientNodes
+  nameWithType: ClientWrapper.ClientNodes
+- uid: AeroSharp.Connection.ClientWrapper.ClientNodes*
+  name: ClientNodes
+  href: api/AeroSharp.Connection.ClientWrapper.html#AeroSharp_Connection_ClientWrapper_ClientNodes_
+  commentId: Overload:AeroSharp.Connection.ClientWrapper.ClientNodes
+  isSpec: "True"
+  fullName: AeroSharp.Connection.ClientWrapper.ClientNodes
+  nameWithType: ClientWrapper.ClientNodes
 - uid: AeroSharp.Connection.ConnectionConfiguration
   name: ConnectionConfiguration
   href: api/AeroSharp.Connection.ConnectionConfiguration.html

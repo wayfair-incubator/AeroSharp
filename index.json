@@ -17,7 +17,7 @@
   "api/AeroSharp.Connection.ClientWrapper.html": {
     "href": "api/AeroSharp.Connection.ClientWrapper.html",
     "title": "Class ClientWrapper | AeroSharp",
-    "keywords": "Class ClientWrapper Inheritance Object ClientWrapper Namespace : AeroSharp.Connection Assembly : AeroSharp.dll Syntax public class ClientWrapper : object Constructors | Improve this Doc View Source ClientWrapper(IAsyncClient) Declaration public ClientWrapper(IAsyncClient client) Parameters Type Name Description IAsyncClient client"
+    "keywords": "Class ClientWrapper Inheritance Object ClientWrapper Namespace : AeroSharp.Connection Assembly : AeroSharp.dll Syntax public class ClientWrapper : object Constructors | Improve this Doc View Source ClientWrapper(IAsyncClient) Declaration public ClientWrapper(IAsyncClient client) Parameters Type Name Description IAsyncClient client Properties | Improve this Doc View Source ClientNodes Declaration public Node[] ClientNodes { get; } Property Value Type Description Node []"
   },
   "api/AeroSharp.Connection.ConnectionConfiguration.html": {
     "href": "api/AeroSharp.Connection.ConnectionConfiguration.html",
