@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.DataAccess.Policies;
 using Aerospike.Client;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.DataAccess.Internal
 {
@@ -103,23 +103,22 @@ namespace AeroSharp.DataAccess.Internal
             }
         }
 
-        private void HandleAerospikeExceptions(AerospikeException ex, string key)
+        private static void HandleAerospikeExceptions(AerospikeException ex, string key)
         {
-            int errorCode = ex.Result;
-            if (errorCode == ResultCode.KEY_NOT_FOUND_ERROR)
+            throw ex.Result switch
             {
-                throw new RecordNotFoundException($"Could not find record to operate on. Key: {key}", ex);
-            }
-            else if (errorCode == ResultCode.BIN_TYPE_ERROR)
-            {
-                throw new BinTypeMismatchException($"Operation on {key} failed. Attempting to operate on a bin with a different data type.", ex);
-            }
-            else if (errorCode == ResultCode.KEY_EXISTS_ERROR)
-            {
-                throw new KeyAlreadyExistsException($"Operation on {key} failed. Trying to operate on a key that already exists with the \"create only\" record exists action.");
-            }
-
-            throw new OperationFailedException($"Operation failed. Key {key}", ex);
+                ResultCode.KEY_NOT_FOUND_ERROR => new RecordNotFoundException(
+                    $"Could not find record to operate on. Key: {key}", ex),
+                ResultCode.BIN_TYPE_ERROR => new BinTypeMismatchException(
+                    $"Operation on {key} failed. Attempting to operate on a bin with a different data type.", ex),
+                ResultCode.KEY_EXISTS_ERROR => new KeyAlreadyExistsException(
+                    $"Operation on {key} failed. Trying to operate on a key that already exists with the \"create only\" record exists action."),
+                ResultCode.ELEMENT_NOT_FOUND => new MapEntryNotFoundException(
+                    $"Operation on {key} failed. Trying to operate on a map element that does not exist with the \"update only\" map policy."),
+                ResultCode.ELEMENT_EXISTS => new MapEntryAlreadyExistsException(
+                    $"Operation on {key} failed. Trying to operate on a map element that already exists with the \"create only\" map policy."),
+                _ => new OperationFailedException($"Operation failed. Key {key}", ex)
+            };
         }
     }
 }

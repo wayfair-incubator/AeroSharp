@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AeroSharp.Examples.Keys;
 using AeroSharp.Examples.KeyValue;
 using AeroSharp.Examples.Lists;
+using AeroSharp.Examples.Maps;
 using AeroSharp.Examples.Operations;
 using AeroSharp.Examples.Ttl;
 using AeroSharp.Examples.Utilities;
@@ -11,12 +12,13 @@ namespace AeroSharp.Examples
 {
     public class App
     {
-        public async Task Run()
+        public async Task RunAsync()
         {
             var client = AerospikeClientProvider.GetClient();
 
             var examples = new IExample[]
             {
+                new MapExamples(client),
                 new ListExamples(client),
                 new KeyValueExamples(client),
                 new KeyExample(client),
