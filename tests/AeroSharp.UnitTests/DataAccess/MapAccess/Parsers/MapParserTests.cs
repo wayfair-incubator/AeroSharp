@@ -130,9 +130,67 @@ internal sealed class MapParserTests
         var record = new Record(bins, default, default);
 
         // act
-        var action = () => _mapParser.Parse<long, long>(record, BinName);
+        var act = () => _mapParser.Parse<long, long>(record, BinName);
 
         // assert
-        action.Should().Throw<UnexpectedDataFormatException>();
+        act.Should().Throw<UnexpectedDataFormatException>();
+    }
+
+    [Test]
+    public void MapParser_throws_exception_when_parsing_KeyValuePair_with_unexpected_key_type()
+    {
+        // arrange
+        var key = new
+        {
+            Id = 123,
+            Name = "name"
+        };
+
+        var value = 123456789L;
+
+        var keyValuePair = new KeyValuePair<object, object>(key, value);
+        var storedValues = new List<object> { keyValuePair };
+
+        var bins = new Dictionary<string, object>
+        {
+            { BinName, storedValues }
+        };
+
+        var record = new Record(bins, default, default);
+
+        // act
+        var act = () => _mapParser.Parse<long, long>(record, BinName);
+
+        // assert
+        act.Should().Throw<UnexpectedDataFormatException>();
+    }
+
+    [Test]
+    public void MapParser_throws_exception_when_parsing_KeyValuePair_with_unexpected_value_type()
+    {
+        // arrange
+        var key = 123456789L;
+
+        var value = new
+        {
+            Id = 123,
+            Name = "name"
+        };
+
+        var keyValuePair = new KeyValuePair<object, object>(key, value);
+        var storedValues = new List<object> { keyValuePair };
+
+        var bins = new Dictionary<string, object>
+        {
+            { BinName, storedValues }
+        };
+
+        var record = new Record(bins, default, default);
+
+        // act
+        var act = () => _mapParser.Parse<long, long>(record, BinName);
+
+        // assert
+        act.Should().Throw<UnexpectedDataFormatException>();
     }
 }

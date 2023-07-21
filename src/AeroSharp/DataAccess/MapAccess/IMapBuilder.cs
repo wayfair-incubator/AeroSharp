@@ -1,5 +1,4 @@
 ﻿using AeroSharp.DataAccess.Configuration;
-using AeroSharp.Serialization;
 
 namespace AeroSharp.DataAccess.MapAccess;
 
@@ -53,35 +52,4 @@ public interface IMapBuilder : ISerializerBuilder<IMapBuilder>
     /// <param name="writeConfiguration"> A <see cref="WriteConfiguration"/>. </param>
     /// <returns> An <see cref="IMapBuilder"/>. </returns>
     IMapBuilder WithWriteConfiguration(WriteConfiguration writeConfiguration);
-
-    /// <summary>
-    ///     Use the default <see cref="ProtobufSerializer"/> for serializing map values.
-    /// </summary>
-    /// <remarks>
-    ///     Optional: useful for when the values are a complex type. Unneeded for scalar types. Note that this
-    ///     will impact methods that deal with map value ranking.
-    /// </remarks>
-    /// <returns> An instance of the next builder. </returns>
-    IMapBuilder UseProtobufSerializer();
-
-    /// <summary>
-    ///     Use the built-in <see cref="MessagePackSerializer"/> for serializing map values.
-    /// </summary>
-    /// <remarks>
-    ///     Optional: useful for when the values are a complex type. Unneeded for scalar types. Note that this
-    ///     will impact methods that deal with map value ranking.
-    /// </remarks>
-    /// <returns> An instance of the next builder. </returns>
-    IMapBuilder UseMessagePackSerializer();
-
-    /// <summary>
-    ///     Use a provided instance of an <see cref="ISerializer"/> for serializing map values.
-    /// </summary>
-    /// <remarks>
-    ///     Optional: useful for when the values are a complex type. Unneeded for scalar types. Note that this
-    ///     will impact methods that deal with map value ranking.
-    /// </remarks>
-    /// <param name="serializer"> The <see cref="ISerializer"/> instance. </param>
-    /// <returns> An instance of the next builder. </returns>
-    IMapBuilder WithSerializer(ISerializer serializer);
 }

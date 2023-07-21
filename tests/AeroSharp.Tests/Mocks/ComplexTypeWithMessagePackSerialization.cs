@@ -1,9 +1,11 @@
 ﻿using MessagePack;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace AeroSharp.Tests.Mocks;
 
 [MessagePackObject]
+[ExcludeFromCodeCoverage]
 public sealed class ComplexTypeWithMessagePackSerialization : IEquatable<ComplexTypeWithMessagePackSerialization>
 {
     [Key(0)]
