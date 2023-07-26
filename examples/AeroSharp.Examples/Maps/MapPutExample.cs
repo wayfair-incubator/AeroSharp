@@ -12,7 +12,7 @@ namespace AeroSharp.Examples.Maps;
 /// <summary>
 ///     Example showing how to put entries into a map.
 /// </summary>
-internal sealed class MapPutExample : IExample
+internal class MapPutExample : IExample
 {
     private const string SetName = nameof(MapPutExample);
     private readonly IMap<string, string> _map;

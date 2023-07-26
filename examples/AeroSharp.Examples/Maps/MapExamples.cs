@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.Maps;
 
-internal sealed class MapExamples : IExample
+internal class MapExamples : IExample
 {
     private readonly IClientProvider _clientProvider;
 

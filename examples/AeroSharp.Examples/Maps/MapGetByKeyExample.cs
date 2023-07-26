@@ -11,7 +11,7 @@ namespace AeroSharp.Examples.Maps;
 /// <summary>
 ///     Example showing how to get entries from a map by key.
 /// </summary>
-internal sealed class MapGetByKeyExample : IExample
+internal class MapGetByKeyExample : IExample
 {
     private const string SetName = nameof(MapGetByKeyExample);
 

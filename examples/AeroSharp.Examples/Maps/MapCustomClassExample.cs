@@ -12,7 +12,7 @@ namespace AeroSharp.Examples.Maps;
 /// <summary>
 ///     Example showing how to use a map with a custom class as the value.
 /// </summary>
-internal sealed class MapCustomClassExample : IExample
+internal class MapCustomClassExample : IExample
 {
     private const int RecordCount = 5;
 

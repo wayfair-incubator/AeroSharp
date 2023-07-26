@@ -11,7 +11,7 @@ namespace AeroSharp.Examples.Maps;
 /// <summary>
 ///     Example showing how to remove a map entry by key.
 /// </summary>
-internal sealed class MapRemoveByKeyExample : IExample
+internal class MapRemoveByKeyExample : IExample
 {
     private const string SetName = nameof(MapRemoveByKeyExample);
 

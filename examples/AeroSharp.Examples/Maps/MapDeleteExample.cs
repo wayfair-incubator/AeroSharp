@@ -11,7 +11,7 @@ namespace AeroSharp.Examples.Maps;
 /// <summary>
 ///     Example showing how to delete a map.
 /// </summary>
-internal sealed class MapDeleteExample : IExample
+internal class MapDeleteExample : IExample
 {
     private const string SetName = nameof(MapDeleteExample);
     private readonly IMap<string, string> _map;
