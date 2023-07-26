@@ -38,7 +38,7 @@ internal sealed class MapConfigurationToMapPolicyMapperTests
             CreateOnly = createOnly,
             UpdateOnly = updateOnly,
             NoFail = noFail,
-            Partial = partial
+            AllowPartial = partial
         };
 
         // act

@@ -26,7 +26,7 @@ internal sealed class MapParserWithSerializer : IMapParser
         var key = ExtractKey<TKey>(mapEntry, bin);
         var byteValue = ExtractValue(mapEntry, bin);
 
-        return DeserializeValue<TKey, TValue>(key, byteValue);
+        return DeserializeValue<TKey, TValue>(key, byteValue, bin);
     }
 
     private static TKey ExtractKey<TKey>(KeyValuePair<object, object> mapEntry, string bin)
@@ -59,7 +59,7 @@ internal sealed class MapParserWithSerializer : IMapParser
         }
     }
 
-    private KeyValuePair<TKey, TValue> DeserializeValue<TKey, TValue>(TKey key, byte[] byteValue)
+    private KeyValuePair<TKey, TValue> DeserializeValue<TKey, TValue>(TKey key, byte[] byteValue, string bin)
     {
         try
         {
@@ -67,7 +67,7 @@ internal sealed class MapParserWithSerializer : IMapParser
         }
         catch (Exception exception)
         {
-            throw new DeserializationException("Error deserializing bin blob.", exception);
+            throw new DeserializationException($"Error deserializing bin blob in bin \"{bin}\".", exception);
         }
     }
 }

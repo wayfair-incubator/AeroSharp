@@ -25,6 +25,8 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
 
     private readonly AbstractValidator<WriteConfiguration> _writeConfigurationValidator;
 
+    private readonly AbstractValidator<MapConfiguration> _mapConfigurationValidator;
+
     private DataContext _dataContext;
 
     private ISerializer _serializer;
@@ -43,6 +45,7 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
         _dataContextValidator = new DataContextValidator();
         _mapContextValidator = new MapContextValidator();
         _writeConfigurationValidator = new WriteConfigurationValidator();
+        _mapConfigurationValidator = new MapConfigurationValidator();
     }
 
     /// <summary>
@@ -135,6 +138,7 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
 
         _dataContextValidator.ValidateAndThrow(_dataContext);
         _writeConfigurationValidator.ValidateAndThrow(_writeConfiguration);
+        _mapConfigurationValidator.ValidateAndThrow(_mapConfiguration);
 
         var recordOperator = new RecordOperator(_clientProvider, _dataContext);
         var mapParser = BuildMapParser();

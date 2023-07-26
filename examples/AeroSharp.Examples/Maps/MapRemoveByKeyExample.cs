@@ -28,6 +28,7 @@ internal class MapRemoveByKeyExample : IExample
 
     public async Task ExecuteAsync()
     {
+        // Ensure we have something to remove.
         await MapHydrator.HydrateMap(_map, MapExampleData.MapEntries);
 
         foreach (var (key, _) in MapExampleData.MapEntries)

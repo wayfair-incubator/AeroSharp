@@ -5,14 +5,17 @@ namespace AeroSharp.DataAccess;
 
 /// <summary>
 ///     Configuration that will help build a MapPolicy for Aerospike Map operations.
-///     Reference: https://www.aerospike.com/apidocs/csharp/html/T_Aerospike_Client_MapWriteFlags.htm
 /// </summary>
+/// <remarks>
+/// See the <see href="https://www.aerospike.com/apidocs/csharp/html/T_Aerospike_Client_MapWriteFlags.html">documentation</see>
+/// for more information on map write configuration flags.
+/// </remarks>
 [ExcludeFromCodeCoverage]
 public sealed class MapConfiguration
 {
     public MapConfiguration()
     {
-        Partial = false;
+        AllowPartial = false;
         NoFail = false;
         CreateOnly = false;
         UpdateOnly = false;
@@ -22,7 +25,7 @@ public sealed class MapConfiguration
     /// <summary>
     ///     Allow other valid map items to be committed if a map item is denied due to write flag constraints.
     /// </summary>
-    public bool Partial { get; set; }
+    public bool AllowPartial { get; set; }
 
     /// <summary>
     ///     Do not raise error if a map item is denied due to write flag constraints.

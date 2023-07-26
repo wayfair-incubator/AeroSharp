@@ -27,6 +27,7 @@ internal class MapDeleteExample : IExample
 
     public async Task ExecuteAsync()
     {
+        // Ensure we have something to delete.
         await MapHydrator.HydrateMap(_map, MapExampleData.MapEntries);
 
         Console.WriteLine($"{nameof(MapDeleteExample)} :: DELETE MAP");

@@ -39,7 +39,7 @@ internal sealed class MapBinParser : IMapBinParser
             );
         }
 
-        if (!binValues.Any())
+        if (binValues.Count == 0)
         {
             throw new MapEntryNotFoundException($"Map entry not found in bin \"{bin}\".");
         }

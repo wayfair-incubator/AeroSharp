@@ -28,6 +28,7 @@ internal class MapGetByKeyExample : IExample
 
     public async Task ExecuteAsync()
     {
+        // Ensure we have something to get.
         await MapHydrator.HydrateMap(_map, MapExampleData.MapEntries);
 
         foreach (var (key, _) in MapExampleData.MapEntries)

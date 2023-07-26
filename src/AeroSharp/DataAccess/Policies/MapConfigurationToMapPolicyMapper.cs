@@ -15,7 +15,7 @@ internal static class MapConfigurationToMapPolicyMapper
             mapConfiguration.CreateOnly ? MapWriteFlags.CREATE_ONLY : 0,
             mapConfiguration.UpdateOnly ? MapWriteFlags.UPDATE_ONLY : 0,
             mapConfiguration.NoFail ? MapWriteFlags.NO_FAIL : 0,
-            mapConfiguration.Partial ? MapWriteFlags.PARTIAL : 0
+            mapConfiguration.AllowPartial ? MapWriteFlags.PARTIAL : 0
         };
 
         var flags = flagsArray.Aggregate(MapWriteFlags.DEFAULT, (currentFlag, nextFlag) => currentFlag | nextFlag);
