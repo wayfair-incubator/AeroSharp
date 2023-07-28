@@ -1,5 +1,6 @@
 ﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
+using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.DataAccess.MapAccess;
 using AeroSharp.Serialization;
 using FluentAssertions;
@@ -35,11 +36,11 @@ internal sealed class MapBuilderTests
         // act
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -47,11 +48,11 @@ internal sealed class MapBuilderTests
     {
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
-            .Build<int, int>("key", "bin");
+            .Build<long, long>("key", "bin");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -59,11 +60,11 @@ internal sealed class MapBuilderTests
     {
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
-            .Build<int, int>();
+            .Build<long, long>();
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMapOperator<int, int>>();
+        map.Should().BeAssignableTo<IMapOperator<long, long>>();
     }
 
     [Test]
@@ -74,11 +75,11 @@ internal sealed class MapBuilderTests
             .WithDataContext(_dataContext)
             .WithMapConfiguration(_mapConfiguration)
             .WithWriteConfiguration(_writeConfiguration)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -88,11 +89,11 @@ internal sealed class MapBuilderTests
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
             .UseProtobufSerializer()
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -102,11 +103,11 @@ internal sealed class MapBuilderTests
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
             .UseMessagePackSerializer()
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -116,11 +117,11 @@ internal sealed class MapBuilderTests
         var map = MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
             .WithSerializer(_mockSerializer.Object)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         map.Should().NotBeNull();
-        map.Should().BeAssignableTo<IMap<int, int>>();
+        map.Should().BeAssignableTo<IMap<long, long>>();
     }
 
     [Test]
@@ -129,7 +130,7 @@ internal sealed class MapBuilderTests
         // arrange + act
         var act = () => MapBuilder.Configure(null)
             .WithDataContext(_dataContext)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         act.Should().Throw<ArgumentNullException>();
@@ -141,7 +142,7 @@ internal sealed class MapBuilderTests
         // arrange + act
         var act = () => MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(null)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         act.Should().Throw<ArgumentNullException>();
@@ -154,7 +155,7 @@ internal sealed class MapBuilderTests
         var act = () => MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
             .WithWriteConfiguration(null)
-            .Build<int, int>("key");
+            .Build<long, long>("key");
 
         // assert
         act.Should().Throw<ArgumentNullException>();
@@ -168,9 +169,21 @@ internal sealed class MapBuilderTests
         // arrange + act
         var act = () => MapBuilder.Configure(_mockClientProvider.Object)
             .WithDataContext(_dataContext)
-            .Build<int, int>(key, bin);
+            .Build<long, long>(key, bin);
 
         // assert
         act.Should().Throw<ValidationException>();
+    }
+
+    [Test]
+    public void When_Build_is_called_with_unsupported_key_type_UnsupportedKeyTypeException_is_thrown()
+    {
+        // arrange + act
+        var act = () => MapBuilder.Configure(_mockClientProvider.Object)
+            .WithDataContext(_dataContext)
+            .Build<int, long>();
+
+        // assert
+        act.Should().Throw<UnsupportedKeyTypeException>();
     }
 }

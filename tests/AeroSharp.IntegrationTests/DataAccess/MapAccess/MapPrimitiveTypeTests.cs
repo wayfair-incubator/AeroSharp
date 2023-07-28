@@ -216,7 +216,7 @@ internal sealed class MapPrimitiveTypeTests
                     CreateOnly = true
                 }
             )
-            .Build<int, int>(Key, Bin);
+            .Build<long, long>(Key, Bin);
 
         // clean up the existing map record
         await map.DeleteAsync(default);
@@ -247,7 +247,7 @@ internal sealed class MapPrimitiveTypeTests
                     UpdateOnly = true
                 }
             )
-            .Build<int, int>(Key, Bin);
+            .Build<long, long>(Key, Bin);
 
         // clean up the existing map record
         await map.DeleteAsync(default);

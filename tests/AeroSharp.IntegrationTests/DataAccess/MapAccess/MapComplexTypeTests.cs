@@ -218,7 +218,7 @@ internal sealed class MapComplexTypeTests
                     CreateOnly = true
                 }
             )
-            .Build<int, ComplexTypeWithMessagePackSerialization>(Key, Bin);
+            .Build<long, ComplexTypeWithMessagePackSerialization>(Key, Bin);
 
         // clean up the existing map record
         await map.DeleteAsync(default);
@@ -250,7 +250,7 @@ internal sealed class MapComplexTypeTests
                     UpdateOnly = true
                 }
             )
-            .Build<int, ComplexTypeWithMessagePackSerialization>(Key, Bin);
+            .Build<long, ComplexTypeWithMessagePackSerialization>(Key, Bin);
 
         // clean up the existing map record
         await map.DeleteAsync(default);
