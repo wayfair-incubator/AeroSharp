@@ -10,6 +10,7 @@ using AeroSharp.DataAccess.Validation;
 using AeroSharp.Serialization;
 using FluentValidation;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace AeroSharp;
@@ -17,7 +18,7 @@ namespace AeroSharp;
 /// <inheritdoc cref="IMapBuilder"/>
 public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
 {
-    private static readonly Type[] ValidKeyTypes =
+    private static readonly ISet<Type> ValidKeyTypes = new HashSet<Type>
     {
         typeof(long), typeof(double), typeof(string), typeof(byte[]), typeof(bool)
     };
@@ -135,11 +136,11 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
     {
         var keyType = typeof(TKey);
 
-        if (!ValidKeyTypes.Any(validKeyType => validKeyType.IsAssignableFrom(keyType)))
+        if (!ValidKeyTypes.Contains(keyType))
         {
-            var validKeyNames = string.Join(", ", ValidKeyTypes.Select(type => $" {type}"));
+            var validKeyNames = string.Join(", ", ValidKeyTypes.Select(type => $"{type}"));
 
-            throw new UnsupportedKeyTypeException($"Map keys must be of type{validKeyNames}.");
+            throw new UnsupportedKeyTypeException($"Map keys must be one of type {validKeyNames}.");
         }
 
         if (_dataContext is null)
