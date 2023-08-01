@@ -709,6 +709,37 @@ references:
   commentId: N:AeroSharp.DataAccess.Exceptions
   fullName: AeroSharp.DataAccess.Exceptions
   nameWithType: AeroSharp.DataAccess.Exceptions
+- uid: AeroSharp.DataAccess.Exceptions.BinNotFoundException
+  name: BinNotFoundException
+  href: api/AeroSharp.DataAccess.Exceptions.BinNotFoundException.html
+  commentId: T:AeroSharp.DataAccess.Exceptions.BinNotFoundException
+  fullName: AeroSharp.DataAccess.Exceptions.BinNotFoundException
+  nameWithType: BinNotFoundException
+- uid: AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor
+  name: BinNotFoundException()
+  href: api/AeroSharp.DataAccess.Exceptions.BinNotFoundException.html#AeroSharp_DataAccess_Exceptions_BinNotFoundException__ctor
+  commentId: M:AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor
+  fullName: AeroSharp.DataAccess.Exceptions.BinNotFoundException.BinNotFoundException()
+  nameWithType: BinNotFoundException.BinNotFoundException()
+- uid: AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor(System.String)
+  name: BinNotFoundException(String)
+  href: api/AeroSharp.DataAccess.Exceptions.BinNotFoundException.html#AeroSharp_DataAccess_Exceptions_BinNotFoundException__ctor_System_String_
+  commentId: M:AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor(System.String)
+  fullName: AeroSharp.DataAccess.Exceptions.BinNotFoundException.BinNotFoundException(System.String)
+  nameWithType: BinNotFoundException.BinNotFoundException(String)
+- uid: AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor(System.String,Exception)
+  name: BinNotFoundException(String, Exception)
+  href: api/AeroSharp.DataAccess.Exceptions.BinNotFoundException.html#AeroSharp_DataAccess_Exceptions_BinNotFoundException__ctor_System_String_Exception_
+  commentId: M:AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor(System.String,Exception)
+  fullName: AeroSharp.DataAccess.Exceptions.BinNotFoundException.BinNotFoundException(System.String, Exception)
+  nameWithType: BinNotFoundException.BinNotFoundException(String, Exception)
+- uid: AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor*
+  name: BinNotFoundException
+  href: api/AeroSharp.DataAccess.Exceptions.BinNotFoundException.html#AeroSharp_DataAccess_Exceptions_BinNotFoundException__ctor_
+  commentId: Overload:AeroSharp.DataAccess.Exceptions.BinNotFoundException.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.Exceptions.BinNotFoundException.BinNotFoundException
+  nameWithType: BinNotFoundException.BinNotFoundException
 - uid: AeroSharp.DataAccess.Exceptions.BinTypeMismatchException
   name: BinTypeMismatchException
   href: api/AeroSharp.DataAccess.Exceptions.BinTypeMismatchException.html
@@ -864,6 +895,68 @@ references:
   isSpec: "True"
   fullName: AeroSharp.DataAccess.Exceptions.KeyAlreadyExistsException.KeyAlreadyExistsException
   nameWithType: KeyAlreadyExistsException.KeyAlreadyExistsException
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException
+  name: MapEntryAlreadyExistsException
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.html
+  commentId: T:AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException
+  nameWithType: MapEntryAlreadyExistsException
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor
+  name: MapEntryAlreadyExistsException()
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.html#AeroSharp_DataAccess_Exceptions_MapEntryAlreadyExistsException__ctor
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.MapEntryAlreadyExistsException()
+  nameWithType: MapEntryAlreadyExistsException.MapEntryAlreadyExistsException()
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor(System.String)
+  name: MapEntryAlreadyExistsException(String)
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.html#AeroSharp_DataAccess_Exceptions_MapEntryAlreadyExistsException__ctor_System_String_
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor(System.String)
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.MapEntryAlreadyExistsException(System.String)
+  nameWithType: MapEntryAlreadyExistsException.MapEntryAlreadyExistsException(String)
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor(System.String,Exception)
+  name: MapEntryAlreadyExistsException(String, Exception)
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.html#AeroSharp_DataAccess_Exceptions_MapEntryAlreadyExistsException__ctor_System_String_Exception_
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor(System.String,Exception)
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.MapEntryAlreadyExistsException(System.String, Exception)
+  nameWithType: MapEntryAlreadyExistsException.MapEntryAlreadyExistsException(String, Exception)
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor*
+  name: MapEntryAlreadyExistsException
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.html#AeroSharp_DataAccess_Exceptions_MapEntryAlreadyExistsException__ctor_
+  commentId: Overload:AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryAlreadyExistsException.MapEntryAlreadyExistsException
+  nameWithType: MapEntryAlreadyExistsException.MapEntryAlreadyExistsException
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException
+  name: MapEntryNotFoundException
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.html
+  commentId: T:AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException
+  nameWithType: MapEntryNotFoundException
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor
+  name: MapEntryNotFoundException()
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.html#AeroSharp_DataAccess_Exceptions_MapEntryNotFoundException__ctor
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.MapEntryNotFoundException()
+  nameWithType: MapEntryNotFoundException.MapEntryNotFoundException()
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor(System.String)
+  name: MapEntryNotFoundException(String)
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.html#AeroSharp_DataAccess_Exceptions_MapEntryNotFoundException__ctor_System_String_
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor(System.String)
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.MapEntryNotFoundException(System.String)
+  nameWithType: MapEntryNotFoundException.MapEntryNotFoundException(String)
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor(System.String,Exception)
+  name: MapEntryNotFoundException(String, Exception)
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.html#AeroSharp_DataAccess_Exceptions_MapEntryNotFoundException__ctor_System_String_Exception_
+  commentId: M:AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor(System.String,Exception)
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.MapEntryNotFoundException(System.String, Exception)
+  nameWithType: MapEntryNotFoundException.MapEntryNotFoundException(String, Exception)
+- uid: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor*
+  name: MapEntryNotFoundException
+  href: api/AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.html#AeroSharp_DataAccess_Exceptions_MapEntryNotFoundException__ctor_
+  commentId: Overload:AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.Exceptions.MapEntryNotFoundException.MapEntryNotFoundException
+  nameWithType: MapEntryNotFoundException.MapEntryNotFoundException
 - uid: AeroSharp.DataAccess.Exceptions.OperationFailedException
   name: OperationFailedException
   href: api/AeroSharp.DataAccess.Exceptions.OperationFailedException.html
@@ -988,6 +1081,37 @@ references:
   isSpec: "True"
   fullName: AeroSharp.DataAccess.Exceptions.UnexpectedDataFormatException.UnexpectedDataFormatException
   nameWithType: UnexpectedDataFormatException.UnexpectedDataFormatException
+- uid: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException
+  name: UnsupportedKeyTypeException
+  href: api/AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.html
+  commentId: T:AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException
+  fullName: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException
+  nameWithType: UnsupportedKeyTypeException
+- uid: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor
+  name: UnsupportedKeyTypeException()
+  href: api/AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.html#AeroSharp_DataAccess_Exceptions_UnsupportedKeyTypeException__ctor
+  commentId: M:AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor
+  fullName: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.UnsupportedKeyTypeException()
+  nameWithType: UnsupportedKeyTypeException.UnsupportedKeyTypeException()
+- uid: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor(System.String)
+  name: UnsupportedKeyTypeException(String)
+  href: api/AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.html#AeroSharp_DataAccess_Exceptions_UnsupportedKeyTypeException__ctor_System_String_
+  commentId: M:AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor(System.String)
+  fullName: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.UnsupportedKeyTypeException(System.String)
+  nameWithType: UnsupportedKeyTypeException.UnsupportedKeyTypeException(String)
+- uid: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor(System.String,Exception)
+  name: UnsupportedKeyTypeException(String, Exception)
+  href: api/AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.html#AeroSharp_DataAccess_Exceptions_UnsupportedKeyTypeException__ctor_System_String_Exception_
+  commentId: M:AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor(System.String,Exception)
+  fullName: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.UnsupportedKeyTypeException(System.String, Exception)
+  nameWithType: UnsupportedKeyTypeException.UnsupportedKeyTypeException(String, Exception)
+- uid: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor*
+  name: UnsupportedKeyTypeException
+  href: api/AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.html#AeroSharp_DataAccess_Exceptions_UnsupportedKeyTypeException__ctor_
+  commentId: Overload:AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.Exceptions.UnsupportedKeyTypeException.UnsupportedKeyTypeException
+  nameWithType: UnsupportedKeyTypeException.UnsupportedKeyTypeException
 - uid: AeroSharp.DataAccess.General
   name: AeroSharp.DataAccess.General
   href: api/AeroSharp.DataAccess.General.html
@@ -2978,6 +3102,367 @@ references:
   isSpec: "True"
   fullName: AeroSharp.DataAccess.ListConfiguration.Partial
   nameWithType: ListConfiguration.Partial
+- uid: AeroSharp.DataAccess.MapAccess
+  name: AeroSharp.DataAccess.MapAccess
+  href: api/AeroSharp.DataAccess.MapAccess.html
+  commentId: N:AeroSharp.DataAccess.MapAccess
+  fullName: AeroSharp.DataAccess.MapAccess
+  nameWithType: AeroSharp.DataAccess.MapAccess
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2
+  name: IMap<TKey, TValue>
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html
+  commentId: T:AeroSharp.DataAccess.MapAccess.IMap`2
+  name.vb: IMap(Of TKey, TValue)
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue)
+  nameWithType: IMap<TKey, TValue>
+  nameWithType.vb: IMap(Of TKey, TValue)
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.DeleteAsync(CancellationToken)
+  name: DeleteAsync(CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_DeleteAsync_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMap`2.DeleteAsync(CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.DeleteAsync(CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).DeleteAsync(CancellationToken)
+  nameWithType: IMap<TKey, TValue>.DeleteAsync(CancellationToken)
+  nameWithType.vb: IMap(Of TKey, TValue).DeleteAsync(CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.DeleteAsync*
+  name: DeleteAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_DeleteAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMap`2.DeleteAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.DeleteAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).DeleteAsync
+  nameWithType: IMap<TKey, TValue>.DeleteAsync
+  nameWithType.vb: IMap(Of TKey, TValue).DeleteAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.GetByKeyAsync(`0,CancellationToken)
+  name: GetByKeyAsync(TKey, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_GetByKeyAsync__0_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMap`2.GetByKeyAsync(`0,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.GetByKeyAsync(TKey, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).GetByKeyAsync(TKey, CancellationToken)
+  nameWithType: IMap<TKey, TValue>.GetByKeyAsync(TKey, CancellationToken)
+  nameWithType.vb: IMap(Of TKey, TValue).GetByKeyAsync(TKey, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.GetByKeyAsync*
+  name: GetByKeyAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_GetByKeyAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMap`2.GetByKeyAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.GetByKeyAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).GetByKeyAsync
+  nameWithType: IMap<TKey, TValue>.GetByKeyAsync
+  nameWithType.vb: IMap(Of TKey, TValue).GetByKeyAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.PutAsync(`0,`1,CancellationToken)
+  name: PutAsync(TKey, TValue, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_PutAsync__0__1_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMap`2.PutAsync(`0,`1,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.PutAsync(TKey, TValue, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).PutAsync(TKey, TValue, CancellationToken)
+  nameWithType: IMap<TKey, TValue>.PutAsync(TKey, TValue, CancellationToken)
+  nameWithType.vb: IMap(Of TKey, TValue).PutAsync(TKey, TValue, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.PutAsync*
+  name: PutAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_PutAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMap`2.PutAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.PutAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).PutAsync
+  nameWithType: IMap<TKey, TValue>.PutAsync
+  nameWithType.vb: IMap(Of TKey, TValue).PutAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.RemoveByKeyAsync(`0,CancellationToken)
+  name: RemoveByKeyAsync(TKey, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_RemoveByKeyAsync__0_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMap`2.RemoveByKeyAsync(`0,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.RemoveByKeyAsync(TKey, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).RemoveByKeyAsync(TKey, CancellationToken)
+  nameWithType: IMap<TKey, TValue>.RemoveByKeyAsync(TKey, CancellationToken)
+  nameWithType.vb: IMap(Of TKey, TValue).RemoveByKeyAsync(TKey, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMap`2.RemoveByKeyAsync*
+  name: RemoveByKeyAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMap-2.html#AeroSharp_DataAccess_MapAccess_IMap_2_RemoveByKeyAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMap`2.RemoveByKeyAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMap<TKey, TValue>.RemoveByKeyAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMap(Of TKey, TValue).RemoveByKeyAsync
+  nameWithType: IMap<TKey, TValue>.RemoveByKeyAsync
+  nameWithType.vb: IMap(Of TKey, TValue).RemoveByKeyAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder
+  name: IMapBuilder
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html
+  commentId: T:AeroSharp.DataAccess.MapAccess.IMapBuilder
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder
+  nameWithType: IMapBuilder
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build*
+  name: Build
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_Build_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapBuilder.Build
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build
+  nameWithType: IMapBuilder.Build
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2
+  name: Build<TKey, TValue>()
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_Build__2
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2
+  name.vb: Build(Of TKey, TValue)()
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build<TKey, TValue>()
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build(Of TKey, TValue)()
+  nameWithType: IMapBuilder.Build<TKey, TValue>()
+  nameWithType.vb: IMapBuilder.Build(Of TKey, TValue)()
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2(System.String)
+  name: Build<TKey, TValue>(String)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_Build__2_System_String_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2(System.String)
+  name.vb: Build(Of TKey, TValue)(String)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build<TKey, TValue>(System.String)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build(Of TKey, TValue)(System.String)
+  nameWithType: IMapBuilder.Build<TKey, TValue>(String)
+  nameWithType.vb: IMapBuilder.Build(Of TKey, TValue)(String)
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2(System.String,System.String)
+  name: Build<TKey, TValue>(String, String)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_Build__2_System_String_System_String_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapBuilder.Build``2(System.String,System.String)
+  name.vb: Build(Of TKey, TValue)(String, String)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build<TKey, TValue>(System.String, System.String)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapBuilder.Build(Of TKey, TValue)(System.String, System.String)
+  nameWithType: IMapBuilder.Build<TKey, TValue>(String, String)
+  nameWithType.vb: IMapBuilder.Build(Of TKey, TValue)(String, String)
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  name: WithMapConfiguration(MapConfiguration)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_WithMapConfiguration_AeroSharp_DataAccess_MapConfiguration_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  nameWithType: IMapBuilder.WithMapConfiguration(MapConfiguration)
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration*
+  name: WithMapConfiguration
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_WithMapConfiguration_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithMapConfiguration
+  nameWithType: IMapBuilder.WithMapConfiguration
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  name: WithWriteConfiguration(WriteConfiguration)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  nameWithType: IMapBuilder.WithWriteConfiguration(WriteConfiguration)
+- uid: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration*
+  name: WithWriteConfiguration
+  href: api/AeroSharp.DataAccess.MapAccess.IMapBuilder.html#AeroSharp_DataAccess_MapAccess_IMapBuilder_WithWriteConfiguration_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapBuilder.WithWriteConfiguration
+  nameWithType: IMapBuilder.WithWriteConfiguration
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2
+  name: IMapOperator<TKey, TValue>
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html
+  commentId: T:AeroSharp.DataAccess.MapAccess.IMapOperator`2
+  name.vb: IMapOperator(Of TKey, TValue)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue)
+  nameWithType: IMapOperator<TKey, TValue>
+  nameWithType.vb: IMapOperator(Of TKey, TValue)
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.DeleteAsync(System.String,CancellationToken)
+  name: DeleteAsync(String, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_DeleteAsync_System_String_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapOperator`2.DeleteAsync(System.String,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.DeleteAsync(System.String, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).DeleteAsync(System.String, CancellationToken)
+  nameWithType: IMapOperator<TKey, TValue>.DeleteAsync(String, CancellationToken)
+  nameWithType.vb: IMapOperator(Of TKey, TValue).DeleteAsync(String, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.DeleteAsync*
+  name: DeleteAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_DeleteAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapOperator`2.DeleteAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.DeleteAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).DeleteAsync
+  nameWithType: IMapOperator<TKey, TValue>.DeleteAsync
+  nameWithType.vb: IMapOperator(Of TKey, TValue).DeleteAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.GetByKeyAsync(System.String,System.String,`0,CancellationToken)
+  name: GetByKeyAsync(String, String, TKey, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_GetByKeyAsync_System_String_System_String__0_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapOperator`2.GetByKeyAsync(System.String,System.String,`0,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.GetByKeyAsync(System.String, System.String, TKey, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).GetByKeyAsync(System.String, System.String, TKey, CancellationToken)
+  nameWithType: IMapOperator<TKey, TValue>.GetByKeyAsync(String, String, TKey, CancellationToken)
+  nameWithType.vb: IMapOperator(Of TKey, TValue).GetByKeyAsync(String, String, TKey, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.GetByKeyAsync*
+  name: GetByKeyAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_GetByKeyAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapOperator`2.GetByKeyAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.GetByKeyAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).GetByKeyAsync
+  nameWithType: IMapOperator<TKey, TValue>.GetByKeyAsync
+  nameWithType.vb: IMapOperator(Of TKey, TValue).GetByKeyAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.PutAsync(System.String,System.String,`0,`1,CancellationToken)
+  name: PutAsync(String, String, TKey, TValue, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_PutAsync_System_String_System_String__0__1_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapOperator`2.PutAsync(System.String,System.String,`0,`1,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.PutAsync(System.String, System.String, TKey, TValue, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).PutAsync(System.String, System.String, TKey, TValue, CancellationToken)
+  nameWithType: IMapOperator<TKey, TValue>.PutAsync(String, String, TKey, TValue, CancellationToken)
+  nameWithType.vb: IMapOperator(Of TKey, TValue).PutAsync(String, String, TKey, TValue, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.PutAsync*
+  name: PutAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_PutAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapOperator`2.PutAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.PutAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).PutAsync
+  nameWithType: IMapOperator<TKey, TValue>.PutAsync
+  nameWithType.vb: IMapOperator(Of TKey, TValue).PutAsync
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.RemoveByKeyAsync(System.String,System.String,`0,CancellationToken)
+  name: RemoveByKeyAsync(String, String, TKey, CancellationToken)
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_RemoveByKeyAsync_System_String_System_String__0_CancellationToken_
+  commentId: M:AeroSharp.DataAccess.MapAccess.IMapOperator`2.RemoveByKeyAsync(System.String,System.String,`0,CancellationToken)
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.RemoveByKeyAsync(System.String, System.String, TKey, CancellationToken)
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).RemoveByKeyAsync(System.String, System.String, TKey, CancellationToken)
+  nameWithType: IMapOperator<TKey, TValue>.RemoveByKeyAsync(String, String, TKey, CancellationToken)
+  nameWithType.vb: IMapOperator(Of TKey, TValue).RemoveByKeyAsync(String, String, TKey, CancellationToken)
+- uid: AeroSharp.DataAccess.MapAccess.IMapOperator`2.RemoveByKeyAsync*
+  name: RemoveByKeyAsync
+  href: api/AeroSharp.DataAccess.MapAccess.IMapOperator-2.html#AeroSharp_DataAccess_MapAccess_IMapOperator_2_RemoveByKeyAsync_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.IMapOperator`2.RemoveByKeyAsync
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.IMapOperator<TKey, TValue>.RemoveByKeyAsync
+  fullName.vb: AeroSharp.DataAccess.MapAccess.IMapOperator(Of TKey, TValue).RemoveByKeyAsync
+  nameWithType: IMapOperator<TKey, TValue>.RemoveByKeyAsync
+  nameWithType.vb: IMapOperator(Of TKey, TValue).RemoveByKeyAsync
+- uid: AeroSharp.DataAccess.MapAccess.MapContext
+  name: MapContext
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html
+  commentId: T:AeroSharp.DataAccess.MapAccess.MapContext
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext
+  nameWithType: MapContext
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.#ctor(System.String)
+  name: MapContext(String)
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext__ctor_System_String_
+  commentId: M:AeroSharp.DataAccess.MapAccess.MapContext.#ctor(System.String)
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.MapContext(System.String)
+  nameWithType: MapContext.MapContext(String)
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.#ctor(System.String,System.String)
+  name: MapContext(String, String)
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext__ctor_System_String_System_String_
+  commentId: M:AeroSharp.DataAccess.MapAccess.MapContext.#ctor(System.String,System.String)
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.MapContext(System.String, System.String)
+  nameWithType: MapContext.MapContext(String, String)
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.#ctor*
+  name: MapContext
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext__ctor_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.MapContext.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.MapContext
+  nameWithType: MapContext.MapContext
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.Bin
+  name: Bin
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext_Bin
+  commentId: P:AeroSharp.DataAccess.MapAccess.MapContext.Bin
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.Bin
+  nameWithType: MapContext.Bin
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.Bin*
+  name: Bin
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext_Bin_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.MapContext.Bin
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.Bin
+  nameWithType: MapContext.Bin
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.Key
+  name: Key
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext_Key
+  commentId: P:AeroSharp.DataAccess.MapAccess.MapContext.Key
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.Key
+  nameWithType: MapContext.Key
+- uid: AeroSharp.DataAccess.MapAccess.MapContext.Key*
+  name: Key
+  href: api/AeroSharp.DataAccess.MapAccess.MapContext.html#AeroSharp_DataAccess_MapAccess_MapContext_Key_
+  commentId: Overload:AeroSharp.DataAccess.MapAccess.MapContext.Key
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapAccess.MapContext.Key
+  nameWithType: MapContext.Key
+- uid: AeroSharp.DataAccess.MapConfiguration
+  name: MapConfiguration
+  href: api/AeroSharp.DataAccess.MapConfiguration.html
+  commentId: T:AeroSharp.DataAccess.MapConfiguration
+  fullName: AeroSharp.DataAccess.MapConfiguration
+  nameWithType: MapConfiguration
+- uid: AeroSharp.DataAccess.MapConfiguration.#ctor
+  name: MapConfiguration()
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration__ctor
+  commentId: M:AeroSharp.DataAccess.MapConfiguration.#ctor
+  fullName: AeroSharp.DataAccess.MapConfiguration.MapConfiguration()
+  nameWithType: MapConfiguration.MapConfiguration()
+- uid: AeroSharp.DataAccess.MapConfiguration.#ctor*
+  name: MapConfiguration
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration__ctor_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.#ctor
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.MapConfiguration
+  nameWithType: MapConfiguration.MapConfiguration
+- uid: AeroSharp.DataAccess.MapConfiguration.AllowPartial
+  name: AllowPartial
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_AllowPartial
+  commentId: P:AeroSharp.DataAccess.MapConfiguration.AllowPartial
+  fullName: AeroSharp.DataAccess.MapConfiguration.AllowPartial
+  nameWithType: MapConfiguration.AllowPartial
+- uid: AeroSharp.DataAccess.MapConfiguration.AllowPartial*
+  name: AllowPartial
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_AllowPartial_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.AllowPartial
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.AllowPartial
+  nameWithType: MapConfiguration.AllowPartial
+- uid: AeroSharp.DataAccess.MapConfiguration.CreateOnly
+  name: CreateOnly
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_CreateOnly
+  commentId: P:AeroSharp.DataAccess.MapConfiguration.CreateOnly
+  fullName: AeroSharp.DataAccess.MapConfiguration.CreateOnly
+  nameWithType: MapConfiguration.CreateOnly
+- uid: AeroSharp.DataAccess.MapConfiguration.CreateOnly*
+  name: CreateOnly
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_CreateOnly_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.CreateOnly
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.CreateOnly
+  nameWithType: MapConfiguration.CreateOnly
+- uid: AeroSharp.DataAccess.MapConfiguration.NoFail
+  name: NoFail
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_NoFail
+  commentId: P:AeroSharp.DataAccess.MapConfiguration.NoFail
+  fullName: AeroSharp.DataAccess.MapConfiguration.NoFail
+  nameWithType: MapConfiguration.NoFail
+- uid: AeroSharp.DataAccess.MapConfiguration.NoFail*
+  name: NoFail
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_NoFail_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.NoFail
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.NoFail
+  nameWithType: MapConfiguration.NoFail
+- uid: AeroSharp.DataAccess.MapConfiguration.Order
+  name: Order
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_Order
+  commentId: P:AeroSharp.DataAccess.MapConfiguration.Order
+  fullName: AeroSharp.DataAccess.MapConfiguration.Order
+  nameWithType: MapConfiguration.Order
+- uid: AeroSharp.DataAccess.MapConfiguration.Order*
+  name: Order
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_Order_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.Order
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.Order
+  nameWithType: MapConfiguration.Order
+- uid: AeroSharp.DataAccess.MapConfiguration.UpdateOnly
+  name: UpdateOnly
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_UpdateOnly
+  commentId: P:AeroSharp.DataAccess.MapConfiguration.UpdateOnly
+  fullName: AeroSharp.DataAccess.MapConfiguration.UpdateOnly
+  nameWithType: MapConfiguration.UpdateOnly
+- uid: AeroSharp.DataAccess.MapConfiguration.UpdateOnly*
+  name: UpdateOnly
+  href: api/AeroSharp.DataAccess.MapConfiguration.html#AeroSharp_DataAccess_MapConfiguration_UpdateOnly_
+  commentId: Overload:AeroSharp.DataAccess.MapConfiguration.UpdateOnly
+  isSpec: "True"
+  fullName: AeroSharp.DataAccess.MapConfiguration.UpdateOnly
+  nameWithType: MapConfiguration.UpdateOnly
 - uid: AeroSharp.DataAccess.Operations
   name: AeroSharp.DataAccess.Operations
   href: api/AeroSharp.DataAccess.Operations.html
@@ -4422,6 +4907,150 @@ references:
   isSpec: "True"
   fullName: AeroSharp.ListBuilder.WithWriteConfiguration
   nameWithType: ListBuilder.WithWriteConfiguration
+- uid: AeroSharp.MapBuilder
+  name: MapBuilder
+  href: api/AeroSharp.MapBuilder.html
+  commentId: T:AeroSharp.MapBuilder
+  fullName: AeroSharp.MapBuilder
+  nameWithType: MapBuilder
+- uid: AeroSharp.MapBuilder.Build*
+  name: Build
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Build_
+  commentId: Overload:AeroSharp.MapBuilder.Build
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.Build
+  nameWithType: MapBuilder.Build
+- uid: AeroSharp.MapBuilder.Build``2
+  name: Build<TKey, TValue>()
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Build__2
+  commentId: M:AeroSharp.MapBuilder.Build``2
+  name.vb: Build(Of TKey, TValue)()
+  fullName: AeroSharp.MapBuilder.Build<TKey, TValue>()
+  fullName.vb: AeroSharp.MapBuilder.Build(Of TKey, TValue)()
+  nameWithType: MapBuilder.Build<TKey, TValue>()
+  nameWithType.vb: MapBuilder.Build(Of TKey, TValue)()
+- uid: AeroSharp.MapBuilder.Build``2(System.String)
+  name: Build<TKey, TValue>(String)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Build__2_System_String_
+  commentId: M:AeroSharp.MapBuilder.Build``2(System.String)
+  name.vb: Build(Of TKey, TValue)(String)
+  fullName: AeroSharp.MapBuilder.Build<TKey, TValue>(System.String)
+  fullName.vb: AeroSharp.MapBuilder.Build(Of TKey, TValue)(System.String)
+  nameWithType: MapBuilder.Build<TKey, TValue>(String)
+  nameWithType.vb: MapBuilder.Build(Of TKey, TValue)(String)
+- uid: AeroSharp.MapBuilder.Build``2(System.String,System.String)
+  name: Build<TKey, TValue>(String, String)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Build__2_System_String_System_String_
+  commentId: M:AeroSharp.MapBuilder.Build``2(System.String,System.String)
+  name.vb: Build(Of TKey, TValue)(String, String)
+  fullName: AeroSharp.MapBuilder.Build<TKey, TValue>(System.String, System.String)
+  fullName.vb: AeroSharp.MapBuilder.Build(Of TKey, TValue)(System.String, System.String)
+  nameWithType: MapBuilder.Build<TKey, TValue>(String, String)
+  nameWithType.vb: MapBuilder.Build(Of TKey, TValue)(String, String)
+- uid: AeroSharp.MapBuilder.Configure(AeroSharp.Connection.IClientProvider)
+  name: Configure(IClientProvider)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Configure_AeroSharp_Connection_IClientProvider_
+  commentId: M:AeroSharp.MapBuilder.Configure(AeroSharp.Connection.IClientProvider)
+  fullName: AeroSharp.MapBuilder.Configure(AeroSharp.Connection.IClientProvider)
+  nameWithType: MapBuilder.Configure(IClientProvider)
+- uid: AeroSharp.MapBuilder.Configure*
+  name: Configure
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_Configure_
+  commentId: Overload:AeroSharp.MapBuilder.Configure
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.Configure
+  nameWithType: MapBuilder.Configure
+- uid: AeroSharp.MapBuilder.UseMessagePackSerializer
+  name: UseMessagePackSerializer()
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseMessagePackSerializer
+  commentId: M:AeroSharp.MapBuilder.UseMessagePackSerializer
+  fullName: AeroSharp.MapBuilder.UseMessagePackSerializer()
+  nameWithType: MapBuilder.UseMessagePackSerializer()
+- uid: AeroSharp.MapBuilder.UseMessagePackSerializer*
+  name: UseMessagePackSerializer
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseMessagePackSerializer_
+  commentId: Overload:AeroSharp.MapBuilder.UseMessagePackSerializer
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.UseMessagePackSerializer
+  nameWithType: MapBuilder.UseMessagePackSerializer
+- uid: AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression
+  name: UseMessagePackSerializerWithLz4Compression()
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseMessagePackSerializerWithLz4Compression
+  commentId: M:AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression
+  fullName: AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression()
+  nameWithType: MapBuilder.UseMessagePackSerializerWithLz4Compression()
+- uid: AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression*
+  name: UseMessagePackSerializerWithLz4Compression
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseMessagePackSerializerWithLz4Compression_
+  commentId: Overload:AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.UseMessagePackSerializerWithLz4Compression
+  nameWithType: MapBuilder.UseMessagePackSerializerWithLz4Compression
+- uid: AeroSharp.MapBuilder.UseProtobufSerializer
+  name: UseProtobufSerializer()
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseProtobufSerializer
+  commentId: M:AeroSharp.MapBuilder.UseProtobufSerializer
+  fullName: AeroSharp.MapBuilder.UseProtobufSerializer()
+  nameWithType: MapBuilder.UseProtobufSerializer()
+- uid: AeroSharp.MapBuilder.UseProtobufSerializer*
+  name: UseProtobufSerializer
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_UseProtobufSerializer_
+  commentId: Overload:AeroSharp.MapBuilder.UseProtobufSerializer
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.UseProtobufSerializer
+  nameWithType: MapBuilder.UseProtobufSerializer
+- uid: AeroSharp.MapBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)
+  name: WithDataContext(DataContext)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithDataContext_AeroSharp_DataAccess_DataContext_
+  commentId: M:AeroSharp.MapBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)
+  fullName: AeroSharp.MapBuilder.WithDataContext(AeroSharp.DataAccess.DataContext)
+  nameWithType: MapBuilder.WithDataContext(DataContext)
+- uid: AeroSharp.MapBuilder.WithDataContext*
+  name: WithDataContext
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithDataContext_
+  commentId: Overload:AeroSharp.MapBuilder.WithDataContext
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.WithDataContext
+  nameWithType: MapBuilder.WithDataContext
+- uid: AeroSharp.MapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  name: WithMapConfiguration(MapConfiguration)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithMapConfiguration_AeroSharp_DataAccess_MapConfiguration_
+  commentId: M:AeroSharp.MapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  fullName: AeroSharp.MapBuilder.WithMapConfiguration(AeroSharp.DataAccess.MapConfiguration)
+  nameWithType: MapBuilder.WithMapConfiguration(MapConfiguration)
+- uid: AeroSharp.MapBuilder.WithMapConfiguration*
+  name: WithMapConfiguration
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithMapConfiguration_
+  commentId: Overload:AeroSharp.MapBuilder.WithMapConfiguration
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.WithMapConfiguration
+  nameWithType: MapBuilder.WithMapConfiguration
+- uid: AeroSharp.MapBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)
+  name: WithSerializer(ISerializer)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithSerializer_AeroSharp_Serialization_ISerializer_
+  commentId: M:AeroSharp.MapBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)
+  fullName: AeroSharp.MapBuilder.WithSerializer(AeroSharp.Serialization.ISerializer)
+  nameWithType: MapBuilder.WithSerializer(ISerializer)
+- uid: AeroSharp.MapBuilder.WithSerializer*
+  name: WithSerializer
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithSerializer_
+  commentId: Overload:AeroSharp.MapBuilder.WithSerializer
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.WithSerializer
+  nameWithType: MapBuilder.WithSerializer
+- uid: AeroSharp.MapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  name: WithWriteConfiguration(WriteConfiguration)
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithWriteConfiguration_AeroSharp_DataAccess_WriteConfiguration_
+  commentId: M:AeroSharp.MapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  fullName: AeroSharp.MapBuilder.WithWriteConfiguration(AeroSharp.DataAccess.WriteConfiguration)
+  nameWithType: MapBuilder.WithWriteConfiguration(WriteConfiguration)
+- uid: AeroSharp.MapBuilder.WithWriteConfiguration*
+  name: WithWriteConfiguration
+  href: api/AeroSharp.MapBuilder.html#AeroSharp_MapBuilder_WithWriteConfiguration_
+  commentId: Overload:AeroSharp.MapBuilder.WithWriteConfiguration
+  isSpec: "True"
+  fullName: AeroSharp.MapBuilder.WithWriteConfiguration
+  nameWithType: MapBuilder.WithWriteConfiguration
 - uid: AeroSharp.OperatorBuilder
   name: OperatorBuilder
   href: api/AeroSharp.OperatorBuilder.html
