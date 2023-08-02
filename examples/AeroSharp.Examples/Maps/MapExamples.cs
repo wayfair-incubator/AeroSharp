@@ -17,7 +17,8 @@ internal class MapExamples : IExample
             new MapGetByKeyExample(_clientProvider),
             new MapCustomClassExample(_clientProvider),
             new MapRemoveByKeyExample(_clientProvider),
-            new MapDeleteExample(_clientProvider)
+            new MapDeleteExample(_clientProvider),
+            new MapGetByRankExample(_clientProvider)
         };
 
         foreach (var example in mapExamples)

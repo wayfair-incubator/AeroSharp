@@ -60,4 +60,18 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
     /// <returns> A task that represents the asynchronous operation of deleting the map. </returns>
     Task DeleteAsync(string recordKey, CancellationToken cancellationToken);
+
+    /// <summary>
+    ///     Get the key/value pair in the map at the specified rank.
+    /// </summary>
+    /// <param name="recordKey"> The key in the Aerospike record containing the map. </param>
+    /// <param name="bin"> The bin containing the map. </param>
+    /// <param name="rank"> The rank that we want to fetch, 0...n, -1 being the max. </param>
+    /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation.</param>
+    /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
+    Task<KeyValuePair<TKey, TValue>> GetByRankAsync(
+        string recordKey,
+        string bin,
+        int rank,
+        CancellationToken cancellationToken);
 }

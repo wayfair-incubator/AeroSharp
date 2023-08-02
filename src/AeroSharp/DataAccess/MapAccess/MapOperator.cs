@@ -74,4 +74,19 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
 
     public Task DeleteAsync(string recordKey, CancellationToken cancellationToken) =>
         _recordOperator.DeleteAsync(recordKey, _writeConfiguration, cancellationToken);
+
+    public async Task<KeyValuePair<TKey, TValue>> GetByRankAsync(
+        string recordKey,
+        string bin,
+        int rank,
+        CancellationToken cancellationToken)
+    {
+        var operation = MapOperations.GetByRank(bin, rank);
+
+        var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
+
+        return record is null
+            ? throw new RecordNotFoundException($"Map record not found for Aerospike record key \"{recordKey}\".")
+            : _mapParser.Parse<TKey, TValue>(record, bin);
+    }
 }

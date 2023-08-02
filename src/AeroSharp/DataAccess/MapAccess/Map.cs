@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,4 +28,7 @@ internal class Map<TKey, TValue> : IMap<TKey, TValue>
 
     public Task DeleteAsync(CancellationToken cancellationToken) =>
         _mapOperator.DeleteAsync(_mapContext.Key, cancellationToken);
+
+    public Task<KeyValuePair<TKey, TValue>> GetByRankAsync(int rank, CancellationToken cancellationToken) =>
+        _mapOperator.GetByRankAsync(_mapContext.Key, _mapContext.Bin, rank, cancellationToken);
 }

@@ -54,4 +54,13 @@ internal static class MapOperations
     /// <returns> The map operation. </returns>
     public static Operation RemoveByKey<TKey>(string bin, TKey key, IMapEntryGenerator mapEntryGenerator) =>
         MapOperation.RemoveByKey(bin, mapEntryGenerator.GenerateKey(key), MapReturnType.KEY_VALUE);
+
+    /// <summary>
+    ///     Get the key and value rank for a map
+    /// </summary>
+    /// <param name="bin"> The bin containing the map. </param>
+    /// <param name="rank"> The rank to fetch. </param>
+    /// <returns> The map operation. </returns>
+    public static Operation GetByRank(string bin, int rank) =>
+        MapOperation.GetByRank(bin, rank, MapReturnType.KEY_VALUE);
 }

@@ -43,4 +43,12 @@ public interface IMap<TKey, TValue>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
     /// <returns> A task that represents the asynchronous operation of deleting the map. </returns>
     Task DeleteAsync(CancellationToken cancellationToken);
+
+    /// <summary>
+    ///    Asynchronously Get {key: value} entry where map.value is the ith smallest value where i == rank.
+    /// </summary>
+    /// <param name="rank"> The rank to fetch from the map. </param>
+    /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <returns>A task representing the result of the asynchronous fetch of the rank.</returns>
+    Task<KeyValuePair<TKey, TValue>> GetByRankAsync(int rank, CancellationToken cancellationToken);
 }
