@@ -86,7 +86,7 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
         return record is null
-            ? throw new RecordNotFoundException($"Map record not found for Aerospike record key \"{recordKey}\".")
+            ? throw new RecordNotFoundException($"No record found in map for rank \"{rank}\".")
             : _mapParser.Parse<TKey, TValue>(record, bin);
     }
 }
