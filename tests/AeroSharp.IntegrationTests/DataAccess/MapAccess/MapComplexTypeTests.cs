@@ -7,6 +7,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Aerospike.Client;
 
 namespace AeroSharp.IntegrationTests.DataAccess.MapAccess;
 
@@ -263,6 +264,79 @@ internal sealed class MapComplexTypeTests
 
         // assert
         await act.Should().ThrowAsync<MapEntryNotFoundException>();
+    }
+
+    [Test]
+    public async Task GetByRankAsync_with_no_values_returns_RecordNotFoundException()
+    {
+        // arrange
+        var map = BuildMap<long, ComplexTypeWithMessagePackSerialization>();
+
+        // clean up the existing map record
+        await map.DeleteAsync(default);
+
+        // act
+        var act = async () => await map.GetByRankAsync(1, default);
+
+        // assert
+        await act.Should().ThrowAsync<RecordNotFoundException>();
+    }
+
+    [Test]
+    public async Task GetByRankAsync_with_the_same_values_returns_the_right_key()
+    {
+        // arrange
+        var map = BuildMap<long, ComplexTypeWithMessagePackSerialization>();
+
+        // clean up the existing map record
+        await map.DeleteAsync(default);
+
+        var key = 123;
+        var value = new ComplexTypeWithMessagePackSerialization { Id = 1, Name = "Name" };
+
+        var key2 = 246;
+        var value2 = new ComplexTypeWithMessagePackSerialization { Id = 2, Name = "Name" };
+        await map.PutAsync(key, value, default);
+        await map.PutAsync(key2, value2, default);
+
+        var expectedValue = new KeyValuePair<long, ComplexTypeWithMessagePackSerialization>(key, value);
+
+        // act
+        var act = await map.GetByRankAsync(0, default);
+
+        // assert
+        act.Should().Be(expectedValue);
+    }
+
+    [Test]
+    public async Task GetByRankAsync_returns_the_highest_rank()
+    {
+        // arrange
+        var map = BuildMap<long, ComplexTypeWithMessagePackSerialization>();
+
+        // clean up the existing map record
+        await map.DeleteAsync(default);
+
+        var key = 123;
+        var value = new ComplexTypeWithMessagePackSerialization { Id = 1, Name = "Name" };
+
+        var key2 = 246;
+        var value2 = new ComplexTypeWithMessagePackSerialization { Id = 2, Name = "Name2" };
+
+        var key3 = 256;
+        var value3 = new ComplexTypeWithMessagePackSerialization { Id = 3, Name = "Name3" };
+
+        await map.PutAsync(key, value, default);
+        await map.PutAsync(key2, value2, default);
+        await map.PutAsync(key3, value3, default);
+
+        var expectedValue = new KeyValuePair<long, ComplexTypeWithMessagePackSerialization>(key3, value3);
+
+        // act
+        var act = await map.GetByRankAsync(-1, default);
+
+        // assert
+        act.Should().Be(expectedValue);
     }
 
     private static IMap<TKey, TValue> BuildMap<TKey, TValue>() => MapBuilder
