@@ -3,8 +3,11 @@ using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.MapAccess;
 using AeroSharp.Examples.Utilities;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using Timer = System.Timers.Timer;
 
 namespace AeroSharp.Examples.Maps;
 
@@ -27,16 +30,20 @@ public class MapGetByRankExample : IExample
     {
         // Ensure we have something to get.
         await MapHydrator.HydrateMap(_map, MapExampleData.MapEntries);
-
-        // Grab the smallest value in the Map.
-        var rank = 0;
-        for (int i = 0; i < MapExampleData.MapEntries.Count; i++)
+        Stopwatch stopwatch = new Stopwatch();
+        long microseconds;
+        var mapEntry = new KeyValuePair<string, string>();
+        for (int i = -1; i < MapExampleData.MapEntries.Count; i++)
         {
-            var mapEntry = await _map.GetByRankAsync(rank, CancellationToken.None);
+            stopwatch.Start();
+            mapEntry = await _map.GetByRankAsync(i, CancellationToken.None);
+            stopwatch.Stop();
+            microseconds = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L*1000L));
             Console.WriteLine(
-                $"{nameof(MapGetByRankExample)} :: GET BY RANK - rank '{rank}' is: key '{mapEntry.Key}','{mapEntry.Value}'"
+                $"{nameof(MapGetByRankExample)} :: GET BY RANK - rank {i} is: key '{mapEntry.Key}','{mapEntry.Value}', " +
+                $"took: {microseconds} microseconds"
             );
-            rank++;
+            stopwatch.Reset();
         }
     }
 }
