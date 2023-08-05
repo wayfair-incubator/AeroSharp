@@ -62,7 +62,8 @@ public interface IMapOperator<TKey, TValue>
     Task DeleteAsync(string recordKey, CancellationToken cancellationToken);
 
     /// <summary>
-    ///     Get the key/value pair in the map at the specified rank.
+    ///    Asynchronously get {key: value} entry where map.value is the ith smallest value where i == rank, starting
+    ///    at zero being the lowest value.
     /// </summary>
     /// <param name="recordKey"> The key in the Aerospike record containing the map. </param>
     /// <param name="bin"> The bin containing the map. </param>
