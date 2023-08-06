@@ -60,7 +60,8 @@ internal static class MapOperations
     /// </summary>
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="rank"> The rank to fetch. </param>
+    /// <param name="context"> The context within the map to apply the method to, defaults to top-level of map. </param>
     /// <returns> The map operation. </returns>
-    public static Operation GetByRank(string bin, int rank) =>
-        MapOperation.GetByRank(bin, rank, MapReturnType.KEY_VALUE);
+    public static Operation GetByRank(string bin, int rank, CTX[] context) =>
+        MapOperation.GetByRank(bin, rank, MapReturnType.KEY_VALUE, context);
 }

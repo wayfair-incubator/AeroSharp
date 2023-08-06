@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Aerospike.Client;
 
 namespace AeroSharp.DataAccess.MapAccess;
 
@@ -68,11 +69,15 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="recordKey"> The key in the Aerospike record containing the map. </param>
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="rank"> The rank that we want to fetch, 0...n, -1 being the max. </param>
+    /// <param name="context"> The context within the map, if any. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation.</param>
     /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
     Task<KeyValuePair<TKey, TValue>> GetByRankAsync(
         string recordKey,
         string bin,
         int rank,
+        CTX[] context,
+        CancellationToken cancellationToken);
+
         CancellationToken cancellationToken);
 }

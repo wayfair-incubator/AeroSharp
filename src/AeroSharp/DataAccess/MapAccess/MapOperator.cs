@@ -1,10 +1,12 @@
-﻿using AeroSharp.DataAccess.Exceptions;
+﻿using System.Collections;
+using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.DataAccess.Internal;
 using AeroSharp.DataAccess.MapAccess.Generators;
 using AeroSharp.DataAccess.MapAccess.Parsers;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Aerospike.Client;
 
 namespace AeroSharp.DataAccess.MapAccess;
 
@@ -79,9 +81,10 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         string recordKey,
         string bin,
         int rank,
+        CTX[] context,
         CancellationToken cancellationToken)
     {
-        var operation = MapOperations.GetByRank(bin, rank);
+        var operation = MapOperations.GetByRank(bin, rank, context);
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
