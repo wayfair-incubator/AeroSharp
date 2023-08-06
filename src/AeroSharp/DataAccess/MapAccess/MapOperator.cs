@@ -81,8 +81,8 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         string recordKey,
         string bin,
         int rank,
-        CTX[] context,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        params CTX[] context)
     {
         var operation = MapOperations.GetByRank(bin, rank, context);
 

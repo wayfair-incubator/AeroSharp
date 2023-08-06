@@ -76,8 +76,6 @@ public interface IMapOperator<TKey, TValue>
         string recordKey,
         string bin,
         int rank,
-        CTX[] context,
-        CancellationToken cancellationToken);
-
-        CancellationToken cancellationToken);
+        CancellationToken cancellationToken,
+        params CTX[] context);
 }

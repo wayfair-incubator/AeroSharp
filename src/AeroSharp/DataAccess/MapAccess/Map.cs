@@ -29,6 +29,6 @@ internal class Map<TKey, TValue> : IMap<TKey, TValue>
     public Task DeleteAsync(CancellationToken cancellationToken) =>
         _mapOperator.DeleteAsync(_mapContext.Key, cancellationToken);
 
-    public Task<KeyValuePair<TKey, TValue>> GetByRankAsync(int rank, CTX[] context, CancellationToken cancellationToken) =>
-        _mapOperator.GetByRankAsync(_mapContext.Key, _mapContext.Bin, rank, context, cancellationToken);
+    public Task<KeyValuePair<TKey, TValue>> GetByRankAsync(int rank, CancellationToken cancellationToken, params CTX[] context) =>
+        _mapOperator.GetByRankAsync(_mapContext.Key, _mapContext.Bin, rank, cancellationToken, context);
 }
