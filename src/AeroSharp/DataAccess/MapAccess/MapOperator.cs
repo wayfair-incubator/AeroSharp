@@ -37,9 +37,15 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         _writeConfiguration = writeConfiguration;
     }
 
-    public Task PutAsync(string recordKey, string bin, TKey mapKey, TValue value, CancellationToken cancellationToken)
+    public Task PutAsync(
+        string recordKey,
+        string bin,
+        TKey mapKey,
+        TValue value,
+        CancellationToken cancellationToken,
+        params CTX[] context)
     {
-        var operation = MapOperations.Put(bin, mapKey, value, _mapConfiguration, _mapEntryGenerator);
+        var operation = MapOperations.Put(bin, mapKey, value, _mapConfiguration, _mapEntryGenerator, context);
 
         return _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
     }

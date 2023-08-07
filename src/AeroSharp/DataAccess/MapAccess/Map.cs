@@ -17,8 +17,8 @@ internal class Map<TKey, TValue> : IMap<TKey, TValue>
         _mapContext = mapContext;
     }
 
-    public Task PutAsync(TKey mapKey, TValue value, CancellationToken cancellationToken) =>
-        _mapOperator.PutAsync(_mapContext.Key, _mapContext.Bin, mapKey, value, cancellationToken);
+    public Task PutAsync(TKey mapKey, TValue value, CancellationToken cancellationToken, params CTX[] context) =>
+        _mapOperator.PutAsync(_mapContext.Key, _mapContext.Bin, mapKey, value, cancellationToken, context);
 
     public Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(TKey key, CancellationToken cancellationToken) =>
         _mapOperator.GetByKeyAsync(_mapContext.Key, _mapContext.Bin, key, cancellationToken);

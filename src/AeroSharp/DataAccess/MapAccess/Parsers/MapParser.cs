@@ -29,8 +29,7 @@ internal sealed class MapParser : IMapParser
         if (mapEntry.Value is not TValue value)
         {
             throw new UnexpectedDataFormatException(
-                $"Unable to parse map entry from bin \"{bin}\". Map value is not a {typeof(TValue).FullName}."
-            );
+                $"Unable to parse map entry from bin \"{bin}\". Map value is not a {typeof(TValue).FullName}--It is: {mapEntry.Value.GetType()}");
         }
 
         return new KeyValuePair<TKey, TValue>(key, value);

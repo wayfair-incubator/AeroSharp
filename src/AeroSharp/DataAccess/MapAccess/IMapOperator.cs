@@ -22,7 +22,7 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="value"> The value to add. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
     /// <returns> A task that represents the asynchronous operation of adding the entry. </returns>
-    Task PutAsync(string recordKey, string bin, TKey mapKey, TValue value, CancellationToken cancellationToken);
+    Task PutAsync(string recordKey, string bin, TKey mapKey, TValue value, CancellationToken cancellationToken, params CTX[] context);
 
     /// <summary>
     ///     Asynchronously retrieve the map entry associated with the given key.

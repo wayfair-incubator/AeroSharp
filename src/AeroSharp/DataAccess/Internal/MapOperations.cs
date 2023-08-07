@@ -19,19 +19,21 @@ internal static class MapOperations
     /// <param name="value"> The value to put. </param>
     /// <param name="mapConfiguration"> The map configuration. </param>
     /// <param name="mapEntryGenerator"> The map entry generator for generating the key and value <see cref="Value"/>s. </param>
+    /// <param name="context"> The context in the map to put the key/value pair. </param>
     /// <returns> The map operation. </returns>
     public static Operation Put<TKey, TValue>(
         string bin,
         TKey key,
         TValue value,
         MapConfiguration mapConfiguration,
-        IMapEntryGenerator mapEntryGenerator
+        IMapEntryGenerator mapEntryGenerator,
+        params CTX[] context
     ) => MapOperation.Put(
         MapConfigurationToMapPolicyMapper.MapToPolicy(mapConfiguration),
         bin,
         mapEntryGenerator.GenerateKey(key),
-        mapEntryGenerator.GenerateValue(value)
-    );
+        mapEntryGenerator.GenerateValue(value),
+        context);
 
     /// <summary>
     ///     Create a map operation that gets the map value at the given key.

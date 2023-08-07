@@ -18,7 +18,8 @@ internal class MapExamples : IExample
             new MapCustomClassExample(_clientProvider),
             new MapRemoveByKeyExample(_clientProvider),
             new MapDeleteExample(_clientProvider),
-            new MapGetByRankExample(_clientProvider)
+            new MapGetByRankExample(_clientProvider),
+            new NestedCdtMapGetByRankExample(_clientProvider)
         };
 
         foreach (var example in mapExamples)
