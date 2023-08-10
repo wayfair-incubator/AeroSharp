@@ -6,7 +6,7 @@ internal static class MapExampleData
 {
     public const string RecordKey = "map-aerospike-record-key";
     public const string NestedRecordKey = "nested-map-aerospike-record-key";
-    
+
     public static readonly IDictionary<string, string> MapEntries = new Dictionary<string, string>
     {
         { "key1", "value1" },
@@ -21,24 +21,34 @@ internal static class MapExampleData
         { "key10", "value10" }
     };
 
-    public static readonly IDictionary<string, Dictionary<object, object>> MapNestedCollectionEntries =
-        new Dictionary<string, Dictionary<object, object>>
+/*
+ * A nested map example
+ * {
+ *   { "key1" : {
+*        { "key21", 999.99 },
+ *       { "key22", 999.99 }
+ *   },
+ *   { "key2" : {
+ *       { "a", 5 },
+ *       { "c", 3 }
+ *   }
+ * }
+ */
+    public static readonly Dictionary<string, object> m3 = new()
+    {
         {
+            "key1", new Dictionary<object, object>
             {
-                "key1",
-                new Dictionary<object, object>
-                {
-                    { "nestedKey1", "nestedValue1" },
-                    { "nestedKey1_1", "nestedValue1_1" }
-                }
-            },
-            {
-                "key2",
-                new Dictionary<object, object>
-                {
-                    { "nestedKey2", "nestedValue2" },
-                    { "nestedKey2_1", "nestedValue2_1" }
-                }
+                { "key21", 999.99 },
+                { "key22", 999.99 }
             }
-        };
+        },
+        {
+            "key2", new Dictionary<object, object>
+            {
+                { "a", 5 },
+                { "c", 3 }
+            }
+        }
+    };
 }

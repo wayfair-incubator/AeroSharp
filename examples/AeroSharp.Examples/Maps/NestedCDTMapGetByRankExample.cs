@@ -16,7 +16,7 @@ public class NestedCdtMapGetByRankExample : IExample
 {
     private const string SetName = nameof(NestedCdtMapGetByRankExample);
 
-    private readonly IMap<string, Dictionary<object, object>> _map;
+    private readonly IMap<string, object> _map;
 
     public NestedCdtMapGetByRankExample(IClientProvider clientProvider)
     {
@@ -28,41 +28,30 @@ public class NestedCdtMapGetByRankExample : IExample
         _map = MapBuilder.Configure(clientProvider)
             .WithDataContext(dataContext)
             .WithMapConfiguration(mapConfiguration)
-            .Build<string, Dictionary<object, object>>(MapExampleData.NestedRecordKey);
+            .Build<string, object>(MapExampleData.NestedRecordKey);
     }
 
     public async Task ExecuteAsync()
     {
-        // Ensure we have something to get.
-        
         await _map.DeleteAsync(cancellationToken: default);
-        await MapHydrator.HydrateMap<string, Dictionary<object, object>>(_map, MapExampleData.MapNestedCollectionEntries);
-        Stopwatch stopwatch = new Stopwatch();
-        CTX context1 = CTX.MapKey(Value.Get("nestedKey1"));
-        stopwatch.Start();
-        var mapEntry = await _map.GetByRankAsync(
-            1,
+        await MapHydrator.HydrateMap(_map, MapExampleData.m3);
+        CTX context1 = CTX.MapKey(Value.Get("key1"));
+        CTX context2 = CTX.MapKey(Value.Get("key2"));
+        var lowestMapEntry = await _map.GetByRankAsync(
+            0,
             CancellationToken.None,
             context1
         );
-        stopwatch.Stop();
-        var microseconds = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         Console.WriteLine(
-            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK - rank {0} is: key '{mapEntry.Key}','{mapEntry.Value.Values.FirstOrDefault()}', " +
-            $"took: {microseconds} microseconds"
+            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK (nested) - lowest rank ({0}) for key1 is: key '{lowestMapEntry.Key}', {lowestMapEntry.Value}"
         );
-        stopwatch.Reset();
-        stopwatch.Start();
-        mapEntry = await _map.GetByRankAsync(
-            1,
-            CancellationToken.None
+        var highestMapEntry = await _map.GetByRankAsync(
+            -1,
+            CancellationToken.None,
+            context2
         );
-        stopwatch.Stop();
-        microseconds = stopwatch.ElapsedTicks / (Stopwatch.Frequency / (1000L * 1000L));
         Console.WriteLine(
-            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK - rank {1} is: key '{mapEntry.Key}','{mapEntry.Value.Values.FirstOrDefault()}', " +
-            $"took: {microseconds} microseconds"
+            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK (nested) - highest rank ({-1}) for key2 is: key '{highestMapEntry.Key}', {highestMapEntry.Value}"
         );
-        stopwatch.Reset();
     }
 }
