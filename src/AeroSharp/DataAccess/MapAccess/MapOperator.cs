@@ -60,9 +60,7 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
-        return record is null
-            ? throw new RecordNotFoundException($"Map record not found for Aerospike record key \"{recordKey}\".")
-            : _mapParser.Parse<TKey, TValue>(record, bin);
+        return ParseRecord(record, bin, recordKey);
     }
 
     public async Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(
@@ -75,9 +73,7 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
-        return record is null
-            ? throw new RecordNotFoundException($"Map record not found for Aerospike record key \"{recordKey}\".")
-            : _mapParser.Parse<TKey, TValue>(record, bin);
+        return ParseRecord(record, bin, recordKey);
     }
 
     public Task DeleteAsync(string recordKey, CancellationToken cancellationToken) =>
@@ -94,8 +90,13 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
+        return ParseRecord(record, bin, recordKey);
+    }
+
+    private KeyValuePair<TKey, TValue> ParseRecord(Record record, string bin, string recordKey)
+    {
         return record is null
-            ? throw new RecordNotFoundException($"No record found in map for rank \"{rank}\".")
+            ? throw new RecordNotFoundException($"Map record not found for Aerospike record key \"{recordKey}\".")
             : _mapParser.Parse<TKey, TValue>(record, bin);
     }
 }
