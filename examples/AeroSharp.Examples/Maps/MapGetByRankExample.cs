@@ -4,11 +4,9 @@ using AeroSharp.DataAccess.MapAccess;
 using AeroSharp.Examples.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Aerospike.Client;
-using Timer = System.Timers.Timer;
 
 namespace AeroSharp.Examples.Maps;
 
