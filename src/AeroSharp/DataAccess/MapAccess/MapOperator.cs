@@ -54,9 +54,10 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         string recordKey,
         string bin,
         TKey mapKey,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        CTX[] context)
     {
-        var operation = MapOperations.GetByKey(bin, mapKey, _mapEntryGenerator);
+        var operation = MapOperations.GetByKey(bin, mapKey, _mapEntryGenerator, context);
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 
@@ -67,9 +68,10 @@ internal sealed class MapOperator<TKey, TValue> : IMapOperator<TKey, TValue>
         string recordKey,
         string bin,
         TKey mapKey,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken,
+        CTX[] context)
     {
-        var operation = MapOperations.RemoveByKey(bin, mapKey, _mapEntryGenerator);
+        var operation = MapOperations.RemoveByKey(bin, mapKey, _mapEntryGenerator, context);
 
         var record = await _recordOperator.OperateAsync(recordKey, operation, _writeConfiguration, cancellationToken);
 

@@ -20,11 +20,11 @@ internal class Map<TKey, TValue> : IMap<TKey, TValue>
     public Task PutAsync(TKey mapKey, TValue value, CancellationToken cancellationToken, params CTX[] context) =>
         _mapOperator.PutAsync(_mapContext.Key, _mapContext.Bin, mapKey, value, cancellationToken, context);
 
-    public Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(TKey key, CancellationToken cancellationToken) =>
-        _mapOperator.GetByKeyAsync(_mapContext.Key, _mapContext.Bin, key, cancellationToken);
+    public Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(TKey key, CancellationToken cancellationToken, params CTX[] context) =>
+        _mapOperator.GetByKeyAsync(_mapContext.Key, _mapContext.Bin, key, cancellationToken, context);
 
-    public Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(TKey key, CancellationToken cancellationToken) =>
-        _mapOperator.RemoveByKeyAsync(_mapContext.Key, _mapContext.Bin, key, cancellationToken);
+    public Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(TKey key, CancellationToken cancellationToken, params CTX[] context) =>
+        _mapOperator.RemoveByKeyAsync(_mapContext.Key, _mapContext.Bin, key, cancellationToken, context);
 
     public Task DeleteAsync(CancellationToken cancellationToken) =>
         _mapOperator.DeleteAsync(_mapContext.Key, cancellationToken);

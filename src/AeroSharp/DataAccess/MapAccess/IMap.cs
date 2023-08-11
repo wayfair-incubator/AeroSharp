@@ -27,16 +27,18 @@ public interface IMap<TKey, TValue>
     /// </summary>
     /// <param name="key"> The key. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> A <see cref="Task{TResult}" /> which will complete with the value associated with the given key. </returns>
-    Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(TKey key, CancellationToken cancellationToken);
+    Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(TKey key, CancellationToken cancellationToken, params CTX[] context);
 
     /// <summary>
     ///     Asynchronously remove the map entry associated with the given key and return it.
     /// </summary>
     /// <param name="key"> The key. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> A <see cref="Task{TResult}" /> which will complete with the value associated with the given key. </returns>
-    Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(TKey key, CancellationToken cancellationToken);
+    Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(TKey key, CancellationToken cancellationToken, params CTX[] context);
 
     /// <summary>
     ///     Asynchronously delete the map.
@@ -50,8 +52,9 @@ public interface IMap<TKey, TValue>
     ///    at zero being the lowest value.
     /// </summary>
     /// <param name="rank"> The rank to fetch from the map. </param>
-    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
+    /// <param name="context"> The context within the map to apply the function, defaults to the top-level of map.   </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
     /// <returns>A task representing the result of the asynchronous fetch of the rank.</returns>
-    Task<KeyValuePair<TKey, TValue>> GetByRankAsync(int rank, CancellationToken cancellationToken, params CTX[] context);
+    Task<KeyValuePair<TKey, TValue>>
+        GetByRankAsync(int rank, CancellationToken cancellationToken, params CTX[] context);
 }

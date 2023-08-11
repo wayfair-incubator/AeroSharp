@@ -21,8 +21,10 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="mapKey"> The map key. </param>
     /// <param name="value"> The value to add. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> A task that represents the asynchronous operation of adding the entry. </returns>
-    Task PutAsync(string recordKey, string bin, TKey mapKey, TValue value, CancellationToken cancellationToken, params CTX[] context);
+    Task PutAsync(string recordKey, string bin, TKey mapKey, TValue value, CancellationToken cancellationToken,
+        params CTX[] context);
 
     /// <summary>
     ///     Asynchronously retrieve the map entry associated with the given key.
@@ -31,12 +33,14 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="mapKey"> The map key. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> A <see cref="Task{TResult}" /> which will complete with the map entry associated with the given key. </returns>
     Task<KeyValuePair<TKey, TValue>> GetByKeyAsync(
         string recordKey,
         string bin,
         TKey mapKey,
-        CancellationToken cancellationToken
+        CancellationToken cancellationToken,
+        params CTX[] context
     );
 
     /// <summary>
@@ -46,12 +50,14 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="mapKey"> The map key. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> A <see cref="Task{TResult}" /> which will complete with the map entry associated with the given key. </returns>
     Task<KeyValuePair<TKey, TValue>> RemoveByKeyAsync(
         string recordKey,
         string bin,
         TKey mapKey,
-        CancellationToken cancellationToken
+        CancellationToken cancellationToken,
+        params CTX[] context
     );
 
     /// <summary>
@@ -69,8 +75,8 @@ public interface IMapOperator<TKey, TValue>
     /// <param name="recordKey"> The key in the Aerospike record containing the map. </param>
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="rank"> The rank that we want to fetch, 0...n, -1 being the max. </param>
-    /// <param name="context"> The context within the map, if any. </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation.</param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
     Task<KeyValuePair<TKey, TValue>> GetByRankAsync(
         string recordKey,

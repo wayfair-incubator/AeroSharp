@@ -19,7 +19,7 @@ internal static class MapOperations
     /// <param name="value"> The value to put. </param>
     /// <param name="mapConfiguration"> The map configuration. </param>
     /// <param name="mapEntryGenerator"> The map entry generator for generating the key and value <see cref="Value"/>s. </param>
-    /// <param name="context"> The context in the map to put the key/value pair. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> The map operation. </returns>
     public static Operation Put<TKey, TValue>(
         string bin,
@@ -42,9 +42,10 @@ internal static class MapOperations
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="key"> The key to get the value for. </param>
     /// <param name="mapEntryGenerator"> The map entry generator for generating the key <see cref="Value"/>. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> The map operation. </returns>
-    public static Operation GetByKey<TKey>(string bin, TKey key, IMapEntryGenerator mapEntryGenerator) =>
-        MapOperation.GetByKey(bin, mapEntryGenerator.GenerateKey(key), MapReturnType.KEY_VALUE);
+    public static Operation GetByKey<TKey>(string bin, TKey key, IMapEntryGenerator mapEntryGenerator, CTX[] context) =>
+        MapOperation.GetByKey(bin, mapEntryGenerator.GenerateKey(key), MapReturnType.KEY_VALUE, context);
 
     /// <summary>
     ///     Remove the map entry at the given key.
@@ -53,9 +54,10 @@ internal static class MapOperations
     /// <param name="bin"> The bin containing the map. </param>
     /// <param name="key"> The key to remove. </param>
     /// <param name="mapEntryGenerator"> The map entry generator for generating the key <see cref="Value"/>. </param>
+    /// <param name="context"> The context within the map to apply the function, default the top-level of map. </param>
     /// <returns> The map operation. </returns>
-    public static Operation RemoveByKey<TKey>(string bin, TKey key, IMapEntryGenerator mapEntryGenerator) =>
-        MapOperation.RemoveByKey(bin, mapEntryGenerator.GenerateKey(key), MapReturnType.KEY_VALUE);
+    public static Operation RemoveByKey<TKey>(string bin, TKey key, IMapEntryGenerator mapEntryGenerator, CTX[] context) =>
+        MapOperation.RemoveByKey(bin, mapEntryGenerator.GenerateKey(key), MapReturnType.KEY_VALUE, context);
 
     /// <summary>
     ///     Get the key and value rank for a map
