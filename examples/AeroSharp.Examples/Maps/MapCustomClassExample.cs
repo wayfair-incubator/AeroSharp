@@ -56,9 +56,11 @@ internal class MapCustomClassExample : IExample
 [MessagePackObject]
 public sealed class CustomClass
 {
-    [Key(0)] public string Value1 { get; set; }
+    [Key(0)] 
+    public string Value1 { get; set; }
 
-    [Key(1)] public string Value2 { get; set; }
+    [Key(1)] 
+    public string Value2 { get; set; }
 
     public override string ToString()
     {
