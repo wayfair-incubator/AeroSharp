@@ -12,13 +12,13 @@ using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.Maps;
 
-public class NestedCdtMapGetByRankExample : IExample
+public class NestedMapGetByRankExample : IExample
 {
-    private const string SetName = nameof(NestedCdtMapGetByRankExample);
+    private const string SetName = nameof(NestedMapGetByRankExample);
 
     private readonly IMap<string, object> _map;
 
-    public NestedCdtMapGetByRankExample(IClientProvider clientProvider)
+    public NestedMapGetByRankExample(IClientProvider clientProvider)
     {
         var dataContext = new DataContext(ExamplesConfiguration.AerospikeNamespace, SetName);
         var mapConfiguration = new MapConfiguration()
@@ -34,7 +34,7 @@ public class NestedCdtMapGetByRankExample : IExample
     public async Task ExecuteAsync()
     {
         await _map.DeleteAsync(cancellationToken: default);
-        await MapHydrator.HydrateMap(_map, MapExampleData.m3);
+        await MapHydrator.HydrateMap(_map, MapExampleData.nestedMap);
         CTX context1 = CTX.MapKey(Value.Get("key1"));
         CTX context2 = CTX.MapKey(Value.Get("key2"));
         var lowestMapEntry = await _map.GetByRankAsync(
@@ -43,7 +43,7 @@ public class NestedCdtMapGetByRankExample : IExample
             context1
         );
         Console.WriteLine(
-            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK (nested) - lowest rank ({0}) for key1 is: key '{lowestMapEntry.Key}', {lowestMapEntry.Value}"
+            $"{nameof(NestedMapGetByRankExample)} :: GET BY RANK (nested) - lowest rank ({0}) for key1 is: key '{lowestMapEntry.Key}', {lowestMapEntry.Value}"
         );
         var highestMapEntry = await _map.GetByRankAsync(
             -1,
@@ -51,7 +51,7 @@ public class NestedCdtMapGetByRankExample : IExample
             context2
         );
         Console.WriteLine(
-            $"{nameof(NestedCdtMapGetByRankExample)} :: GET BY RANK (nested) - highest rank ({-1}) for key2 is: key '{highestMapEntry.Key}', {highestMapEntry.Value}"
+            $"{nameof(NestedMapGetByRankExample)} :: GET BY RANK (nested) - highest rank ({-1}) for key2 is: key '{highestMapEntry.Key}', {highestMapEntry.Value}"
         );
     }
 }

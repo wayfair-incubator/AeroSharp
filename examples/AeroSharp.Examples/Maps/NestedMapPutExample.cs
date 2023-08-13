@@ -10,12 +10,12 @@ using Aerospike.Client;
 
 namespace AeroSharp.Examples.Maps;
 
-public class NestedCDTMapPutExample : IExample
+public class NestedMapPutExample : IExample
 {
-    private const string SetName = nameof(NestedCDTMapPutExample);
+    private const string SetName = nameof(NestedMapPutExample);
     private readonly IMap<string, object> _map;
 
-    public NestedCDTMapPutExample(IClientProvider clientProvider)
+    public NestedMapPutExample(IClientProvider clientProvider)
     {
         var dataContext = new DataContext(ExamplesConfiguration.AerospikeNamespace, SetName);
 
@@ -28,12 +28,12 @@ public class NestedCDTMapPutExample : IExample
     public async Task ExecuteAsync()
     {
         await _map.DeleteAsync(cancellationToken: default);
-        await MapHydrator.HydrateMap(_map, MapExampleData.m3);
+        await MapHydrator.HydrateMap(_map, MapExampleData.nestedMap);
         CTX context1 = CTX.MapKey(Value.Get("key1"));
         await _map.PutAsync("key23", "1000", CancellationToken.None, context1);
         var mapEntry = await _map.GetByKeyAsync("key23", CancellationToken.None, context1);
         Console.WriteLine(
-            $"{nameof(NestedCDTMapPutExample)} :: PUT key/value in nested map - " +
+            $"{nameof(NestedMapPutExample)} :: PUT key/value in nested map - " +
             $"{mapEntry.Key}, {mapEntry.Value}");
     }
 }

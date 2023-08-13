@@ -34,7 +34,7 @@ internal static class MapExampleData
  *   }
  * }
  */
-    public static readonly Dictionary<string, object> m3 = new()
+    public static readonly Dictionary<string, object> nestedMap = new()
     {
         {
             "key1", new Dictionary<object, object>

@@ -52,8 +52,8 @@ public interface IMap<TKey, TValue>
     ///    at zero being the lowest value.
     /// </summary>
     /// <param name="rank"> The rank to fetch from the map. </param>
-    /// <param name="context"> The context within the map to apply the function, defaults to the top-level of map.   </param>
     /// <param name="cancellationToken"> A cancellation token to cooperatively cancel the operation. </param>
+    /// <param name="context"> The context within the map to apply the function, defaults to the top-level of map.   </param>
     /// <returns>A task representing the result of the asynchronous fetch of the rank.</returns>
     Task<KeyValuePair<TKey, TValue>>
         GetByRankAsync(int rank, CancellationToken cancellationToken, params CTX[] context);
