@@ -32,9 +32,6 @@ internal class MapPutExample : IExample
             $"{nameof(MapPutExample)} :: PUT - {string.Join(", ", MapExampleData.MapEntries.Select(kvp => $"{{{kvp.Key}:{kvp.Value}}}"))}"
         );
 
-        foreach (var (key, value) in MapExampleData.MapEntries)
-        {
-            await _map.PutAsync(key, value, CancellationToken.None);
-        }
+        foreach (var (key, value) in MapExampleData.MapEntries) await _map.PutAsync(key, value, CancellationToken.None);
     }
 }

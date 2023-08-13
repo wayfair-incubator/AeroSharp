@@ -7,7 +7,10 @@ internal class MapExamples : IExample
 {
     private readonly IClientProvider _clientProvider;
 
-    public MapExamples(IClientProvider clientProvider) => _clientProvider = clientProvider;
+    public MapExamples(IClientProvider clientProvider)
+    {
+        _clientProvider = clientProvider;
+    }
 
     public async Task ExecuteAsync()
     {
@@ -23,9 +26,6 @@ internal class MapExamples : IExample
             new NestedMapPutExample(_clientProvider)
         };
 
-        foreach (var example in mapExamples)
-        {
-            await example.ExecuteAsync();
-        }
+        foreach (var example in mapExamples) await example.ExecuteAsync();
     }
 }

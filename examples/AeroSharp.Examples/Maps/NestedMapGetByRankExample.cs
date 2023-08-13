@@ -33,10 +33,10 @@ public class NestedMapGetByRankExample : IExample
 
     public async Task ExecuteAsync()
     {
-        await _map.DeleteAsync(cancellationToken: default);
+        await _map.DeleteAsync(default);
         await MapHydrator.HydrateMap(_map, MapExampleData.nestedMap);
-        CTX context1 = CTX.MapKey(Value.Get("key1"));
-        CTX context2 = CTX.MapKey(Value.Get("key2"));
+        var context1 = CTX.MapKey(Value.Get("key1"));
+        var context2 = CTX.MapKey(Value.Get("key2"));
         var lowestMapEntry = await _map.GetByRankAsync(
             0,
             CancellationToken.None,

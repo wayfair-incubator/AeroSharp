@@ -36,7 +36,7 @@ public class MapGetByRankExample : IExample
         var mapEntry = new KeyValuePair<string, string>();
         // Let's loop through the Map, starting at -1 (in order to test the "highest" rank)
         // This allows us to try a bunch of different ranks and assert that we're getting the right one
-        for (int i = -1; i < MapExampleData.MapEntries.Count; i++)
+        for (var i = -1; i < MapExampleData.MapEntries.Count; i++)
         {
             mapEntry = await _map.GetByRankAsync(i, CancellationToken.None);
             Console.WriteLine(
