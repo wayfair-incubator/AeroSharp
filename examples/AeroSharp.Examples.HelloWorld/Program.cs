@@ -7,7 +7,6 @@ namespace AeroSharp.Examples.HelloWorld
 {
     /// <summary>
     /// The simplest example of connecting to a local instance of Aerospike and writing/reading some data.
-    /// 
     /// Before running this, run `../scripts/start_aerospike_in_docker.sh` to start a preconfigured local Aerospike instance.
     /// </summary>
     public class Program
@@ -22,8 +21,7 @@ namespace AeroSharp.Examples.HelloWorld
                     new ConnectionConfiguration
                     {
                         ConnectionTimeout = TimeSpan.FromMilliseconds(100)
-                    }
-                )
+                    })
                 .Build();
 
             var dataContext = new DataContext("test", "test_set");
