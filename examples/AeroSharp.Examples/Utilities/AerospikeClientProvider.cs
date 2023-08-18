@@ -24,8 +24,7 @@ namespace AeroSharp.Examples.Utilities
                     new ConnectionConfiguration
                     {
                         ConnectionTimeout = TimeSpan.FromMilliseconds(100)
-                    }
-                )
+                    })
                 .Build();
         }
     }

@@ -11,8 +11,9 @@ namespace AeroSharp.UnitTests.Connection
     [Category("Aerospike")]
     public class ConnectionBuilderTests
     {
+        private readonly ConnectionContext _validContext = new (new[] { "cluster.url" });
+
         private IConnectionBuilderNeedingContext _builder;
-        private readonly ConnectionContext _validContext = new(new[] { "cluster.url" });
 
         [SetUp]
         public void SetUp()

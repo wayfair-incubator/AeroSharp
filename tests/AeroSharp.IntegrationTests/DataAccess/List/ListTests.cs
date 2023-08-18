@@ -10,15 +10,6 @@ using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.DataAccess.List
 {
-    [MessagePackObject]
-    public class TestType
-    {
-        [Key(1)]
-        public string Text { get; set; }
-        [Key(2)]
-        public double Value { get; set; }
-    }
-
     [TestFixture]
     [Category("Aerospike")]
     public class ListTests
@@ -80,7 +71,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task It_should_return_3_after_writing_a_size_3_list_and_checking_size()
             {
-                await _list.WriteAsync(new TestType[] { new(), new(), new() }, default);
+                await _list.WriteAsync(new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(default);
                 size.Should().Be(3);
             }
@@ -88,7 +79,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task Appending_three_items_should_initialize_a_list_of_size_three()
             {
-                await _list.AppendAsync(new TestType[] { new(), new(), new() }, default);
+                await _list.AppendAsync(new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(default);
                 size.Should().Be(3);
             }
@@ -99,6 +90,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
                 _list.Invoking(async x => await x.ClearAsync(default)).Should().ThrowAsync<RecordNotFoundException>();
             }
         }
+
         [TestFixture]
         [Category("Aerospike")]
         public class When_an_item_is_appended_to_a_non_existent_record
@@ -188,7 +180,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task It_should_return_3_after_writing_a_size_3_list_and_checking_size()
             {
-                await _list.WriteAsync(new TestType[] { new(), new(), new() }, default);
+                await _list.WriteAsync(new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(default);
                 size.Should().Be(3);
             }
@@ -196,7 +188,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task Appending_three_items_should_increase_the_size_of_the_list_by_three()
             {
-                await _list.AppendAsync(new TestType[] { new(), new(), new() }, default);
+                await _list.AppendAsync(new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(default);
                 size.Should().Be(4);
             }
@@ -214,11 +206,12 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
         [Category("Aerospike")]
         public class When_a_record_exists_with_other_data
         {
-            private DataContext _testDataContext;
-            private IClientProvider _clientProvider;
             private const string OccupiedBin = "data";
             private const string OtherBin = "data2";
             private const string Key = "test_list";
+
+            private DataContext _testDataContext;
+            private IClientProvider _clientProvider;
 
             [SetUp]
             public async Task SetUp()
@@ -290,5 +283,15 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
                 return list;
             }
         }
+    }
+
+    [MessagePackObject]
+    public class TestType
+    {
+        [Key(1)]
+        public string Text { get; set; }
+
+        [Key(2)]
+        public double Value { get; set; }
     }
 }

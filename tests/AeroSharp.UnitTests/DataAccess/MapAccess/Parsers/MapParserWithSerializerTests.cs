@@ -26,8 +26,7 @@ internal sealed class MapParserWithSerializerTests
 
         _mapParser = new MapParserWithSerializer(
             new MapBinParser(),
-            _mockSerializer.Object
-        );
+            _mockSerializer.Object);
     }
 
     [Test]

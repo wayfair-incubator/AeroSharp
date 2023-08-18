@@ -43,8 +43,8 @@ internal sealed class MapBinParserTests
                 new Dictionary<string, object>
                 {
                     { "other_bin", "bin_value" }
-                }
-            ).SetName("when bins don't contain specified bin.");
+                })
+                .SetName("when bins don't contain specified bin.");
         }
     }
 

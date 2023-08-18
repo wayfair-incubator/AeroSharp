@@ -15,6 +15,7 @@ namespace AeroSharp.UnitTests.Serialization
         {
             [Key(0)]
             public string Text { get; set; }
+
             [Key(1)]
             public int Number { get; set; }
         }

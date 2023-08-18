@@ -12,10 +12,11 @@ namespace AeroSharp.Examples.Ttl
 {
     internal class TtlExample : IExample
     {
+        private const string SetName = nameof(TtlExample);
+
         private readonly TimeSpan _ttl = TimeSpan.FromSeconds(3);
         private readonly IKeyOperator _keyOperator;
         private readonly IKeyValueStore<string> _keyValueStore;
-        private const string SetName = nameof(TtlExample);
 
         internal TtlExample(IClientProvider client)
         {

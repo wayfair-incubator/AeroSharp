@@ -11,9 +11,10 @@ namespace AeroSharp.Examples.Keys
 {
     internal class KeyExample : IExample
     {
+        private const string SetName = nameof(KeyExample);
+
         private readonly IKeyOperator _keyOperator;
         private readonly IKeyValueStore<string> _keyValueAccess;
-        private const string SetName = nameof(KeyExample);
 
         public KeyExample(IClientProvider client)
         {

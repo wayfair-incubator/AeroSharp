@@ -35,9 +35,7 @@ internal class MapGetByKeyExample : IExample
         {
             var mapEntry = await _map.GetByKeyAsync(key, CancellationToken.None);
 
-            Console.WriteLine(
-                $"{nameof(MapGetByKeyExample)} :: GET BY KEY - key '{mapEntry.Key}' is '{mapEntry.Value}'"
-            );
+            Console.WriteLine($"{nameof(MapGetByKeyExample)} :: GET BY KEY - key '{mapEntry.Key}' is '{mapEntry.Value}'");
         }
     }
 }

@@ -26,6 +26,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
         {
             [Key(1)]
             public string Text { get; set; }
+
             [Key(2)]
             public int Value { get; set; }
         }
@@ -37,7 +38,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
         private const string UnoccupiedRecord = "record3";
         private const string UnoccupiedBin = "bin2";
 
-        private readonly TestType _testData = new()
+        private readonly TestType _testData = new ()
         {
             Text = "Hello",
             Value = 4
@@ -350,6 +351,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WaitTimeInMilliseconds = 10,
                 WithExponentialBackoff = true
             };
+
             // The purpose of this test is to assert that a previously non-existent record
             // can be added and modified in parallel without any issue, so let's delete
             // any previously setup record from the set first
@@ -364,8 +366,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 {
                     Text = "Hello!",
                     Value = 2
-                }
-            );
+                });
 
             var updateValueOnTestType = new Func<TestType, TestType>(x =>
             {
@@ -392,6 +393,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 WaitTimeInMilliseconds = 10,
                 WithExponentialBackoff = true
             };
+
             // The purpose of this test is to assert that a previously non-existent record
             // can be added and modified in parallel without any issue, so let's delete
             // any previously setup record from the set first
@@ -406,8 +408,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 {
                     Text = "Hello!",
                     Value = 2
-                }
-            );
+                });
 
             // Unused in actual test, but necessary for function to operate correctly
             var updateValueOnTestType = new Func<TestType, TestType>(x =>
@@ -443,8 +444,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
                 {
                     Text = "Hello!",
                     Value = 2
-                }
-            );
+                });
 
             var updateValueOnTestType = new Func<TestType, TestType>(x =>
             {

@@ -22,6 +22,7 @@ namespace AeroSharp.IntegrationTests.Plugin
         {
             [Key(1)]
             public string Text { get; set; }
+
             [Key(2)]
             public int Value { get; set; }
         }
@@ -29,12 +30,12 @@ namespace AeroSharp.IntegrationTests.Plugin
         [TestFixture]
         public class When_writing_records
         {
-            private IKeyValueStore<TestType, string> _keyValueStore;
-            private Mock<IKeyValueStorePlugin> _mockPlugin;
-
             private const string Key = "test_key";
             private const string Bin = "test_bin";
             private const string Bin2 = "test_bin_2";
+
+            private IKeyValueStore<TestType, string> _keyValueStore;
+            private Mock<IKeyValueStorePlugin> _mockPlugin;
 
             [SetUp]
             public async Task SetUp()
@@ -90,12 +91,12 @@ namespace AeroSharp.IntegrationTests.Plugin
 
         public class When_reading_existing_records
         {
-            private IKeyValueStore<TestType, string> _keyValueStore;
-            private Mock<IKeyValueStorePlugin> _mockPlugin;
-
             private const string Key = "test_key";
             private const string Bin = "test_bin";
             private const string Bin2 = "test_bin_2";
+
+            private IKeyValueStore<TestType, string> _keyValueStore;
+            private Mock<IKeyValueStorePlugin> _mockPlugin;
 
             [SetUp]
             public async Task SetUp()
@@ -155,13 +156,13 @@ namespace AeroSharp.IntegrationTests.Plugin
         [TestFixture]
         public class When_reading_nonexistent_keys
         {
-            private IKeyValueStore<TestType, string> _keyValueStore;
-            private Mock<IKeyValueStorePlugin> _mockPlugin;
-
             private const string Key = "test_key";
             private const string OtherKey = "other_key";
             private const string Bin = "test_bin";
             private const string Bin2 = "test_bin_2";
+
+            private IKeyValueStore<TestType, string> _keyValueStore;
+            private Mock<IKeyValueStorePlugin> _mockPlugin;
 
             [SetUp]
             public async Task SetUp()

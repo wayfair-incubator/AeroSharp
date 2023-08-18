@@ -11,8 +11,9 @@ namespace AeroSharp.Examples.Lists
 {
     internal class ListOverwritingExample : IExample
     {
-        private readonly IList<string> _listAccess;
         private const string SetName = nameof(ListOverwritingExample);
+
+        private readonly IList<string> _listAccess;
 
         public ListOverwritingExample(IClientProvider client)
         {

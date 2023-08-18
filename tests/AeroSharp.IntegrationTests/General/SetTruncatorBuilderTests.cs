@@ -14,7 +14,6 @@ namespace AeroSharp.IntegrationTests.General
     {
         private IClientProvider _clientProvider;
         private DataContext _testDataContext;
-        
 
         [SetUp]
         public void SetUp()

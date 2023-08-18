@@ -44,15 +44,14 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
             var mockSerializer = new Mock<ISerializer>();
             var mockPlugin = new Mock<IKeyValueStorePlugin>();
             var keyValueStore = new KeyValueStore(
-                mockBatchOperator.Object, 
-                mockRecordOperator.Object, 
-                mockSerializer.Object, 
-                new[] { mockPlugin.Object }, 
-                new DataContext("testNamespace", "testSet"), 
-                originalReadConfig, 
-                new WriteConfiguration(), 
-                retryPolicy.Object.Create(genPolicy)
-            );
+                mockBatchOperator.Object,
+                mockRecordOperator.Object,
+                mockSerializer.Object,
+                new[] { mockPlugin.Object },
+                new DataContext("testNamespace", "testSet"),
+                originalReadConfig,
+                new WriteConfiguration(),
+                retryPolicy.Object.Create(genPolicy));
 
             var _ = keyValueStore
                 .Override(config =>
@@ -105,15 +104,14 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
             retryPolicy.Setup(x => x.Create(genPolicy));
 
             var keyValueStore = new KeyValueStore(
-                mockBatchOperator.Object, 
-                mockRecordOperator.Object, 
-                mockSerializer.Object, 
-                new[] { mockPlugin.Object }, 
-                new DataContext("testNamespace", "testSet"), 
-                originalReadConfig, 
-                originalWriteConfig, 
-                retryPolicy.Object.Create(genPolicy)
-            );
+                mockBatchOperator.Object,
+                mockRecordOperator.Object,
+                mockSerializer.Object,
+                new[] { mockPlugin.Object },
+                new DataContext("testNamespace", "testSet"),
+                originalReadConfig,
+                originalWriteConfig,
+                retryPolicy.Object.Create(genPolicy));
 
             var overridenKeyValueStore = keyValueStore
                 .Override(config =>
@@ -163,15 +161,14 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
             retryPolicy.Setup(x => x.Create(genPolicy));
 
             var innerStore = new KeyValueStore(
-                mockBatchOperator.Object, 
-                mockRecordOperator.Object, 
-                mockSerializer.Object, 
-                new[] { mockPlugin.Object }, 
-                new DataContext("testNamespace", "testSet"), 
-                originalReadConfig, 
-                new WriteConfiguration(), 
-                retryPolicy.Object.Create(genPolicy)
-            );
+                mockBatchOperator.Object,
+                mockRecordOperator.Object,
+                mockSerializer.Object,
+                new[] { mockPlugin.Object },
+                new DataContext("testNamespace", "testSet"),
+                originalReadConfig,
+                new WriteConfiguration(),
+                retryPolicy.Object.Create(genPolicy));
 
             var keyValueStore = new KeyValueStore<string>(innerStore, new KeyValueStoreContext(new[] { "bin" }));
 
@@ -217,15 +214,14 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
             retryPolicy.Setup(x => x.Create(genPolicy));
 
             var keyValueStore = new KeyValueStore(
-                mockBatchOperator.Object, 
-                mockRecordOperator.Object, 
-                mockSerializer.Object, 
-                new[] { mockPlugin.Object }, 
-                new DataContext("testNamespace", "testSet"), 
-                new ReadConfiguration(), 
-                originalWriteConfig, 
-                retryPolicy.Object.Create(genPolicy)
-            );
+                mockBatchOperator.Object,
+                mockRecordOperator.Object,
+                mockSerializer.Object,
+                new[] { mockPlugin.Object },
+                new DataContext("testNamespace", "testSet"),
+                new ReadConfiguration(),
+                originalWriteConfig,
+                retryPolicy.Object.Create(genPolicy));
 
             var overriddenKeyValueStore = keyValueStore
                 .Override(config =>

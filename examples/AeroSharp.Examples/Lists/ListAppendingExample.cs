@@ -11,8 +11,9 @@ namespace AeroSharp.Examples.Lists
 {
     internal class ListAppendingExample : IExample
     {
-        private readonly IList<string> _list;
         private const string SetName = nameof(ListAppendingExample);
+
+        private readonly IList<string> _list;
 
         public ListAppendingExample(IClientProvider client)
         {

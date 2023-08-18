@@ -214,8 +214,7 @@ internal sealed class MapPrimitiveTypeTests
                 new MapConfiguration
                 {
                     CreateOnly = true
-                }
-            )
+                })
             .Build<long, long>(Key, Bin);
 
         // clean up the existing map record
@@ -245,8 +244,7 @@ internal sealed class MapPrimitiveTypeTests
                 new MapConfiguration
                 {
                     UpdateOnly = true
-                }
-            )
+                })
             .Build<long, long>(Key, Bin);
 
         // clean up the existing map record

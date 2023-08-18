@@ -16,9 +16,10 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
         [Category("Aerospike")]
         public class When_the_record_does_not_exist
         {
-            private IListOperator<TestType> _list;
             private const string Key = "test_list";
             private const string Bin = "data";
+
+            private IListOperator<TestType> _list;
 
             [SetUp]
             public void SetUp()
@@ -68,7 +69,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task It_should_return_3_after_writing_a_size_3_list_and_checking_size()
             {
-                await _list.WriteAsync(Key, Bin, new TestType[] { new(), new(), new() }, default);
+                await _list.WriteAsync(Key, Bin, new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(Key, Bin, default);
                 size.Should().Be(3);
             }
@@ -76,7 +77,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task Appending_three_items_should_initialize_a_list_of_size_three()
             {
-                await _list.AppendAsync(Key, Bin, new TestType[] { new(), new(), new() }, default);
+                await _list.AppendAsync(Key, Bin, new TestType[] { new (), new (), new () }, default);
                 var size = await _list.SizeAsync(Key, Bin, default);
                 size.Should().Be(3);
             }
@@ -92,9 +93,10 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
         [Category("Aerospike")]
         public class When_an_item_is_appended_to_a_non_existent_record
         {
-            private IListOperator<TestType> _listOperator;
             private const string Key = "test_list";
             private const string Bin = "data";
+
+            private IListOperator<TestType> _listOperator;
 
             [SetUp]
             public async Task SetUp()
@@ -179,7 +181,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task It_should_return_3_after_writing_a_size_3_list_and_checking_size()
             {
-                await _listOperator.WriteAsync(Key, Bin, new TestType[] { new(), new(), new() }, default);
+                await _listOperator.WriteAsync(Key, Bin, new TestType[] { new (), new (), new () }, default);
                 var size = await _listOperator.SizeAsync(Key, Bin, default);
                 size.Should().Be(3);
             }
@@ -187,7 +189,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
             [Test]
             public async Task Appending_three_items_should_increase_the_size_of_the_list_by_three()
             {
-                await _listOperator.AppendAsync(Key, Bin, new TestType[] { new(), new(), new() }, default);
+                await _listOperator.AppendAsync(Key, Bin, new TestType[] { new (), new (), new () }, default);
                 var size = await _listOperator.SizeAsync(Key, Bin, default);
                 size.Should().Be(4);
             }
@@ -205,10 +207,11 @@ namespace AeroSharp.IntegrationTests.DataAccess.List
         [Category("Aerospike")]
         public class When_a_record_exists_with_other_data
         {
-            private IClientProvider _clientProvider;
             private const string OccupiedBin = "data";
             private const string OtherBin = "data2";
             private const string Key = "test_list";
+
+            private IClientProvider _clientProvider;
             private IListOperator<TestType> _listOperator;
 
             [SetUp]

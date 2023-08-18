@@ -11,9 +11,10 @@ namespace AeroSharp.Examples.KeyValue
 {
     internal class KeyValueThreeBinExample : IExample
     {
-        private readonly IKeyValueStore _keyValueStore;
         private const string SetName = nameof(KeyValueThreeBinExample);
         private const int RecordCount = 10;
+
+        private readonly IKeyValueStore _keyValueStore;
 
         public KeyValueThreeBinExample(IClientProvider client)
         {
@@ -72,11 +73,17 @@ namespace AeroSharp.Examples.KeyValue
         private class ThreeBinData
         {
             public string Key { get; init; }
+
             public string Bin1Name { get; init; }
+
             public string Bin1Value { get; init; }
+
             public string Bin2Name { get; init; }
+
             public string Bin2Value { get; init; }
+
             public string Bin3Name { get; init; }
+
             public string Bin3Value { get; init; }
         }
     }

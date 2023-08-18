@@ -11,8 +11,9 @@ namespace AeroSharp.Examples.Lists
 {
     internal class ListIndexExample : IExample
     {
-        private readonly IList<string> _listAccess;
         private const string SetName = nameof(ListIndexExample);
+
+        private readonly IList<string> _listAccess;
 
         public ListIndexExample(IClientProvider client)
         {

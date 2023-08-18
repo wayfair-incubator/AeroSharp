@@ -31,8 +31,8 @@ namespace AeroSharp.Examples
             Console.WriteLine("|      Aerospike Examples       |");
             Console.WriteLine("|                               |");
             Console.WriteLine("---------------------------------");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            Console.WriteLine(string.Empty);
+            Console.WriteLine(string.Empty);
 
             foreach (var example in examples)
             {

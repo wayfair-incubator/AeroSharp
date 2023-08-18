@@ -28,7 +28,6 @@ namespace AeroSharp.UnitTests.DataAccess.Policies
             result.socketTimeout.Should().Be((int)config.SocketTimeout.TotalMilliseconds);
             result.maxRetries.Should().Be(config.RetryCount);
             result.sendKey.Should().Be(config.SendKey);
-            result.sendSetName.Should().Be(config.SendSetName);
             result.sleepBetweenRetries.Should().Be((int)config.SleepBetweenRetries.TotalMilliseconds);
             result.totalTimeout.Should().Be((int)config.TotalTimeout.TotalMilliseconds);
             result.maxConcurrentThreads.Should().Be(config.MaxConcurrentThreads);

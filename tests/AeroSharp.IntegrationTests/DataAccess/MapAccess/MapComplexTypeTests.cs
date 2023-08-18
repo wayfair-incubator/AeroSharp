@@ -216,8 +216,7 @@ internal sealed class MapComplexTypeTests
                 new MapConfiguration
                 {
                     CreateOnly = true
-                }
-            )
+                })
             .Build<long, ComplexTypeWithMessagePackSerialization>(Key, Bin);
 
         // clean up the existing map record
@@ -248,8 +247,7 @@ internal sealed class MapComplexTypeTests
                 new MapConfiguration
                 {
                     UpdateOnly = true
-                }
-            )
+                })
             .Build<long, ComplexTypeWithMessagePackSerialization>(Key, Bin);
 
         // clean up the existing map record

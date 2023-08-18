@@ -13,9 +13,10 @@ namespace AeroSharp.Examples.KeyValue
 {
     internal class KeyValueSingleBinCustomClassExample : IExample
     {
-        private readonly IKeyValueStore<CustomClass> _keyValueStore;
         private const string SetName = nameof(KeyValueSingleBinCustomClassExample);
         private const int RecordCount = 10;
+
+        private readonly IKeyValueStore<CustomClass> _keyValueStore;
 
         public KeyValueSingleBinCustomClassExample(IClientProvider client)
         {
@@ -85,6 +86,7 @@ namespace AeroSharp.Examples.KeyValue
         /// </summary>
         [Key(0)]
         public string Value1 { get; set; }
+
         /// <summary>
         /// Value 2
         /// </summary>

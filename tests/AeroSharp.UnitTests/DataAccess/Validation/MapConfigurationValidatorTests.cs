@@ -9,7 +9,7 @@ namespace AeroSharp.UnitTests.DataAccess.Validation;
 [TestFixture]
 internal sealed class MapConfigurationValidatorTests
 {
-    private static readonly MapConfigurationValidator Validator = new();
+    private static readonly MapConfigurationValidator Validator = new ();
 
     [Test]
     [TestCaseSource(nameof(TestCases))]

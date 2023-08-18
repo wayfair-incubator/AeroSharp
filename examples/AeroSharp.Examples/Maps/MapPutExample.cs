@@ -28,9 +28,8 @@ internal class MapPutExample : IExample
 
     public async Task ExecuteAsync()
     {
-        Console.WriteLine(
-            $"{nameof(MapPutExample)} :: PUT - {string.Join(", ", MapExampleData.MapEntries.Select(kvp => $"{{{kvp.Key}:{kvp.Value}}}"))}"
-        );
+        Console.WriteLine($"{nameof(MapPutExample)} :: PUT - " +
+                          $"{string.Join(", ", MapExampleData.MapEntries.Select(kvp => $"{{{kvp.Key}:{kvp.Value}}}"))}");
 
         foreach (var (key, value) in MapExampleData.MapEntries)
         {

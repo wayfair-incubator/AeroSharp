@@ -52,7 +52,7 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
         {
             // arrange
             var key = "key";
-            var cancellationToken = new CancellationToken();
+            var cancellationToken = CancellationToken.None;
 
             // act
             await _keyValueStoreUnderTest.ReadAsync(key, cancellationToken);
@@ -68,7 +68,7 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
         {
             // arrange
             var keys = new List<string> { "keyOne", "keyTwo" };
-            var cancellationToken = new CancellationToken();
+            var cancellationToken = CancellationToken.None;
 
             // act
             await _keyValueStoreUnderTest.ReadAsync(keys, cancellationToken);
@@ -84,7 +84,7 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
         {
             // arrange
             var key = "key";
-            var cancellationToken = new CancellationToken();
+            var cancellationToken = CancellationToken.None;
             var stringValue = "value";
             var intValue = 1;
             var booleanValue = true;
@@ -103,7 +103,7 @@ namespace AeroSharp.UnitTests.DataAccess.KeyValue
         {
             // arrange
             var key = "key";
-            var cancellationToken = new CancellationToken();
+            var cancellationToken = CancellationToken.None;
             var stringValue = "value";
             var intValue = 1;
             var booleanValue = true;

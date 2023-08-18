@@ -5,7 +5,7 @@ namespace AeroSharp.Examples.Utilities
 {
     internal static class StringGenerator
     {
-        private static readonly Random Random = new();
+        private static readonly Random Random = new ();
 
         internal static string GenerateRandomString(int length)
         {

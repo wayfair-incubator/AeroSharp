@@ -13,14 +13,14 @@ namespace AeroSharp.UnitTests.DataAccess.Policies
     public class WriteConfigurationToWritePolicyMapperTests
     {
         private readonly Dictionary<CommitLevel, global::Aerospike.Client.CommitLevel> _commitLevels =
-            new()
+            new ()
             {
                 { CommitLevel.CommitAll, Aerospike.Client.CommitLevel.COMMIT_ALL },
                 { CommitLevel.CommitMaster, Aerospike.Client.CommitLevel.COMMIT_MASTER }
             };
 
         private readonly Dictionary<RecordExistsAction, global::Aerospike.Client.RecordExistsAction> _recordExistsActions =
-            new()
+            new ()
             {
                 { RecordExistsAction.Update, Aerospike.Client.RecordExistsAction.UPDATE },
                 { RecordExistsAction.CreateOnly, Aerospike.Client.RecordExistsAction.CREATE_ONLY },
@@ -30,7 +30,7 @@ namespace AeroSharp.UnitTests.DataAccess.Policies
             };
 
         private readonly Dictionary<GenerationPolicy, global::Aerospike.Client.GenerationPolicy> _generationPolicies =
-            new()
+            new ()
             {
                 { GenerationPolicy.NONE, Aerospike.Client.GenerationPolicy.NONE },
                 { GenerationPolicy.EXPECT_GEN_EQUAL, Aerospike.Client.GenerationPolicy.EXPECT_GEN_EQUAL },

@@ -35,9 +35,7 @@ internal class MapRemoveByKeyExample : IExample
         {
             var mapEntry = await _map.RemoveByKeyAsync(key, CancellationToken.None);
 
-            Console.WriteLine(
-                $"{nameof(MapRemoveByKeyExample)} :: REMOVE BY KEY - key '{mapEntry.Key}' is '{mapEntry.Value}'"
-            );
+            Console.WriteLine($"{nameof(MapRemoveByKeyExample)} :: REMOVE BY KEY - key '{mapEntry.Key}' is '{mapEntry.Value}'");
         }
     }
 }

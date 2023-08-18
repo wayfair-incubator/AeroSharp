@@ -10,7 +10,6 @@ namespace AeroSharp.DataAccess.Policies
                 socketTimeout = (int)configuration.SocketTimeout.TotalMilliseconds,
                 maxRetries = configuration.RetryCount,
                 sendKey = configuration.SendKey,
-                sendSetName = configuration.SendSetName,
                 sleepBetweenRetries = (int)configuration.SleepBetweenRetries.TotalMilliseconds,
                 totalTimeout = (int)configuration.TotalTimeout.TotalMilliseconds,
                 maxConcurrentThreads = configuration.MaxConcurrentThreads
