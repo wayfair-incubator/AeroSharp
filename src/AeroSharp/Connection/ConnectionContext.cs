@@ -14,7 +14,10 @@ namespace AeroSharp.Connection
         /// A connection object containing information needed to establish a connection to Aerospike.
         /// </summary>
         /// <param name="bootstrapServers">Urls to Aerospike cluster nodes</param>
-        public ConnectionContext(string[] bootstrapServers) : this(bootstrapServers, DefaultPort) { }
+        public ConnectionContext(string[] bootstrapServers)
+            : this(bootstrapServers, DefaultPort)
+        {
+        }
 
         /// <summary>
         /// A connection object containing information needed to establish a connection to Aerospike.

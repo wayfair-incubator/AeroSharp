@@ -17,13 +17,13 @@ namespace AeroSharp.DataAccess.KeyValueAccess
     internal class KeyValueStore : IKeyValueStore
     {
         private readonly IBatchOperator _batchOperator;
+        private readonly DataContext _dataContext;
+        private readonly AsyncRetryPolicy _generationExceptionPolicy;
+        private readonly IEnumerable<IKeyValueStorePlugin> _plugins;
+        private readonly ReadConfiguration _readConfiguration;
         private readonly IRecordOperator _recordOperator;
         private readonly ISerializer _serializer;
-        private readonly IEnumerable<IKeyValueStorePlugin> _plugins;
-        private readonly DataContext _dataContext;
-        private readonly ReadConfiguration _readConfiguration;
         private readonly WriteConfiguration _writeConfiguration;
-        private readonly AsyncRetryPolicy _generationExceptionPolicy;
 
         internal KeyValueStore(
             IBatchOperator batchOperator,
@@ -78,21 +78,21 @@ namespace AeroSharp.DataAccess.KeyValueAccess
         {
             var bins = new[] { bin };
             var types = new[] { typeof(T) };
-            return PerformRead(keys, bins, types, (records) => MapRecordsToTuple<T>(records, bin), cancellationToken);
+            return PerformRead(keys, bins, types, records => MapRecordsToTuple<T>(records, bin), cancellationToken);
         }
 
         public Task<IEnumerable<(string Key, T1 Value1, T2 Value2)>> ReadAsync<T1, T2>(IEnumerable<string> keys, string bin1, string bin2, CancellationToken cancellationToken)
         {
             var bins = new[] { bin1, bin2 };
             var types = new[] { typeof(T1), typeof(T2) };
-            return PerformRead(keys, bins, types, (records) => MapRecordsToTuple<T1, T2>(records, bin1, bin2), cancellationToken);
+            return PerformRead(keys, bins, types, records => MapRecordsToTuple<T1, T2>(records, bin1, bin2), cancellationToken);
         }
 
         public Task<IEnumerable<(string Key, T1 Value1, T2 Value2, T3 Value3)>> ReadAsync<T1, T2, T3>(IEnumerable<string> keys, string bin1, string bin2, string bin3, CancellationToken cancellationToken)
         {
             var bins = new[] { bin1, bin2, bin3 };
             var types = new[] { typeof(T1), typeof(T2), typeof(T3) };
-            return PerformRead(keys, bins, types, (records) => MapRecordsToTuple<T1, T2, T3>(records, bin1, bin2, bin3), cancellationToken);
+            return PerformRead(keys, bins, types, records => MapRecordsToTuple<T1, T2, T3>(records, bin1, bin2, bin3), cancellationToken);
         }
 
         public Task WriteAsync<T>(string key, string bin, T value, CancellationToken cancellationToken)
@@ -141,11 +141,12 @@ namespace AeroSharp.DataAccess.KeyValueAccess
                 IEnumerable<string> keys = new[] { key }.ToList();
                 IEnumerable<string> bins = new[] { bin }.ToList();
                 var records = await _batchOperator.GetRecordsAsync(keys, bins, _readConfiguration, cancellationToken);
-                int generationId = records.FirstOrDefault().Value?.generation ?? 0;
-                T value = GetValueToWrite(addValueFunc, updateValueFunc, records, bins.First());
+                var generationId = records.FirstOrDefault().Value?.generation ?? 0;
+                var value = GetValueToWrite(addValueFunc, updateValueFunc, records, bins.First());
                 await WriteAsyncWithEqualGeneration(key, bin, value, generationId, timeToLive, cancellationToken);
             });
         }
+
         private Task WriteAsyncWithEqualGeneration<T>(string key, string bin, T value, int generationId, TimeSpan timeToLive, CancellationToken cancellationToken)
         {
             var config = new WriteConfiguration(_writeConfiguration);
@@ -153,6 +154,7 @@ namespace AeroSharp.DataAccess.KeyValueAccess
             config.TimeToLiveBehavior = TimeToLiveBehavior.SetOnWrite;
             config.GenerationPolicy = GenerationPolicy.EXPECT_GEN_EQUAL;
             config.Generation = generationId;
+
             // As per the Aerospike documentation, we should not have our writer retry a bunch of times, instead
             // implement a retry of the whole read/modify/write process again
             // Per docs: The retry policy must be set to “no retry” on a write request so that it is not repeated on time-out
@@ -166,7 +168,6 @@ namespace AeroSharp.DataAccess.KeyValueAccess
         {
             // Adding this function in as a helper method to AddOrUpdate
             // Intention is to make the code in the retry simple and readable
-
             T result;
             if (value.First().Value is object)
             {
@@ -321,8 +322,8 @@ namespace AeroSharp.DataAccess.KeyValueAccess
     /// <inheritdoc />
     public class KeyValueStore<T> : IKeyValueStore<T>
     {
-        private readonly IKeyValueStore _inner;
         private readonly KeyValueStoreContext _context;
+        private readonly IKeyValueStore _inner;
 
         internal KeyValueStore(
             IKeyValueStore innerReader,
@@ -380,8 +381,8 @@ namespace AeroSharp.DataAccess.KeyValueAccess
     /// <inheritdoc />
     public class KeyValueStore<T1, T2> : IKeyValueStore<T1, T2>
     {
-        private readonly IKeyValueStore _inner;
         private readonly KeyValueStoreContext _context;
+        private readonly IKeyValueStore _inner;
 
         internal KeyValueStore(
             IKeyValueStore innerReader,
@@ -433,8 +434,8 @@ namespace AeroSharp.DataAccess.KeyValueAccess
     /// <inheritdoc />
     public class KeyValueStore<T1, T2, T3> : IKeyValueStore<T1, T2, T3>
     {
-        private readonly IKeyValueStore _inner;
         private readonly KeyValueStoreContext _context;
+        private readonly IKeyValueStore _inner;
 
         internal KeyValueStore(
             IKeyValueStore innerReader,

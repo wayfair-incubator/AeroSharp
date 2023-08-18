@@ -19,6 +19,7 @@ namespace AeroSharp.Utilities
                     {
                         yield return output;
                     }
+
                     batch.Clear();
                 }
             }
@@ -32,8 +33,15 @@ namespace AeroSharp.Utilities
 
         public static IEnumerable<T[]> Batch<T>(this IEnumerable<T> collection, int batchSize)
         {
-            if (batchSize <= 0) { throw new ArgumentOutOfRangeException("Batch size cannot be zero unless you like endless CPU cycles!"); }
-            if (!collection.Any()) yield break;
+            if (batchSize <= 0)
+            {
+                throw new ArgumentOutOfRangeException("Batch size cannot be zero unless you like endless CPU cycles!");
+            }
+
+            if (!collection.Any())
+            {
+                yield break;
+            }
 
             int count = 0;
             do

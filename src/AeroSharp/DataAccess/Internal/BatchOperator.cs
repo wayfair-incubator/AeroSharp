@@ -27,32 +27,47 @@ namespace AeroSharp.DataAccess.Internal
             _dataContext = dataContext;
         }
 
-        public Task<IEnumerable<KeyValuePair<string, Record>>> GetRecordsAsync(IEnumerable<string> keys,
-            IEnumerable<string> bins, ReadConfiguration configuration, CancellationToken cancellationToken)
+        public Task<IEnumerable<KeyValuePair<string, Record>>> GetRecordsAsync(
+            IEnumerable<string> keys,
+            IEnumerable<string> bins,
+            ReadConfiguration configuration,
+            CancellationToken cancellationToken)
         {
-            return BatchReadAsync(keys,
+            return BatchReadAsync(
+                keys,
                 (client, policy, recordKeys) => client.Get(policy, cancellationToken, recordKeys, bins.ToArray()),
-                configuration, cancellationToken);
-        }
-
-        public Task<IEnumerable<KeyValuePair<string, bool>>> RecordsExistAsync(IEnumerable<string> keys,
-            ReadConfiguration configuration, CancellationToken cancellationToken)
-        {
-            return BatchReadAsync(keys,
-                (client, policy, recordKeys) => client.Exists(policy, cancellationToken, recordKeys), configuration,
+                configuration,
                 cancellationToken);
         }
 
-        public Task<IEnumerable<KeyValuePair<string, Record>>> GetRecordsAsync(IEnumerable<string> keys,
-            ReadConfiguration configuration, CancellationToken cancellationToken)
+        public Task<IEnumerable<KeyValuePair<string, bool>>> RecordsExistAsync(
+            IEnumerable<string> keys,
+            ReadConfiguration configuration,
+            CancellationToken cancellationToken)
         {
-            return BatchReadAsync(keys,
-                (client, policy, recordKeys) => client.Get(policy, cancellationToken, recordKeys), configuration,
+            return BatchReadAsync(
+                keys,
+                (client, policy, recordKeys) => client.Exists(policy, cancellationToken, recordKeys),
+                configuration,
                 cancellationToken);
         }
 
-        private async Task<IEnumerable<KeyValuePair<string, T>>> BatchReadAsync<T>(IEnumerable<string> keys,
-            Func<IAsyncClient, BatchPolicy, Key[], Task<T[]>> clientReadOperation, ReadConfiguration configuration,
+        public Task<IEnumerable<KeyValuePair<string, Record>>> GetRecordsAsync(
+            IEnumerable<string> keys,
+            ReadConfiguration configuration,
+            CancellationToken cancellationToken)
+        {
+            return BatchReadAsync(
+                keys,
+                (client, policy, recordKeys) => client.Get(policy, cancellationToken, recordKeys),
+                configuration,
+                cancellationToken);
+        }
+
+        private async Task<IEnumerable<KeyValuePair<string, T>>> BatchReadAsync<T>(
+            IEnumerable<string> keys,
+            Func<IAsyncClient, BatchPolicy, Key[], Task<T[]>> clientReadOperation,
+            ReadConfiguration configuration,
             CancellationToken cancellationToken)
         {
             var client = _clientProvider.GetClient();
@@ -85,9 +100,12 @@ namespace AeroSharp.DataAccess.Internal
             return response;
         }
 
-        private async Task<IEnumerable<KeyValuePair<string, T>>> ReadOneBatchAsync<T>(string[] keys,
-            Func<IAsyncClient, BatchPolicy, Key[], Task<T[]>> clientReadOperation, IAsyncClient client,
-            BatchPolicy policy, CancellationToken cancellationToken)
+        private async Task<IEnumerable<KeyValuePair<string, T>>> ReadOneBatchAsync<T>(
+            string[] keys,
+            Func<IAsyncClient, BatchPolicy, Key[], Task<T[]>> clientReadOperation,
+            IAsyncClient client,
+            BatchPolicy policy,
+            CancellationToken cancellationToken)
         {
             var response = new List<KeyValuePair<string, T>>();
 
@@ -95,7 +113,10 @@ namespace AeroSharp.DataAccess.Internal
             var recordKeys = keys.Select(key => new Key(_dataContext.Namespace, _dataContext.Set, key)).ToArray();
             var records = await clientReadOperation(client, policy, recordKeys);
 
-            for (var i = 0; i < records.Length; i++) response.Add(new KeyValuePair<string, T>(keys[i], records[i]));
+            for (var i = 0; i < records.Length; i++)
+            {
+                response.Add(new KeyValuePair<string, T>(keys[i], records[i]));
+            }
 
             return response;
         }

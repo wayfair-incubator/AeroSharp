@@ -11,7 +11,8 @@
         /// Constructs a list context with the provided key and a default bin name.
         /// </summary>
         /// <param name="key">The key of the record that will store the list.</param>
-        public ListContext(string key) : this(key, DefaultBinName) { }
+        public ListContext(string key)
+            : this(key, DefaultBinName) { }
 
         /// <summary>
         /// Constructs a list context with the provided key and bin name.

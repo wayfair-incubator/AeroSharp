@@ -10,15 +10,12 @@ namespace AeroSharp.DataAccess.Operations
 {
     internal class OperationBuilder : IBlobOperationBuilder, IOperationBuilder, IListOperationBuilder
     {
-        private readonly ISerializer _serializer;
-        private readonly IRecordOperator _recordOperator;
-        private readonly WriteConfiguration _writeConfiguration;
         private readonly string _key;
+        private readonly IRecordOperator _recordOperator;
+        private readonly ISerializer _serializer;
+        private readonly WriteConfiguration _writeConfiguration;
 
-        private List<Operation> _operations;
-
-        public IBlobOperationBuilder Blob => this;
-        public IListOperationBuilder List => this;
+        private readonly List<Operation> _operations;
 
         public OperationBuilder(
             ISerializer serializer,
@@ -35,9 +32,44 @@ namespace AeroSharp.DataAccess.Operations
         }
 
         /// <inheritdoc />
-        public Task ExecuteAsync(CancellationToken cancellationToken)
+        IOperationBuilder IBlobOperationBuilder.Write<T>(string bin, T data)
         {
-            return _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
+            var op = RecordOperations.Write(bin, data, _serializer);
+            _operations.Add(op);
+            return this;
+        }
+
+        /// <inheritdoc />
+        async Task<T> IBlobOperationBuilder.ReadAsync<T>(string bin, CancellationToken cancellationToken)
+        {
+            var op = RecordOperations.Read(bin);
+            _operations.Add(op);
+            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
+            var result = BlobParser.Parse<T>(_serializer, record, bin);
+            return result;
+        }
+
+        /// <inheritdoc />
+        async Task<(T1, T2)> IBlobOperationBuilder.ReadAsync<T1, T2>(string bin1, string bin2, CancellationToken cancellationToken)
+        {
+            var op = RecordOperations.Read();
+            _operations.Add(op);
+            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
+            var result1 = BlobParser.Parse<T1>(_serializer, record, bin1);
+            var result2 = BlobParser.Parse<T2>(_serializer, record, bin2);
+            return (result1, result2);
+        }
+
+        /// <inheritdoc />
+        async Task<(T1, T2, T3)> IBlobOperationBuilder.ReadAsync<T1, T2, T3>(string bin1, string bin2, string bin3, CancellationToken cancellationToken)
+        {
+            var op = RecordOperations.Read();
+            _operations.Add(op);
+            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
+            var result1 = BlobParser.Parse<T1>(_serializer, record, bin1);
+            var result2 = BlobParser.Parse<T2>(_serializer, record, bin2);
+            var result3 = BlobParser.Parse<T3>(_serializer, record, bin3);
+            return (result1, result2, result3);
         }
 
         /// <inheritdoc />
@@ -135,45 +167,14 @@ namespace AeroSharp.DataAccess.Operations
             return SizeParser.Parse(record, bin);
         }
 
-        /// <inheritdoc />
-        IOperationBuilder IBlobOperationBuilder.Write<T>(string bin, T data)
-        {
-            var op = RecordOperations.Write(bin, data, _serializer);
-            _operations.Add(op);
-            return this;
-        }
+        public IBlobOperationBuilder Blob => this;
+
+        public IListOperationBuilder List => this;
 
         /// <inheritdoc />
-        async Task<T> IBlobOperationBuilder.ReadAsync<T>(string bin, CancellationToken cancellationToken)
+        public Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            var op = RecordOperations.Read(bin);
-            _operations.Add(op);
-            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
-            var result = BlobParser.Parse<T>(_serializer, record, bin);
-            return result;
-        }
-
-        /// <inheritdoc />
-        async Task<(T1, T2)> IBlobOperationBuilder.ReadAsync<T1, T2>(string bin1, string bin2, CancellationToken cancellationToken)
-        {
-            var op = RecordOperations.Read();
-            _operations.Add(op);
-            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
-            var result1 = BlobParser.Parse<T1>(_serializer, record, bin1);
-            var result2 = BlobParser.Parse<T2>(_serializer, record, bin2);
-            return (result1, result2);
-        }
-
-        /// <inheritdoc />
-        async Task<(T1, T2, T3)> IBlobOperationBuilder.ReadAsync<T1, T2, T3>(string bin1, string bin2, string bin3, CancellationToken cancellationToken)
-        {
-            var op = RecordOperations.Read();
-            _operations.Add(op);
-            var record = await _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
-            var result1 = BlobParser.Parse<T1>(_serializer, record, bin1);
-            var result2 = BlobParser.Parse<T2>(_serializer, record, bin2);
-            var result3 = BlobParser.Parse<T3>(_serializer, record, bin3);
-            return (result1, result2, result3);
+            return _recordOperator.OperateAsync(_key, _operations.ToArray(), _writeConfiguration, cancellationToken);
         }
     }
 }

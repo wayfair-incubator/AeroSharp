@@ -126,10 +126,7 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
     {
         _mapContextValidator.ValidateAndThrow(mapContext);
 
-        return new Map<TKey, TValue>(
-            BuildMapOperator<TKey, TValue>(),
-            mapContext
-        );
+        return new Map<TKey, TValue>(BuildMapOperator<TKey, TValue>(), mapContext);
     }
 
     private IMapOperator<TKey, TValue> BuildMapOperator<TKey, TValue>()
@@ -166,8 +163,7 @@ public sealed class MapBuilder : IDataContextBuilder<IMapBuilder>, IMapBuilder
             mapEntryGenerator,
             _mapConfiguration,
             recordOperator,
-            _writeConfiguration
-        );
+            _writeConfiguration);
     }
 
     private IMapParser BuildMapParser() => _serializer is null

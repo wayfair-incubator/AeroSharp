@@ -26,3 +26,21 @@ dotnet_diagnostic.SA1633.severity = none
 
 # require standardized summary test for constructors
 dotnet_diagnostic.SA1642.severity = none
+
+# file may only contain a single type
+dotnet_diagnostic.SA1402.severity = none
+
+# elements must be documented (temporarily disabling) 
+dotnet_diagnostic.SA1600.severity = none
+
+# 'public' members should come before 'internal' members
+dotnet_diagnostic.SA1202.severity = none
+
+# constructor should not follow a property
+dotnet_diagnostic.SA1201.severity = none
+
+# XML comment analysis disabled due to project configuration
+dotnet_diagnostic.SA0001.severity = none
+
+# static members should appear before non-static members
+dotnet_diagnostic.SA1204.severity = none

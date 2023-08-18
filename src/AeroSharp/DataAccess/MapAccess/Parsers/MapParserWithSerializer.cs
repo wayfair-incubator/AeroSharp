@@ -39,8 +39,7 @@ internal sealed class MapParserWithSerializer : IMapParser
         {
             throw new UnexpectedDataFormatException(
                 $"Map key in bin \"{bin}\" is not a {typeof(TKey).FullName}.",
-                exception
-            );
+                exception);
         }
     }
 
@@ -54,8 +53,7 @@ internal sealed class MapParserWithSerializer : IMapParser
         {
             throw new UnexpectedDataFormatException(
                 $"Value in bin \"{bin}\" is not a {typeof(byte[]).FullName}.",
-                exception
-            );
+                exception);
         }
     }
 

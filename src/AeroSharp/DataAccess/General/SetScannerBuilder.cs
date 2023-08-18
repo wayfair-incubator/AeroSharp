@@ -76,7 +76,10 @@ namespace AeroSharp.DataAccess.General
             scanValidator.ValidateAndThrow(_configuration);
 
             var serializer = _serializer;
-            if (!(_compressor is null)) serializer = new SerializerWithCompression(_serializer, _compressor);
+            if (!(_compressor is null))
+            {
+                serializer = new SerializerWithCompression(_serializer, _compressor);
+            }
 
             ISetScanOperator @operator = new SetScanOperator(_clientProvider);
 

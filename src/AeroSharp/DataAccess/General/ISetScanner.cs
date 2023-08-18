@@ -43,8 +43,11 @@ namespace AeroSharp.DataAccess.General
         /// <param name="bin1">The bin to retrieve the first typed value from.</param>
         /// <param name="bin2">The bin to retrieve the second typed value from.</param>
         /// <param name="bin3">The bin to retrieve the third typed value from.</param>
-        void ScanSet<T1, T2, T3>(Action<(string Key, T1 Value1, T2 Value2, T3 Value3)> recordFoundOperation,
-            string bin1, string bin2, string bin3);
+        void ScanSet<T1, T2, T3>(
+            Action<(string Key, T1 Value1, T2 Value2, T3 Value3)> recordFoundOperation,
+            string bin1,
+            string bin2,
+            string bin3);
     }
 
     /// <summary>

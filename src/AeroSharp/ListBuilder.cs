@@ -108,7 +108,6 @@ namespace AeroSharp
             return this;
         }
 
-
         /// <inheritdoc />
         public IListBuilder UseLZ4()
         {

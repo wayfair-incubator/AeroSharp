@@ -12,6 +12,7 @@ namespace AeroSharp.DataAccess.General
         }
 
         public string Key { get; }
+
         public bool Exists { get; }
     }
 }

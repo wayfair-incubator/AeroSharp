@@ -21,16 +21,12 @@ internal sealed class MapParser : IMapParser
 
         if (mapEntry.Key is not TKey key)
         {
-            throw new UnexpectedDataFormatException(
-                $"Unable to parse map entry from bin \"{bin}\". Map key is not a {typeof(TKey).FullName}."
-            );
+            throw new UnexpectedDataFormatException($"Unable to parse map entry from bin \"{bin}\". Map key is not a {typeof(TKey).FullName}.");
         }
 
         if (mapEntry.Value is not TValue value)
         {
-            throw new UnexpectedDataFormatException(
-                $"Unable to parse map entry from bin \"{bin}\". Map value is not a {typeof(TValue).FullName}."
-            );
+            throw new UnexpectedDataFormatException($"Unable to parse map entry from bin \"{bin}\". Map value is not a {typeof(TValue).FullName}.");
         }
 
         return new KeyValuePair<TKey, TValue>(key, value);
