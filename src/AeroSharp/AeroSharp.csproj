@@ -13,6 +13,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>aerospike, aerosharp, serialization, policy validation</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
