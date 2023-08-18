@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
+using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.Operations
 {

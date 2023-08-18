@@ -1,7 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
+using System;
+using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.HelloWorld
 {

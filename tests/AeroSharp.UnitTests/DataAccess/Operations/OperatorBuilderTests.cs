@@ -1,9 +1,9 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.UnitTests.DataAccess.Operations
 {

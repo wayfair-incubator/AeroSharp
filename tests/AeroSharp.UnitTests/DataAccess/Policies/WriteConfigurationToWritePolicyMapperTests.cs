@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using AeroSharp.DataAccess;
+﻿using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Policies;
 using AeroSharp.Enums;
 using FluentAssertions;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace AeroSharp.UnitTests.DataAccess.Policies
 {

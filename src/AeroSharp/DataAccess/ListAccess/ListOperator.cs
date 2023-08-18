@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.DataAccess.Operations;
 using AeroSharp.Serialization;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.DataAccess.ListAccess
 {

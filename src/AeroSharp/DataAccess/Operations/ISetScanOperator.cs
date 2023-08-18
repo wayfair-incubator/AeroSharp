@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Aerospike.Client;
+using System;
 using System.Collections.Generic;
-using Aerospike.Client;
 
 namespace AeroSharp.DataAccess.Operations
 {

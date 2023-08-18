@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.KeyValueAccess;
 using AeroSharp.DataAccess.ListAccess;
 using AeroSharp.DataAccess.Operations;
 using AeroSharp.Examples.Utilities;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.Operations
 {

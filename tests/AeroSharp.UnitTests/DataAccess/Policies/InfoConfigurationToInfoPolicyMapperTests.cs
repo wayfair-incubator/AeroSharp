@@ -1,8 +1,8 @@
-﻿using System;
-using AeroSharp.DataAccess;
+﻿using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Policies;
 using FluentAssertions;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.UnitTests.DataAccess.Policies
 {

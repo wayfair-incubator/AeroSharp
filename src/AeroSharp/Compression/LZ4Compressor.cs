@@ -1,5 +1,5 @@
-﻿using System.IO;
-using LZ4;
+﻿using LZ4;
+using System.IO;
 
 namespace AeroSharp.Compression
 {

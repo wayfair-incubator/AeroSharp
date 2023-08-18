@@ -1,8 +1,8 @@
-﻿using System;
-using AeroSharp.DataAccess.Exceptions;
+﻿using AeroSharp.DataAccess.Exceptions;
 using Aerospike.Client;
 using Polly;
 using Polly.Retry;
+using System;
 using Policy = Polly.Policy;
 
 namespace AeroSharp.Utilities
@@ -13,6 +13,7 @@ namespace AeroSharp.Utilities
     public class ReadModifyWritePolicyFactory : IReadModifyWritePolicy
     {
         private readonly PolicyBuilder _policyBuilder;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ReadModifyWritePolicyFactory"/> class.
         /// </summary>
@@ -31,6 +32,7 @@ namespace AeroSharp.Utilities
                 // Reset to defaults if the wait time is <= 0
                 policyConfig.WaitTimeInMilliseconds = 5;
             }
+
             return _policyBuilder
                 .WaitAndRetryAsync(
                     policyConfig.MaxRetries,

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using AeroSharp.DataAccess;
+using AeroSharp.DataAccess.KeyValueAccess;
+using Aerospike.Client;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using AeroSharp.DataAccess;
-using AeroSharp.DataAccess.KeyValueAccess;
-using Aerospike.Client;
 
 namespace AeroSharp.Plugins
 {
@@ -23,6 +23,7 @@ namespace AeroSharp.Plugins
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A Task.</returns>
         Task OnWriteAsync(DataContext dataContext, string key, Bin[] bins, Type[] types, CancellationToken cancellationToken);
+
         /// <summary>
         /// Called when the write operation has completed.
         /// </summary>
@@ -34,6 +35,7 @@ namespace AeroSharp.Plugins
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A Task.</returns>
         Task OnWriteCompletedAsync(DataContext dataContext, string key, Bin[] bins, Type[] types, TimeSpan duration, CancellationToken cancellationToken);
+
         /// <summary>
         /// Called just before the start of a read operation.
         /// </summary>
@@ -44,6 +46,7 @@ namespace AeroSharp.Plugins
         /// <param name="cancellationToken">A cancellation token.</param>
         /// <returns>A Task.</returns>
         Task OnReadAsync(DataContext dataContext, string[] keys, string[] binNames, Type[] types, CancellationToken cancellationToken);
+
         /// <summary>
         /// Called just after the read operation has completed.
         /// </summary>

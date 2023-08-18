@@ -1,6 +1,6 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using FluentValidation;
+using System;
 
 namespace AeroSharp.DataAccess.Validation
 {

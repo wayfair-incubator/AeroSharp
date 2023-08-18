@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.DataAccess;
+﻿using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.KeyValueAccess;
 using AeroSharp.Plugins;
 using AeroSharp.Tests.Utility;
@@ -11,6 +6,11 @@ using Aerospike.Client;
 using MessagePack;
 using Moq;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.Plugin
 {

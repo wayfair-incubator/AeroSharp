@@ -1,10 +1,10 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using FluentValidation;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.IntegrationTests.General
 {

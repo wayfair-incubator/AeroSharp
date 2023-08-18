@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using AeroSharp.Compression;
+﻿using AeroSharp.Compression;
 using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Configuration;
@@ -11,6 +10,7 @@ using AeroSharp.Serialization;
 using AeroSharp.Utilities;
 using FluentValidation;
 using Polly.Retry;
+using System.Collections.Generic;
 
 namespace AeroSharp
 {

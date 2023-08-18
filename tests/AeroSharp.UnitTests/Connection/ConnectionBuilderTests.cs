@@ -1,9 +1,9 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Exceptions;
 using FluentAssertions;
 using FluentValidation;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.UnitTests.Connection
 {

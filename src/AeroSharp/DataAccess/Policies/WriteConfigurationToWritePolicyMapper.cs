@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Aerospike.Client;
+﻿using Aerospike.Client;
+using System.Collections.Generic;
 
 namespace AeroSharp.DataAccess.Policies
 {

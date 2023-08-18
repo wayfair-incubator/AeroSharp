@@ -1,5 +1,5 @@
-using System.Linq;
 using Aerospike.Client;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Policies
 {

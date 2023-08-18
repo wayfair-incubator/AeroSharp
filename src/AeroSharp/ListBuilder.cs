@@ -1,5 +1,4 @@
-﻿using System;
-using AeroSharp.Compression;
+﻿using AeroSharp.Compression;
 using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Configuration;
@@ -7,6 +6,7 @@ using AeroSharp.DataAccess.ListAccess;
 using AeroSharp.DataAccess.Validation;
 using AeroSharp.Serialization;
 using FluentValidation;
+using System;
 
 namespace AeroSharp
 {

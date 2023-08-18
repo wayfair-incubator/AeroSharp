@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AeroSharp.DataAccess.Configuration;
+using System;
 using System.Collections.Generic;
-using AeroSharp.DataAccess.Configuration;
 
 namespace AeroSharp.DataAccess.General
 {
@@ -14,6 +14,7 @@ namespace AeroSharp.DataAccess.General
         /// </summary>
         /// <param name="recordFoundOperation">The operation to perform.</param>
         void ScanSet(Action<string> recordFoundOperation);
+
         /// <summary>
         /// Synchronously scan a set and perform an operation on a found key-value pair.
         /// </summary>
@@ -21,6 +22,7 @@ namespace AeroSharp.DataAccess.General
         /// <param name="recordFoundOperation">The operation to perform.</param>
         /// <param name="bin">The bin to retrieve the value from.</param>
         void ScanSet<T1>(Action<KeyValuePair<string, T1>> recordFoundOperation, string bin);
+
         /// <summary>
         /// Synchronously scan a set and perform an operation on a found key value-set.
         /// </summary>
@@ -30,6 +32,7 @@ namespace AeroSharp.DataAccess.General
         /// <param name="bin1">The bin to retrieve the first typed value from.</param>
         /// <param name="bin2">The bin to retrieve the second typed value from.</param>
         void ScanSet<T1, T2>(Action<(string Key, T1 Value1, T2 Value2)> recordFoundOperation, string bin1, string bin2);
+
         /// <summary>
         /// Synchronously scan a set and perform an operation on a found key value-set.
         /// </summary>
@@ -40,7 +43,8 @@ namespace AeroSharp.DataAccess.General
         /// <param name="bin1">The bin to retrieve the first typed value from.</param>
         /// <param name="bin2">The bin to retrieve the second typed value from.</param>
         /// <param name="bin3">The bin to retrieve the third typed value from.</param>
-        void ScanSet<T1, T2, T3>(Action<(string Key, T1 Value1, T2 Value2, T3 Value3)> recordFoundOperation, string bin1, string bin2, string bin3);
+        void ScanSet<T1, T2, T3>(Action<(string Key, T1 Value1, T2 Value2, T3 Value3)> recordFoundOperation,
+            string bin1, string bin2, string bin3);
     }
 
     /// <summary>

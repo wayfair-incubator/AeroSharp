@@ -9,6 +9,7 @@
         /// Server should wait until successfully committing master and all replicas.
         /// </summary>
         CommitAll,
+
         /// <summary>
         /// Server should wait until successfully committing master only.
         /// </summary>

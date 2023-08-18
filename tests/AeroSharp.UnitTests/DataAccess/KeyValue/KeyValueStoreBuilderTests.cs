@@ -1,12 +1,12 @@
-﻿using System;
-using System.Linq;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using FluentValidation;
 using Moq;
 using NUnit.Framework;
+using System;
+using System.Linq;
 
 namespace AeroSharp.UnitTests.DataAccess.KeyValue
 {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.General;
 using AeroSharp.DataAccess.Internal;
@@ -9,6 +6,9 @@ using AeroSharp.Tests.Utility;
 using Aerospike.Client;
 using FluentAssertions;
 using NUnit.Framework;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.General
 {

@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using AeroSharp.DataAccess.General;
+﻿using AeroSharp.DataAccess.General;
 using FluentValidation;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Validation
 {

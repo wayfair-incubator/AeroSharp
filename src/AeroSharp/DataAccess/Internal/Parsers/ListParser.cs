@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AeroSharp.DataAccess.Exceptions;
+﻿using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.Serialization;
 using Aerospike.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Internal.Parsers
 {

@@ -1,16 +1,19 @@
-﻿using System.Linq;
-using Aerospike.Client;
+﻿using Aerospike.Client;
+using System.Linq;
 
 namespace AeroSharp.Connection
 {
     internal class ClientProvider : IClientProvider
     {
+        private readonly Host[] _hosts;
+        private readonly object _lock;
+        private readonly AsyncClientPolicy _policy;
         private volatile ClientWrapper _client;
-        private AsyncClientPolicy _policy;
-        private Host[] _hosts;
-        private object _lock;
 
-        internal ClientProvider(ConnectionContext connection, Credentials credentials, ConnectionConfiguration configuration)
+        internal ClientProvider(
+            ConnectionContext connection,
+            Credentials credentials,
+            ConnectionConfiguration configuration)
         {
             _lock = new object();
 
@@ -32,12 +35,14 @@ namespace AeroSharp.Connection
             {
                 lock (_lock)
                 {
-                    if (_client is null || !_client.Client.Connected) // Check again in case current thread isn't first one here
+                    // Check again in case current thread isn't first one here
+                    if (_client is null || !_client.Client.Connected)
                     {
                         _client = new ClientWrapper(new AsyncClient(_policy, _hosts));
                     }
                 }
             }
+
             return _client;
         }
 

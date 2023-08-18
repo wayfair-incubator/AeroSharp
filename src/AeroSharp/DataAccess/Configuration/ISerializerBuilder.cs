@@ -9,24 +9,27 @@ namespace AeroSharp.DataAccess.Configuration
     public interface ISerializerBuilder<TNextBuilder>
     {
         /// <summary>
-        /// Use the default <see cref="ProtobufSerializer"/>.
+        /// Use the default <see cref="ProtobufSerializer" />.
         /// </summary>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder UseProtobufSerializer();
+
         /// <summary>
-        /// Use the built-in <see cref="MessagePackSerializer"/>.
+        /// Use the built-in <see cref="MessagePackSerializer" />.
         /// </summary>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder UseMessagePackSerializer();
+
         /// <summary>
-        /// Use the built-in <see cref="MessagePackSerializerWithCompression"/>.
+        /// Use the built-in <see cref="MessagePackSerializerWithCompression" />.
         /// </summary>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder UseMessagePackSerializerWithLz4Compression();
+
         /// <summary>
-        /// Use a provided instance of an <see cref="ISerializer"/>.
+        /// Use a provided instance of an <see cref="ISerializer" />.
         /// </summary>
-        /// <param name="serializer">The <see cref="ISerializer"/> instance.</param>
+        /// <param name="serializer">The <see cref="ISerializer" /> instance.</param>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder WithSerializer(ISerializer serializer);
     }

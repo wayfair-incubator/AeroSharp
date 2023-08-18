@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AeroSharp.Enums;
+using System;
 using System.Diagnostics.CodeAnalysis;
-using AeroSharp.Enums;
 
 namespace AeroSharp.Connection
 {

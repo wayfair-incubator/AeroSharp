@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.General;
 using AeroSharp.DataAccess.KeyValueAccess;
 using AeroSharp.Examples.Keys;
 using AeroSharp.Examples.Utilities;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.Examples.Ttl
 {

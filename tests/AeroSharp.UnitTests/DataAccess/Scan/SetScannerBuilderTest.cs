@@ -1,5 +1,4 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.General;
 using AeroSharp.Tests.Utility;
@@ -7,6 +6,7 @@ using FluentAssertions;
 using FluentValidation;
 using Moq;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.UnitTests.DataAccess.Scan
 {

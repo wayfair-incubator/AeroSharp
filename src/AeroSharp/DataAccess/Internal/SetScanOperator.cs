@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Operations;
 using AeroSharp.DataAccess.Policies;
 using Aerospike.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Internal
 {

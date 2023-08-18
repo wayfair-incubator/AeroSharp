@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Exceptions;
 using AeroSharp.DataAccess.ListAccess;
@@ -7,6 +6,7 @@ using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using MessagePack;
 using NUnit.Framework;
+using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.DataAccess.List
 {

@@ -1,5 +1,5 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
+using System;
 
 namespace AeroSharp.Examples.Utilities
 {

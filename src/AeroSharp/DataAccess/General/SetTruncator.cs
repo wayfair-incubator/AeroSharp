@@ -1,7 +1,7 @@
-﻿using System;
+﻿using AeroSharp.DataAccess.Internal;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using AeroSharp.DataAccess.Internal;
 
 namespace AeroSharp.DataAccess.General
 {

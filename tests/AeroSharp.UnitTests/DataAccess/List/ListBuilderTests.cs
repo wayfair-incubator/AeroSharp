@@ -1,11 +1,11 @@
-﻿using System;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.ListAccess;
 using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using FluentValidation;
 using Moq;
 using NUnit.Framework;
+using System;
 
 namespace AeroSharp.UnitTests.DataAccess.List
 {

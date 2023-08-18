@@ -1,6 +1,6 @@
-﻿using System;
-using AeroSharp.DataAccess.Exceptions;
+﻿using AeroSharp.DataAccess.Exceptions;
 using Aerospike.Client;
+using System;
 
 namespace AeroSharp.DataAccess.Internal.Parsers
 {

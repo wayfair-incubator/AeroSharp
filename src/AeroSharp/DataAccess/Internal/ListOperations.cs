@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AeroSharp.DataAccess.Policies;
+﻿using AeroSharp.DataAccess.Policies;
 using AeroSharp.Serialization;
 using Aerospike.Client;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Internal
 {

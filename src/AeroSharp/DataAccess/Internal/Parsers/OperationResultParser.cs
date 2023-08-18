@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using AeroSharp.Serialization;
+﻿using AeroSharp.Serialization;
 using Aerospike.Client;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Internal.Parsers
 {

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.Connection;
+﻿using AeroSharp.Connection;
 using AeroSharp.DataAccess.Policies;
 using Aerospike.Client;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.DataAccess.Internal
 {

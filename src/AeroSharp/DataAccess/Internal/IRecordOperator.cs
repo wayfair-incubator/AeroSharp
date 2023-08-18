@@ -1,6 +1,6 @@
-﻿using System.Threading;
+﻿using Aerospike.Client;
+using System.Threading;
 using System.Threading.Tasks;
-using Aerospike.Client;
 
 namespace AeroSharp.DataAccess.Internal
 {

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using AeroSharp.Compression;
+﻿using AeroSharp.Compression;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Internal;
 using AeroSharp.DataAccess.Internal.Parsers;
@@ -9,6 +7,8 @@ using AeroSharp.Serialization;
 using AeroSharp.Tests.Utility;
 using FluentAssertions;
 using NUnit.Framework;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.DataAccess.Operations
 {

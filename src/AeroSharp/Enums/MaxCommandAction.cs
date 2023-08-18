@@ -9,10 +9,12 @@
         /// Reject database command.
         /// </summary>
         REJECT,
+
         /// <summary>
         /// Block until a previous command completes.
         /// </summary>
         BLOCK,
+
         /// <summary>
         /// Delay until a previous command completes.
         /// </summary>

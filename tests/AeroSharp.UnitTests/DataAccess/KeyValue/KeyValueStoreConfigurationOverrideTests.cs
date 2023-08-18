@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using AeroSharp.DataAccess;
+﻿using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Internal;
 using AeroSharp.DataAccess.KeyValueAccess;
 using AeroSharp.Plugins;
@@ -12,6 +8,10 @@ using Aerospike.Client;
 using FluentAssertions;
 using Moq;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace AeroSharp.UnitTests.DataAccess.KeyValue
 {

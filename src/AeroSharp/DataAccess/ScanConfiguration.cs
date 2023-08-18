@@ -10,7 +10,7 @@ namespace AeroSharp.DataAccess
     public class ScanConfiguration
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="ScanConfiguration"/> class.
+        /// Creates a new instance of the <see cref="ScanConfiguration" /> class.
         /// </summary>
         public ScanConfiguration()
         {
@@ -42,26 +42,32 @@ namespace AeroSharp.DataAccess
         /// Whether or not scan requests should be issued in parallel.
         /// </summary>
         public bool ConcurrentNodes { get; set; }
+
         /// <summary>
         /// Whether or not the data inside the bins should be retrieved.
         /// </summary>
         public bool IncludeBinData { get; set; }
+
         /// <summary>
         /// The maximum number of concurrent requests to server nodes at any point in time.
         /// </summary>
         public int MaxConcurrentNodes { get; set; }
+
         /// <summary>
         /// The approximate number of records to return to the client. Set to 0 to specify no limit.
         /// </summary>
         public int MaxRecords { get; set; }
+
         /// <summary>
         /// Limits the number of records per second per server. Ignored if 0.
         /// </summary>
         public int RecordsPerSecond { get; set; }
+
         /// <summary>
         /// The socket idle timeout.
         /// </summary>
         public TimeSpan SocketTimeout { get; set; }
+
         /// <summary>
         /// The total transaction timeout. Set to TimeSpan.Zero for unlimited.
         /// </summary>

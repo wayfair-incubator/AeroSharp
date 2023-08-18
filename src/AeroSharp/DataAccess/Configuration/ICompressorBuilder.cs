@@ -9,14 +9,15 @@ namespace AeroSharp.DataAccess.Configuration
     public interface ICompressorBuilder<TNextBuilder>
     {
         /// <summary>
-        /// Uses the default <see cref="LZ4Compressor"/>.
+        /// Uses the default <see cref="LZ4Compressor" />.
         /// </summary>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder UseLZ4();
+
         /// <summary>
-        /// Use a provided instance of an <see cref="ICompressor"/>.
+        /// Use a provided instance of an <see cref="ICompressor" />.
         /// </summary>
-        /// <param name="compressor">The <see cref="ICompressor"/> instance.</param>
+        /// <param name="compressor">The <see cref="ICompressor" /> instance.</param>
         /// <returns>An instance of the next builder.</returns>
         TNextBuilder WithCompressor(ICompressor compressor);
     }

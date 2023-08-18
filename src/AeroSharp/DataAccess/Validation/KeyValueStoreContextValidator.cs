@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using AeroSharp.DataAccess.KeyValueAccess;
+﻿using AeroSharp.DataAccess.KeyValueAccess;
 using FluentValidation;
+using System.Linq;
 
 namespace AeroSharp.DataAccess.Validation
 {

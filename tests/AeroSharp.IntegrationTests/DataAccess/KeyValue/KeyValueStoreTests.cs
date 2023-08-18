@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AeroSharp.Compression;
+﻿using AeroSharp.Compression;
 using AeroSharp.Connection;
 using AeroSharp.DataAccess;
 using AeroSharp.DataAccess.Exceptions;
@@ -14,6 +10,10 @@ using AeroSharp.Utilities;
 using FluentAssertions;
 using MessagePack;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
 {
