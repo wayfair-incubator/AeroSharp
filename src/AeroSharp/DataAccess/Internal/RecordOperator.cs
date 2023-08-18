@@ -103,8 +103,7 @@ namespace AeroSharp.DataAccess.Internal
             }
         }
 
-        private static void HandleAerospikeExceptions(AerospikeException ex, string key)
-        {
+        private static void HandleAerospikeExceptions(AerospikeException ex, string key) =>
             throw ex.Result switch
             {
                 ResultCode.KEY_NOT_FOUND_ERROR => new RecordNotFoundException(
@@ -119,6 +118,5 @@ namespace AeroSharp.DataAccess.Internal
                     $"Operation on {key} failed. Trying to operate on a map element that already exists with the \"create only\" map policy."),
                 _ => new OperationFailedException($"Operation failed. Key {key}", ex)
             };
-        }
     }
 }
