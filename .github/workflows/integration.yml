@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Check Out Code
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
             6.0.x
@@ -36,7 +36,7 @@ jobs:
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
       - name: Publish Code Coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
           fail_ci_if_error: true

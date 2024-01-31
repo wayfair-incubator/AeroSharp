@@ -6,10 +6,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Lint Renovate config
-        uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.3
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@v1.0.1
         with:
           config_file_path: 'renovate.json'
 
