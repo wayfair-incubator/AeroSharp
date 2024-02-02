@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.2.0-preview-7</Version>
+    <Version>v1.2.0-preview-7</Version>
     <Authors>Wayfair</Authors>
     <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
     <Copyright>Wayfair ©2023</Copyright>
