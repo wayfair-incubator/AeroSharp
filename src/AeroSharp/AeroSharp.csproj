@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>Wayfair</Authors>
     <Description>Wrapper around the .NET Aerospike client that provides a variety of methods for storing and retrieving data in Aerospike</Description>
-    <Copyright>Wayfair ©2023</Copyright>
+    <Copyright>Wayfair ©2024</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/wayfair-incubator/AeroSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/wayfair-incubator/AeroSharp</RepositoryUrl>
@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aerospike.Client" Version="6.0.1" />
+    <PackageReference Include="Aerospike.Client" Version="7.0.1" />
     <PackageReference Include="FluentValidation" Version="11.6.0" />
     <PackageReference Include="lz4net" Version="1.0.15.93" />
     <PackageReference Include="MessagePack" Version="2.5.124" />
