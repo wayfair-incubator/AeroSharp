@@ -39,6 +39,6 @@ namespace AeroSharp.Connection
         /// <summary>
         /// The maximum sync connections per node.
         /// </summary>
-        public MaxConnsPerNode MaxConnsPerNode { get; set; }
+        public int MaxConnsPerNode { get; set; }
     }
 }
