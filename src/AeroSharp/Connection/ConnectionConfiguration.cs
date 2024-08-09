@@ -18,6 +18,7 @@ namespace AeroSharp.Connection
             ConnectionTimeout = TimeSpan.FromSeconds(10);
             AsyncMaxCommands = 500;
             MaxCommandAction = MaxCommandAction.DELAY; // Recommended by Aerospike Enterprise Support (behavior when asyncMaxCommands is exceeded)
+            MaxConnsPerNode = 100; // Leave it as default value from Aerospike
         }
 
         /// <summary>
@@ -34,5 +35,10 @@ namespace AeroSharp.Connection
         /// Defines how to handle cases when the maximum number of concurrent database commands has been exceeded for the async client.
         /// </summary>
         public MaxCommandAction MaxCommandAction { get; set; }
+
+        /// <summary>
+        /// The maximum sync connections per node.
+        /// </summary>
+        public MaxConnsPerNode MaxConnsPerNode { get; set; }
     }
 }

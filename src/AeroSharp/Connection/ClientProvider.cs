@@ -20,7 +20,8 @@ namespace AeroSharp.Connection
                 user = credentials.Username,
                 password = credentials.Password,
                 asyncMaxCommandAction = GetMaxCommandAction(configuration.MaxCommandAction),
-                asyncMaxCommands = configuration.AsyncMaxCommands
+                asyncMaxCommands = configuration.AsyncMaxCommands,
+                maxConnsPerNode = configuration.MaxConnsPerNode
             };
 
             _hosts = connection.BootstrapServers.Select(s => new Host(s, connection.Port)).ToArray();
