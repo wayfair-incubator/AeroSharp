@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using Aerospike.Client;
+﻿using Aerospike.Client;
+using System.Linq;
 
 namespace AeroSharp.Connection
 {
@@ -39,6 +39,7 @@ namespace AeroSharp.Connection
                     }
                 }
             }
+            
             return _client;
         }
 
