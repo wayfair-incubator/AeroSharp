@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using Aerospike.Client;
+﻿using Aerospike.Client;
+using System.Linq;
 
 namespace AeroSharp.Connection
 {
@@ -20,7 +20,8 @@ namespace AeroSharp.Connection
                 user = credentials.Username,
                 password = credentials.Password,
                 asyncMaxCommandAction = GetMaxCommandAction(configuration.MaxCommandAction),
-                asyncMaxCommands = configuration.AsyncMaxCommands
+                asyncMaxCommands = configuration.AsyncMaxCommands,
+                maxConnsPerNode = configuration.MaxConnsPerNode
             };
 
             _hosts = connection.BootstrapServers.Select(s => new Host(s, connection.Port)).ToArray();
@@ -38,6 +39,7 @@ namespace AeroSharp.Connection
                     }
                 }
             }
+
             return _client;
         }
 

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AeroSharp.Enums;
+using System;
 using System.Diagnostics.CodeAnalysis;
-using AeroSharp.Enums;
 
 namespace AeroSharp.Connection
 {
@@ -18,6 +18,12 @@ namespace AeroSharp.Connection
             ConnectionTimeout = TimeSpan.FromSeconds(10);
             AsyncMaxCommands = 500;
             MaxCommandAction = MaxCommandAction.DELAY; // Recommended by Aerospike Enterprise Support (behavior when asyncMaxCommands is exceeded)
+            
+            // Leave it as default value from Aerospike Client.
+            // Note: Aerospike client has updated their default settings, see the change reasons from Aerospike forum: https://discuss.aerospike.com/t/client-1772-client-configurations-changes-reasons/9699
+            // We will update AsyncMaxCommands to 100 when we bump up Aerospike version so we align with Aerospike settings.
+            // Relationship between asyncMaxConnsPerNode and MaxConnsPerNode can be found from here: https://aerospike.com/apidocs/csharp/html/f_aerospike_client_asyncclientpolicy_asyncmaxconnspernode
+            MaxConnsPerNode = 100;
         }
 
         /// <summary>
@@ -34,5 +40,10 @@ namespace AeroSharp.Connection
         /// Defines how to handle cases when the maximum number of concurrent database commands has been exceeded for the async client.
         /// </summary>
         public MaxCommandAction MaxCommandAction { get; set; }
+
+        /// <summary>
+        /// The maximum sync connections per node.
+        /// </summary>
+        public int MaxConnsPerNode { get; set; }
     }
 }
