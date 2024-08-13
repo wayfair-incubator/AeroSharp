@@ -39,7 +39,7 @@ namespace AeroSharp.Connection
                     }
                 }
             }
-            
+
             return _client;
         }
 

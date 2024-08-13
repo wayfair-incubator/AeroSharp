@@ -1,5 +1,5 @@
-﻿using System;
-using Aerospike.Client;
+﻿using Aerospike.Client;
+using System;
 
 namespace AeroSharp.Connection
 {
