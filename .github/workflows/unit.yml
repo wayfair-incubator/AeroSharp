@@ -33,8 +33,8 @@ jobs:
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
-      - name: Publish Code Coverage
-        uses: codecov/codecov-action@v3
-        with:
-          files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
-          fail_ci_if_error: true
+      # - name: Publish Code Coverage
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
+      #     fail_ci_if_error: true
