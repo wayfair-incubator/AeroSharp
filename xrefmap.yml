@@ -247,6 +247,19 @@ references:
   isSpec: "True"
   fullName: AeroSharp.Connection.ConnectionConfiguration.MaxCommandAction
   nameWithType: ConnectionConfiguration.MaxCommandAction
+- uid: AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode
+  name: MaxConnsPerNode
+  href: api/AeroSharp.Connection.ConnectionConfiguration.html#AeroSharp_Connection_ConnectionConfiguration_MaxConnsPerNode
+  commentId: P:AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode
+  fullName: AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode
+  nameWithType: ConnectionConfiguration.MaxConnsPerNode
+- uid: AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode*
+  name: MaxConnsPerNode
+  href: api/AeroSharp.Connection.ConnectionConfiguration.html#AeroSharp_Connection_ConnectionConfiguration_MaxConnsPerNode_
+  commentId: Overload:AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode
+  isSpec: "True"
+  fullName: AeroSharp.Connection.ConnectionConfiguration.MaxConnsPerNode
+  nameWithType: ConnectionConfiguration.MaxConnsPerNode
 - uid: AeroSharp.Connection.ConnectionContext
   name: ConnectionContext
   href: api/AeroSharp.Connection.ConnectionContext.html
