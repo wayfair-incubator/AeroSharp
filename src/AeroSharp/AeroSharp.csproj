@@ -32,11 +32,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aerospike.Client" Version="6.0.1" />
+    <PackageReference Include="Aerospike.Client" Version="7.4.0" />
     <PackageReference Include="FluentValidation" Version="11.6.0" />
     <PackageReference Include="lz4net" Version="1.0.15.93" />
     <PackageReference Include="MessagePack" Version="2.5.124" />
-    <PackageReference Include="Polly" Version="7.2.4" />
+    <PackageReference Include="Polly" Version="8.4.2" />
     <PackageReference Include="protobuf-net" Version="3.2.26" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
       <PrivateAssets>all</PrivateAssets>
