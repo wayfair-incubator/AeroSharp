@@ -27,7 +27,7 @@ jobs:
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
         with:
-          config-file: '.github/aerospike.conf'
+          server-version: 6.2.0.7
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
