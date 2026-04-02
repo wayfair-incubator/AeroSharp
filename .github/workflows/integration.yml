@@ -28,6 +28,7 @@ jobs:
         uses: reugn/github-action-aerospike@v1.1.0
         with:
           server-version: 6.2.0.7
+          config-file: '.github/aerospike/aerospike.conf'
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
