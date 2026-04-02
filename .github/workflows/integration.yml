@@ -28,7 +28,16 @@ jobs:
         uses: reugn/github-action-aerospike@v1.1.0
         with:
           server-version: 6.2.0.7
-          config-file: '.github/aerospike/aerospike.conf'
+      - name: Configure Aerospike for Tests
+        run: |
+          # Enable the Namespace Supervisor (NSUP) to allow TTLs
+          docker exec aerospike asinfo -v "set-config:context=namespace;id=test;nsup-period=15"
+
+          # Disable the system memory check to prevent 'Stop Writes' on the GH Runner
+          docker exec aerospike asinfo -v "set-config:context=service;stop-writes-sys-memory-pct=100"
+
+          # Optional: Verify the settings
+          docker exec aerospike asinfo -v "namespace/test" | grep nsup-period
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
