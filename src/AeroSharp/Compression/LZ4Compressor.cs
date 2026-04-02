@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using LZ4;
+using K4os.Compression.LZ4.Streams;
 
 namespace AeroSharp.Compression
 {
@@ -10,7 +10,7 @@ namespace AeroSharp.Compression
             using (var dataStream = new MemoryStream(data))
             using (var compressed = new MemoryStream())
             {
-                using (var zip = new LZ4Stream(compressed, LZ4StreamMode.Compress))
+                using (var zip = LZ4Stream.Encode(compressed))
                 {
                     dataStream.CopyTo(zip);
                 }
@@ -24,7 +24,7 @@ namespace AeroSharp.Compression
             using (var dataStream = new MemoryStream(data))
             using (var decompressed = new MemoryStream())
             {
-                using (var zip = new LZ4Stream(dataStream, LZ4StreamMode.Decompress))
+                using (var zip = LZ4Stream.Decode(dataStream))
                 {
                     zip.CopyTo(decompressed);
                 }
