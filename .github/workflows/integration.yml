@@ -38,6 +38,7 @@ jobs:
           dotnet test --no-restore -nodereuse:false \
             /p:UseSharedCompilation=false \
             /p:UseRazorBuildServer=false \
+            /p:ParallelizeTestCollections=false \
             /p:CollectCoverage=true \
             /p:CoverletOutputFormat=opencover \
             /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
