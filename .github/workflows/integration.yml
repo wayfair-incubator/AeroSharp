@@ -9,7 +9,7 @@ on:
 jobs:
   integration:
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -28,10 +28,6 @@ jobs:
         uses: reugn/github-action-aerospike@v1.1.0
         with:
           server-version: 6.2.0.7
-      - name: Patch Aerospike Config
-        run: |
-          # Using the correct container name: gha_aerospike
-          docker exec gha_aerospike asinfo -v "set-config:context=namespace;id=test;nsup-period=15"
       - name: Integration Tests
         run: |
           cd ./tests/AeroSharp.IntegrationTests/
