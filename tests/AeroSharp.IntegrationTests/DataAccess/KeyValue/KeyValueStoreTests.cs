@@ -78,7 +78,7 @@ namespace AeroSharp.IntegrationTests.DataAccess.KeyValue
             var result = await keyValueStore.ReadAsync<TestType>(OccupiedRecord1, OccupiedBin, default);
             result.Key.Should().Be(OccupiedRecord1);
             result.Value.Text.Should().BeEquivalentTo(_testData.Text);
-            result.Value.Value.Should().NotBe(_testData.Value);
+            result.Value.Value.Should().Be(_testData.Value);
         }
 
         [Test]
