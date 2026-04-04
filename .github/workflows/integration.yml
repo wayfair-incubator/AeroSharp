@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Check Out Code
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
             6.0.x
@@ -26,15 +26,21 @@ jobs:
         run: dotnet build src --configuration Release --no-restore
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
+        with:
+          server-version: 6.2.0.7
       - name: Integration Tests
         run: |
-          cd ./tests/AeroSharp.IntegrationTests/
-          dotnet test --no-restore -nodereuse:false \
-            /p:UseSharedCompilation=false \
-            /p:UseRazorBuildServer=false \
-            /p:CollectCoverage=true \
-            /p:CoverletOutputFormat=opencover \
-            /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
+          for tfm in net6.0 net7.0; do
+            dotnet test tests/AeroSharp.IntegrationTests/AeroSharp.IntegrationTests.csproj \
+              --framework "$tfm" --configuration Release --no-restore -nodereuse:false \
+              /p:UseSharedCompilation=false \
+              /p:UseRazorBuildServer=false \
+              /p:ParallelizeTestCollections=false \
+              /p:CollectCoverage=true \
+              /p:CoverletOutputFormat=opencover \
+              /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
+              || exit 1
+          done   
       # - name: Publish Code Coverage
       #   uses: codecov/codecov-action@v3
       #   with:
