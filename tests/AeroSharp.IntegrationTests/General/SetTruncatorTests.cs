@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using AeroSharp.Connection;
@@ -55,27 +55,8 @@ namespace AeroSharp.IntegrationTests.General
         public async Task TruncateSet_With_TruncateBefore_After_Last_UpdateTime_Should_Not_Remove_Records()
         {
             _setTruncator.TruncateSet(DateTime.Today.AddDays(-1));
-            await WaitUntilRecordAbsentAsync(_userKey);
-        }
-
-        /// <summary>
-        /// Aerospike truncate can return before every read path sees an empty set (common under Docker/CI).
-        /// </summary>
-        private async Task WaitUntilRecordAbsentAsync(string userKey, TimeSpan? maxWait = null)
-        {
-            var timeout = maxWait ?? TimeSpan.FromSeconds(15);
-            var deadline = DateTime.UtcNow + timeout;
-            while (DateTime.UtcNow < deadline)
-            {
-                var result = await _batchOperator.RecordsExistAsync(new[] { userKey }, new ReadConfiguration(), default);
-                if (!result.Single().Value)
-                {
-                    return;
-                }
-                await Task.Delay(100);
-            }
-            var final = await _batchOperator.RecordsExistAsync(new[] { userKey }, new ReadConfiguration(), default);
-            final.Single().Value.Should().BeFalse("truncate should remove all records in the set");
+            var result = await _batchOperator.RecordsExistAsync(new[] { _userKey }, new ReadConfiguration(), default);
+            result.First().Value.Should().BeTrue();
         }
     }
 }
