@@ -39,7 +39,7 @@ jobs:
               /p:CollectCoverage=true \
               /p:CoverletOutputFormat=opencover \
               /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
-              || exit 1
+              || exit $?
           done   
       # - name: Publish Code Coverage
       #   uses: codecov/codecov-action@v3
