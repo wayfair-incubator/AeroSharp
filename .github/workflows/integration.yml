@@ -30,7 +30,6 @@ jobs:
           server-version: 6.2.0.7
       - name: Integration Tests
         run: |
-          cd ./tests/AeroSharp.IntegrationTests/
           for tfm in net6.0 net7.0; do
             dotnet test tests/AeroSharp.IntegrationTests/AeroSharp.IntegrationTests.csproj \
               --framework "$tfm" --configuration Release --no-restore -nodereuse:false \
