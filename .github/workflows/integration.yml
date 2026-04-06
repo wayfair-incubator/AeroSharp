@@ -33,16 +33,15 @@ jobs:
           for tfm in net6.0 net7.0; do
             dotnet test tests/AeroSharp.IntegrationTests/AeroSharp.IntegrationTests.csproj \
               --framework "$tfm" --configuration Release --no-restore -nodereuse:false \
-              --settings tests/AeroSharp.IntegrationTests/integration.runsettings \
               /p:UseSharedCompilation=false \
               /p:UseRazorBuildServer=false \
               /p:ParallelizeTestCollections=false \
               /p:CollectCoverage=true \
               /p:CoverletOutputFormat=opencover \
               /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
-              || exit 1
-          done      
-# - name: Publish Code Coverage
+              || exit $?
+          done   
+      # - name: Publish Code Coverage
       #   uses: codecov/codecov-action@v3
       #   with:
       #     files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
