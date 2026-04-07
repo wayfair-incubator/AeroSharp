@@ -51,7 +51,7 @@ namespace AeroSharp.Tests.Utility
                 .Configure()
                 .WithContext(new ConnectionContext(BootstrapServers, Port))
                 .WithoutCredentials()
-                .WithConfiguration(new ConnectionConfiguration { ConnectionTimeout = TimeSpan.FromMilliseconds(2000) })
+                .WithConfiguration(new ConnectionConfiguration { ConnectionTimeout = TimeSpan.FromMilliseconds(100) })
                 .Build();
 
             var cachedClientProvider = new CachedClientProvider(clientProvider);
