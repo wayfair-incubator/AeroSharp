@@ -6,6 +6,33 @@ namespace AeroSharp.Tests.Utility
 {
     public class TestPreparer
     {
+        public class CachedClientProvider : IClientProvider
+        {
+            private readonly IClientProvider _innerProvider;
+            private static ClientWrapper _instance;
+            private static readonly object Lock = new();
+
+            public CachedClientProvider(IClientProvider innerProvider)
+            {
+                _innerProvider = innerProvider;
+            }
+
+            public ClientWrapper GetClient()
+            {
+                if (_instance is not null)
+                {
+                    return _instance;
+                }
+
+                lock (Lock)
+                {
+                    _instance ??= _innerProvider.GetClient();
+                }
+
+                return _instance;
+            }
+        }
+
         private static readonly string[] BootstrapServers = { "127.0.0.1" };
         private const int Port = 3000;
 
@@ -27,13 +54,15 @@ namespace AeroSharp.Tests.Utility
                 .WithConfiguration(new ConnectionConfiguration { ConnectionTimeout = TimeSpan.FromMilliseconds(2000) })
                 .Build();
 
+            var cachedClientProvider = new CachedClientProvider(clientProvider);
+
             SetTruncatorBuilder
                 .Configure(clientProvider)
                 .WithDataContext(TestDataContext)
                 .Build()
                 .TruncateSet();
 
-            return clientProvider;
+            return cachedClientProvider;
         }
     }
 }
