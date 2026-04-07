@@ -21,15 +21,9 @@ namespace AeroSharp.IntegrationTests.General
         private IRecordOperator _recordOperator;
         private ISetTruncator _setTruncator;
 
-        /// <summary>
-        /// Unique per test so we never collide with other fixtures that reuse common keys like "key1" on the same set.
-        /// </summary>
-        private string _userKey;
-
         [SetUp]
         public async Task SetUp()
         {
-            _userKey = $"set_trunc_{Guid.NewGuid():N}";
             _clientProvider = TestPreparer.PrepareTest();
 
             var dataContext = new DataContext(TestPreparer.TestNamespace, TestPreparer.TestSet);
@@ -40,14 +34,14 @@ namespace AeroSharp.IntegrationTests.General
                 .WithDataContext(dataContext)
                 .Build();
 
-            await _recordOperator.WriteBinAsync(_userKey, new Bin("bin", 100), new WriteConfiguration(), default);
+            await _recordOperator.WriteBinAsync("key1", new Bin("bin", 100), new WriteConfiguration(), default);
         }
 
         [Test]
         public async Task TruncateSet_Should_Remove_All_Records()
         {
             _setTruncator.TruncateSet();
-            var result = await _batchOperator.RecordsExistAsync(new[] {_userKey}, new ReadConfiguration(), default);
+            var result = await _batchOperator.RecordsExistAsync(new[] {"key1"}, new ReadConfiguration(), default);
             result.First().Value.Should().BeFalse();
         }
 
@@ -55,7 +49,7 @@ namespace AeroSharp.IntegrationTests.General
         public async Task TruncateSet_With_TruncateBefore_After_Last_UpdateTime_Should_Not_Remove_Records()
         {
             _setTruncator.TruncateSet(DateTime.Today.AddDays(-1));
-            var result = await _batchOperator.RecordsExistAsync(new[] { _userKey }, new ReadConfiguration(), default);
+            var result = await _batchOperator.RecordsExistAsync(new[] { "key1" }, new ReadConfiguration(), default);
             result.First().Value.Should().BeTrue();
         }
     }
