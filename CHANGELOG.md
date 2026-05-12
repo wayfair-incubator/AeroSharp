@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-05-12
+
+### Changed
+
+- `Aerospike.Client` v6.0.1 => v6.2.2
+- `FluentValidation` v11.6.0 => v11.12.0
+- `MessagePack` v2.5.124 => v2.5.198
+- `protobuf-net` v3.2.26 => v3.2.56
+- Test dependencies: `coverlet.msbuild`, `FluentAssertions`, `Moq`, `nunit`, `NUnit3TestAdapter`, `Microsoft.NET.Test.Sdk` (17.11.1; newer 17.x drops `net6.0` / `net7.0` test TFMs)
+
 ## [1.1.1] - 2024-08-12
 
 ### Changed
