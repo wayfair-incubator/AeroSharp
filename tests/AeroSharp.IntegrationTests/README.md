@@ -14,6 +14,8 @@ To run integration tests for the project locally, first start up Aerospike in a 
 
 After doing this, the tests will connect to your local Aerospike instance and everything should "just work"!
 
+The Docker script currently starts `aerospike:ce-8.1.2.1`.
+
 Tests can be run from the project root with `dotnet test` or via your .NET IDE of choice.
 
 ## Adding New Tests

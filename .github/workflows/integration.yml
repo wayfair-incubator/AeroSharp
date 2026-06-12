@@ -18,8 +18,8 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
-            6.0.x
-            7.0.x
+            8.0.x
+            10.0.x
       - name: Restore Dependencies
         run: dotnet restore src
       - name: Build
@@ -27,10 +27,10 @@ jobs:
       - name: Set up Aerospike Database
         uses: reugn/github-action-aerospike@v1.1.0
         with:
-          server-version: 6.2.0.7
+          server-version: 8.1.2.1
       - name: Integration Tests
         run: |
-          for tfm in net6.0 net7.0; do
+          for tfm in net8.0 net10.0; do
             dotnet test tests/AeroSharp.IntegrationTests/AeroSharp.IntegrationTests.csproj \
               --framework "$tfm" --configuration Release --no-restore -nodereuse:false \
               /p:UseSharedCompilation=false \
@@ -40,9 +40,9 @@ jobs:
               /p:CoverletOutputFormat=opencover \
               /p:CoverletOutput=/home/runner/work/AeroSharp/AeroSharp/ \
               || exit $?
-          done   
+          done
       # - name: Publish Code Coverage
       #   uses: codecov/codecov-action@v3
       #   with:
-      #     files: /home/runner/work/AeroSharp/AeroSharp/coverage.net7.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net6.0.opencover.xml
+      #     files: /home/runner/work/AeroSharp/AeroSharp/coverage.net8.0.opencover.xml,/home/runner/work/AeroSharp/AeroSharp/coverage.net10.0.opencover.xml
       #     fail_ci_if_error: true

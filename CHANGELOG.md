@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-06-11
+
+### Changed
+
+- Target frameworks updated from `.NET 6/.NET 7` to `.NET 8/.NET 10` (dual-targeting).
+- Upgraded `Aerospike.Client` from `6.0.1` to `8.4.1`.
+- Updated local/CI Aerospike server version to `8.1.2.1`.
+- Preserved legacy boolean bin encoding behavior (`Value.UseBoolBin = false`) to avoid data type changes for existing records during the client upgrade.
+
+### Migration Notes
+
+- **Minimum requirement**: .NET 8 (required by Aerospike.Client 8.1+)
+- **Recommended**: .NET 10 LTS (supported until November 2028)
+- This is a **breaking change** for applications targeting .NET 6/.NET 7
+
 ## [1.1.1] - 2024-08-12
 
 ### Changed

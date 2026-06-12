@@ -13,6 +13,9 @@ namespace AeroSharp.Connection
         internal ClientProvider(ConnectionContext connection, Credentials credentials, ConnectionConfiguration configuration)
         {
             _lock = new object();
+            // Preserve pre-7.0 client behavior so booleans continue to be stored as integers.
+            // This avoids data-type drift for existing records when upgrading Aerospike.Client.
+            Value.UseBoolBin = false;
 
             _policy = new AsyncClientPolicy
             {
