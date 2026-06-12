@@ -14,4 +14,6 @@ To run examples for the project locally, first start up Aerospike in a local Doc
 
 After doing this, the examples will connect to your local Aerospike instance and everything should "just work"!
 
-Examples can be run from the project root with `dotnet run --framework net7.0 --project examples/AeroSharp.Examples/AeroSharp.Examples.csproj` or via your .NET IDE of choice.
+Examples can be run from the project root with `dotnet run --framework net10.0 --project examples/AeroSharp.Examples/AeroSharp.Examples.csproj` (recommended) or `dotnet run --framework net8.0 --project examples/AeroSharp.Examples/AeroSharp.Examples.csproj` or via your .NET IDE of choice.
+
+**Note**: .NET 10 is recommended as it's the current LTS release with support until November 2028.
