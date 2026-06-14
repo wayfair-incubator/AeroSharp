@@ -17,7 +17,6 @@ namespace AeroSharp.DataAccess
             RetryCount = 2;
             ReadBatchSize = 5000;
             SendKey = false;
-            SendSetName = false;
             SleepBetweenRetries = TimeSpan.Zero;
             TotalTimeout = TimeSpan.FromSeconds(10);
             SocketTimeout = TimeSpan.FromSeconds(4);
@@ -34,7 +33,6 @@ namespace AeroSharp.DataAccess
             RetryCount = other.RetryCount;
             ReadBatchSize = other.ReadBatchSize;
             SendKey = other.SendKey;
-            SendSetName = other.SendSetName;
             SleepBetweenRetries = other.SleepBetweenRetries;
             TotalTimeout = other.TotalTimeout;
             SocketTimeout = other.SocketTimeout;
@@ -67,6 +65,7 @@ namespace AeroSharp.DataAccess
         /// Send set name field to server for every key in the batch for batch index protocol.
         /// This is only necessary when authentication is enabled and security roles are defined on a per set basis.
         /// </summary>
+        [Obsolete("Deprecated. Aerospike.Client 6+ always sends the set name; this property has no effect.")]
         public bool SendSetName { get; set; }
         /// <summary>
         /// Milliseconds to sleep between retries. Enter zero to skip sleep. This field is ignored when maxRetries is zero.
