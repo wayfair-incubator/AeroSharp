@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **OrderedMap abstraction**: New `IOrderedMap<TSubKey, TOrderKey, TValue>` and `IOrderedMapOperator<TSubKey, TOrderKey, TValue>` interfaces for server-side sorted key-value collections.
+  - Stores entries as `(SubKey, OrderKey, Value)` tuples, natively sorted by `OrderKey` using Aerospike's `KEY_ORDERED` maps with composite keys.
+  - Supports `UpsertAsync` (insert or relocate on order key change), `RemoveAsync`, `GetAllAsync` (in sorted order), `GetByIndexAsync` (with negative index support), `SizeAsync`, and `ClearAsync`.
+  - Uses read-modify-write orchestration with generation checking and automatic retry for concurrent write safety.
+  - Configurable via `OrderedMapConfiguration` (includes `ReadModifyWritePolicy` for retry settings).
+  - Built via `OrderedMapBuilder` with fluent API, supporting custom serializers (Protobuf, MessagePack, MessagePack+LZ4).
+  - Examples added under `examples/AeroSharp.Examples/OrderedMaps/`.
+
 ## [1.2.0] - 2026-05-12
 
 ### Changed
