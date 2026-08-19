@@ -134,4 +134,3 @@ Project Link: [https://github.com/wayfair-incubator/AeroSharp](https://github.co
 [oss-template-url]: https://github.com/wayfair-incubator/oss-template/blob/main/CHANGELOG.md
 [contributor-covenant-shield]: https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg?style=for-the-badge
 [contributor-covenant-url]: https://github.com/wayfair-incubator/AeroSharp/blob/main/CODE_OF_CONDUCT.md
-
